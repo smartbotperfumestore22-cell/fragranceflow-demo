@@ -130,7 +130,7 @@ const CONFIG = {
 const TRANSLATIONS = {
   ar: {
     title:       "محتار؟ نختار ليك العطر المناسب في 30 ثانية ⊹",
-    subtitle:    "أجب على 7 أسئلة وسنختار ليك من مجموعة",
+    subtitle:    "أجب على 7 أسئلة قصيرة وسنقترح ليك العطر الأقرب لذوقك — من مجموعة",
     exclusive:   "الحصرية",
     start:       "ابدأ الآن — مجانًا",
     loading:     "بنحلل ذوقك...",
@@ -193,7 +193,7 @@ const TRANSLATIONS = {
   },
   fr: {
     title:       "Trouvez votre parfum idéal en 30 secondes ⊹",
-    subtitle:    "Répondez à 7 questions et on choisit pour vous dans la collection",
+    subtitle:    "Répondez à 7 questions courtes et on vous propose le parfum le plus proche de vos goûts — collection",
     exclusive:   "exclusive",
     start:       "Commencer — Gratuit",
     loading:     "On analyse vos goûts...",
@@ -891,7 +891,7 @@ function WidgetContent({ onClose, lang: langProp }) {
       {step==="intro" && (
         <div style={{ animation:"up .4s ease both" }}>
           <div style={{ textAlign:"center", marginBottom:18, paddingTop:4 }}>
-            <div style={{ fontSize:21, fontWeight:900, color:T.text, marginBottom:6 }}>
+            <div style={{ fontSize:23, fontWeight:900, color:T.text, marginBottom:8, lineHeight:1.3 }}>
               {t.title}
             </div>
             <div style={{ fontSize:12, color:T.muted, lineHeight:1.8 }}>
@@ -904,7 +904,7 @@ function WidgetContent({ onClose, lang: langProp }) {
             background:"rgba(201,169,110,0.04)",
             border:"1px solid rgba(201,169,110,0.09)",
             borderRadius:11, overflow:"hidden" }}>
-            {[["✦",`${PRODUCTS.length} ${t.statsCount}`],["⚡",t.statsSec],["💧",lang==="ar"?"عدد الرشات":"Nb. de sprays"]].map(([ic,lb],i)=>(
+            {[["✨",`${PRODUCTS.length} ${lang==="ar"?"عطر في انتظارك":"parfums disponibles"}`],["⚡",t.statsSec],["🆓",lang==="ar"?"مجاني 100%":"100% gratuit"]].map(([ic,lb],i)=>(
               <div key={lb} style={{ flex:1, padding:"11px 6px", textAlign:"center",
                 borderRight:i<2?"1px solid rgba(201,169,110,0.09)":"none" }}>
                 <div style={{ fontSize:15, marginBottom:2 }}>{ic}</div>
@@ -916,10 +916,15 @@ function WidgetContent({ onClose, lang: langProp }) {
             width:"100%", padding:"14px 0",
             background:`linear-gradient(135deg,${T.gold},${T.goldD})`,
             border:"none", borderRadius:12,
-            color:"#120E08", fontSize:14, fontWeight:800,
+            color:"#120E08", fontSize:15, fontWeight:800,
             cursor:"pointer", fontFamily:"inherit" }}>
             {t.start}
           </button>
+          <div style={{ textAlign:"center", marginTop:10 }}>
+            <span style={{ fontSize:11, color:"rgba(201,169,110,0.55)" }}>
+              ✨ {lang==="fr" ? "Sans inscription · 100% gratuit" : "بدون تسجيل · مجاني 100%"}
+            </span>
+          </div>
         </div>
       )}
 
@@ -928,7 +933,7 @@ function WidgetContent({ onClose, lang: langProp }) {
         <div key={`q${aKey}`} style={{ animation:"up .28s ease both" }}>
           <div style={{ display:"flex", justifyContent:"space-between",
             alignItems:"center", marginBottom:12, paddingTop:4 }}>
-            <span style={{ fontSize:13, fontWeight:800, color:T.text }}>
+            <span style={{ fontSize:14, fontWeight:900, color:T.text }}>
               {questions[qi]?.q}
             </span>
             <span style={{ fontSize:10, color:"rgba(201,169,110,0.4)" }}>
@@ -965,7 +970,7 @@ function WidgetContent({ onClose, lang: langProp }) {
                   {ICONS[ICON_MAP[o.v]] || <span style={{fontSize:22}}>{o.i}</span>}
                 </div>
                 <div style={{ flex:1 }}>
-                  <div style={{ fontSize:14, fontWeight:700, color:T.text }}>{o.l}</div>
+                  <div style={{ fontSize:15, fontWeight:800, color:T.text }}>{o.l}</div>
                   <div style={{ fontSize:12, color:"rgba(201,169,110,0.65)", marginTop:2 }}>
                     {o.d}{o.detail ? ` — ${o.detail}` : ""}
                   </div>
@@ -1120,7 +1125,7 @@ function Header({ onClose, isMobile, lang, setLang }) {
               <div style={{ fontSize:13, fontWeight:900, color:T.text, lineHeight:1.1 }}>
                 TWINS FRAGRANCE
               </div>
-              <div style={{ fontSize:9, color:"rgba(201,169,110,0.7)", fontWeight:600 }}>
+              <div style={{ fontSize:10, color:"rgba(201,169,110,0.8)", fontWeight:700 }}>
                 {(TRANSLATIONS[lang||"ar"]).assistant}
               </div>
             </div>
@@ -1204,67 +1209,88 @@ function FloatingModal({ open, onClose }) {
 }
 
 function TriggerBtn({ onClick, lang="ar" }) {
-  const [expanded, setExpanded] = useState(false);
   const [hov, setHov] = useState(false);
+  const [isMobileBtn, setIsMobileBtn] = useState(false);
   const t = TRANSLATIONS[lang||"ar"];
 
   useEffect(() => {
-    const timer = setTimeout(() => setExpanded(true), 3000);
-    return () => clearTimeout(timer);
+    const check = () => setIsMobileBtn(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
   }, []);
+
+  // موبايل — دائرة فقط دايماً
+  // Desktop — دائرة بـ default، hover يتوسع
+  const expanded = !isMobileBtn && hov;
 
   return (
     <button
       onClick={onClick}
-      onMouseEnter={() => { setHov(true); setExpanded(true); }}
+      onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
       style={{
         position:"fixed",
         bottom: CONFIG.TRIGGER_BOTTOM || 24,
         right:  CONFIG.TRIGGER_RIGHT  || 20,
         zIndex: 999,
-        display:"flex", alignItems:"center",
+        display:"flex",
+        alignItems:"center",
         gap: expanded ? 10 : 0,
-        background:"linear-gradient(135deg,#1A0F00,#2A1800)",
-        border: `2px solid ${hov ? T.goldL : T.gold}`,
+        background:"linear-gradient(135deg,#120A00,#241400)",
+        border: `2.5px solid ${hov ? T.goldL : T.gold}`,
         borderRadius: 50,
-        padding: expanded ? "8px 18px 8px 8px" : "6px",
+        padding: expanded ? "7px 16px 7px 7px" : "7px",
         cursor:"pointer",
         boxShadow: hov
-          ? "0 8px 32px rgba(201,169,110,0.5)"
-          : "0 4px 20px rgba(201,169,110,0.3)",
-        transition:"all .4s cubic-bezier(0.34,1.2,0.64,1)",
+          ? "0 6px 28px rgba(201,169,110,0.55), 0 0 0 4px rgba(201,169,110,0.1)"
+          : "0 3px 16px rgba(201,169,110,0.35)",
+        transition:"all .35s cubic-bezier(0.34,1.2,0.64,1)",
         overflow:"hidden",
         direction:"ltr",
         whiteSpace:"nowrap",
       }}>
+
+      {/* اللوغو — أكبر وأوضح */}
       <img
         src={FF_LOGO}
-        alt="F"
+        alt="FragranceFlow"
         style={{
-          width: expanded ? 36 : 44,
-          height: expanded ? 36 : 44,
+          width: 42,
+          height: 42,
           borderRadius:"50%",
           flexShrink:0,
-          transition:"all .4s ease",
+          objectFit:"cover",
+          transition:"transform .3s ease",
+          transform: hov ? "scale(1.05)" : "scale(1)",
         }}
       />
+
+      {/* النص — يظهر فقط على Desktop hover */}
       <span style={{
-        fontSize:13, fontWeight:800,
-        color:T.gold, fontFamily:"inherit",
-        maxWidth: expanded ? 160 : 0,
+        fontSize:13,
+        fontWeight:800,
+        color:T.gold,
+        fontFamily:"inherit",
+        maxWidth: expanded ? 150 : 0,
         opacity: expanded ? 1 : 0,
         overflow:"hidden",
-        transition:"max-width .4s ease, opacity .3s ease",
+        transition:"max-width .35s ease, opacity .25s ease",
         letterSpacing:0.3,
       }}>
         {t.triggerBtn}
       </span>
+
+      {/* Pulse dot */}
       <span style={{
-        position:"absolute", top:4, right:4,
-        width:7, height:7, borderRadius:"50%",
-        background:T.goldL, opacity:.9,
+        position:"absolute",
+        top:3, right:3,
+        width:8, height:8,
+        borderRadius:"50%",
+        background:T.goldL,
+        opacity:.85,
         animation:"pulse 2.5s ease infinite",
+        border:"1.5px solid #120A00",
       }}/>
     </button>
   );
