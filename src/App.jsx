@@ -126,7 +126,7 @@ const CONFIG = {
 // ═══════════════════════════════════════════════════════════════
 const TRANSLATIONS = {
   ar: {
-    title:       "اكتشف عطرك المثالي ✨",
+    title:       "محتار؟ نختار ليك العطر المناسب في 30 ثانية ⊹",
     subtitle:    "أجب على 7 أسئلة وسنختار ليك من مجموعة",
     exclusive:   "الحصرية",
     start:       "ابدأ الآن — مجانًا",
@@ -189,7 +189,7 @@ const TRANSLATIONS = {
     full:          "🫙 كاملة",
   },
   fr: {
-    title:       "Découvrez votre parfum idéal ✨",
+    title:       "Trouvez votre parfum idéal en 30 secondes ⊹",
     subtitle:    "Répondez à 7 questions et on choisit pour vous dans la collection",
     exclusive:   "exclusive",
     start:       "Commencer — Gratuit",
@@ -414,17 +414,112 @@ function getResults(ans) {
 //  PERSONAS
 // ═══════════════════════════════════════════════════════════════
 const PERSONAS = {
-  "heavy-evening": { ar:"الكلاسيكي الفاخر",  desc:"ذوقك يميل للعطور العميقة الراقية ذات الحضور الملكي." },
-  "heavy-daily":   { ar:"الجريء المعاصر",     desc:"تحب الرائحة القوية حتى في يومك العادي." },
-  "fresh-daily":   { ar:"الأنيق المنعش",      desc:"ذوقك يميل للمنعشة النظيفة اللي تعكس الثقة والأناقة." },
-  "fresh-evening": { ar:"الحديث الجذاب",      desc:"تختار المنعشة حتى في السهرات — مختلف ومميز." },
-  "floral-daily":  { ar:"الناعم الرومانسي",   desc:"ذوقك يميل للزهرية الناعمة اللي تعكس الرقة." },
-  "floral-evening":{ ar:"الأنثوي الفاخر",     desc:"تختار الزهري الفاخر للسهرات — حضور لا يُقاوم." },
+  "heavy-evening": { ar:"الملكي الفاخر ♚",      desc:"ذوقك يميل للعطور العميقة الراقية ذات الحضور الملكي — رائحة تدوم وتترك أثر لا يُنسى." },
+  "heavy-daily":   { ar:"الجذاب الغامض ◈",      desc:"تحب الرائحة القوية والغامضة حتى في يومك العادي — شخصية تترك أثر أينما كنت." },
+  "fresh-daily":   { ar:"الأنيق الكلاسيكي ✧",   desc:"ذوقك يميل للمنعشة النظيفة اللي تعكس الثقة والأناقة البسيطة الراقية." },
+  "fresh-evening": { ar:"الحضور القوي ⬡",       desc:"تختار المنعشة حتى في السهرات — شخصية مختلفة ومميزة بين الجميع." },
+  "floral-daily":  { ar:"الروح الحرة ✿",         desc:"ذوقك يميل للزهرية الناعمة اللي تعكس الرقة والانوثة الراقية." },
+  "floral-evening":{ ar:"الفخم العصري ❋",       desc:"تختار الزهري الفاخر للسهرات — حضور أنثوي قوي لا يُقاوم." },
 };
 
 // ═══════════════════════════════════════════════════════════════
 //  QUESTIONS
 // ═══════════════════════════════════════════════════════════════
+
+// ═══════════════════════════════════════════════════════════════
+//  SVG ICONS — ذهبية واضحة
+// ═══════════════════════════════════════════════════════════════
+const ICONS = {
+  men: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/>
+    </svg>
+  ),
+  women: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="8" r="4"/><path d="M12 14v7M9 18h6"/>
+    </svg>
+  ),
+  unisex: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="9" cy="8" r="3.5"/><circle cx="15" cy="8" r="3.5"/><path d="M5 20v-2a4 4 0 0 1 8 0v2M11 20v-2a4 4 0 0 1 8 0v2"/>
+    </svg>
+  ),
+  summer: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+    </svg>
+  ),
+  winter: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2v20M4.93 4.93l14.14 14.14M2 12h20M4.93 19.07l14.14-14.14"/>
+      <circle cx="12" cy="12" r="2"/>
+    </svg>
+  ),
+  fresh: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M2 12c2-4 6-6 10-6s8 2 10 6"/><path d="M2 16c2-2 6-3 10-3s8 1 10 3"/>
+      <path d="M6 20c1-1 3-2 6-2s5 1 6 2"/>
+    </svg>
+  ),
+  floral: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="2"/>
+      <path d="M12 2a4 4 0 0 1 0 8 4 4 0 0 1 0-8zM12 14a4 4 0 0 1 0 8 4 4 0 0 1 0-8zM2 12a4 4 0 0 1 8 0 4 4 0 0 1-8 0zM14 12a4 4 0 0 1 8 0 4 4 0 0 1-8 0z"/>
+    </svg>
+  ),
+  heavy: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 3h6M10 3v2.4a4 4 0 0 1-.8 2.4L7 11v9a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-9l-2.2-3.2A4 4 0 0 1 14 5.4V3"/>
+      <path d="M7 14h10"/>
+    </svg>
+  ),
+  daily: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3"/>
+    </svg>
+  ),
+  evening: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+  ),
+  gift: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-9"/>
+      <path d="M7.5 8A2.5 2.5 0 0 1 12 5.5 2.5 2.5 0 0 1 16.5 8"/>
+    </svg>
+  ),
+  self: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/>
+      <path d="M17 3l2 2-2 2"/>
+    </svg>
+  ),
+  decant: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 3h6M10 3v2.4a4 4 0 0 1-.8 2.4L7 11v9a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-9l-2.2-3.2A4 4 0 0 1 14 5.4V3"/>
+      <path d="M7 15h10"/>
+    </svg>
+  ),
+  full: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="6" y="2" width="12" height="20" rx="3"/>
+      <path d="M6 8h12M9 2v2M15 2v2"/>
+      <circle cx="12" cy="14" r="2"/>
+    </svg>
+  ),
+};
+
+const ICON_MAP = {
+  men:"men", women:"women", unisex:"unisex",
+  summer:"summer", winter:"winter",
+  fresh:"fresh", floral:"floral", heavy:"heavy",
+  daily:"daily", evening:"evening",
+  gift:"gift", self:"self",
+  decant:"decant", full:"full",
+};
+
 const QS_BASE = [
   { id:"gender", q:"العطر لمن؟", sub:"كنبدأو من الأساس",
     opts:[
@@ -603,7 +698,7 @@ function PCard({ p, ans, isSmall=false, lang="ar" }) {
         <div style={{ display:"flex", gap:0 }}>
           <div style={{ width:70, flexShrink:0, position:"relative" }}>
             <img src={p.image} alt={p.name}
-              style={{ width:"100%", height:"100%", objectFit:"cover", display:"block", minHeight:90 }}
+              style={{ width:"100%", height:"100%", objectFit:"cover", display:"block", minHeight:110 }}
               onError={e=>e.target.style.display="none"}/>
             <div style={{ position:"absolute", inset:0,
               background:"linear-gradient(to right,transparent 30%,rgba(8,7,10,0.9))" }}/>
@@ -650,9 +745,9 @@ function PCard({ p, ans, isSmall=false, lang="ar" }) {
 
       {/* Image + Info */}
       <div style={{ display:"flex" }}>
-        <div style={{ width:100, flexShrink:0, position:"relative" }}>
+        <div style={{ width:115, flexShrink:0, position:"relative" }}>
           <img src={p.image} alt={p.name}
-            style={{ width:"100%", height:"100%", objectFit:"cover", display:"block", minHeight:130 }}
+            style={{ width:"100%", height:"100%", objectFit:"cover", display:"block", minHeight:155 }}
             onError={e=>e.target.style.display="none"}/>
           <div style={{ position:"absolute", inset:0,
             background:"linear-gradient(to right,transparent 30%,rgba(8,7,10,0.92))" }}/>
@@ -859,11 +954,13 @@ function WidgetContent({ onClose, lang: langProp }) {
                   textAlign:"right", width:"100%",
                   animation:`up .3s ease ${i*.05}s both`,
                   transition:"all .2s ease" }}>
-                <div style={{ width:40, height:40, flexShrink:0,
-                  background: o.bg || "rgba(201,169,110,0.1)",
-                  border:"1px solid rgba(255,255,255,0.1)",
-                  borderRadius:10, display:"flex", alignItems:"center",
-                  justifyContent:"center", fontSize:24 }}>{o.i}</div>
+                <div style={{ width:44, height:44, flexShrink:0,
+                  background:"rgba(201,169,110,0.08)",
+                  border:"1px solid rgba(201,169,110,0.2)",
+                  borderRadius:11, display:"flex", alignItems:"center",
+                  justifyContent:"center" }}>
+                  {ICONS[ICON_MAP[o.v]] || <span style={{fontSize:22}}>{o.i}</span>}
+                </div>
                 <div style={{ flex:1 }}>
                   <div style={{ fontSize:14, fontWeight:700, color:T.text }}>{o.l}</div>
                   <div style={{ fontSize:12, color:"rgba(201,169,110,0.65)", marginTop:2 }}>
@@ -1088,8 +1185,8 @@ function FloatingModal({ open, onClose }) {
       <div onClick={onClose} style={{ position:"absolute", inset:0,
         background:"rgba(0,0,0,0.7)", backdropFilter:"blur(6px)",
         opacity:vis?1:0, transition:"opacity .3s ease" }}/>
-      <div style={{ position:"relative", zIndex:1, width:"100%", maxWidth:440,
-        maxHeight:"85vh", background:"#100D14",
+      <div style={{ position:"relative", zIndex:1, width:"100%", maxWidth:500,
+        maxHeight:"88vh", background:"#100D14",
         border:"1px solid rgba(201,169,110,0.22)", borderRadius:22,
         display:"flex", flexDirection:"column",
         boxShadow:"0 32px 80px rgba(0,0,0,0.6)",
