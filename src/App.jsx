@@ -255,17 +255,37 @@ const TRANSLATIONS = {
 
 const QS_FR = [
   { id:"gender", q:"Le parfum est pour qui ?", sub:"Commençons par la base",
-    opts:[{v:"men",l:"Homme",i:"♂",d:"Musqué et boisé"},{v:"women",l:"Femme",i:"♀",d:"Floral et doux"},{v:"unisex",l:"Tout le monde",i:"✦",d:"Unisexe"}] },
+    opts:[
+      {v:"men",   l:"Homme",       i:"👨", d:"Musqué et boisé",  ic:"#1E3A5F", bg:"#1a3a6b"},
+      {v:"women", l:"Femme",       i:"👩", d:"Floral et doux",   ic:"#8B1A4A", bg:"#6b1a45"},
+      {v:"unisex",l:"Tout le monde",i:"👫",d:"Unisexe",          ic:"#5F4A1E", bg:"#6b4a1a"},
+    ] },
   { id:"season", q:"Quand le portez-vous le plus ?", sub:"La saison change tout",
-    opts:[{v:"summer",l:"Été / Printemps",i:"☀",d:"Frais et léger"},{v:"winter",l:"Automne / Hiver",i:"❄",d:"Chaud et profond"}] },
+    opts:[
+      {v:"summer",l:"Été / Printemps",  i:"🌞", d:"Frais et léger",    ic:"#7A5C00", bg:"#8B6914"},
+      {v:"winter",l:"Automne / Hiver",  i:"🌨️", d:"Chaud et profond",  ic:"#1A4A6B", bg:"#1a3a5f"},
+    ] },
   { id:"character", q:"Quel type de fragrance aimez-vous ?", sub:"Votre personnalité olfactive",
-    opts:[{v:"fresh",l:"Fraîche et propre",i:"🌊",d:"Bergamot · Mer"},{v:"floral",l:"Florale et douce",i:"🌸",d:"Rose · Jasmin"},{v:"heavy",l:"Profonde et intense",i:"🌑",d:"Oud · Ambre · Vanille"}] },
+    opts:[
+      {v:"fresh", l:"Fraîche et propre", i:"🌊", d:"Bergamot · Citrus · Mer",   ic:"#0A4A6B", bg:"#0a3a5f"},
+      {v:"floral",l:"Florale et douce",  i:"🌺", d:"Rose · Jasmin · Iris",      ic:"#6B1A45", bg:"#5f1a3a"},
+      {v:"heavy", l:"Profonde et intense",i:"🕯️",d:"Oud · Ambre · Vanille",    ic:"#3A1A0A", bg:"#6b3a1a"},
+    ] },
   { id:"occasion", q:"Pour quelle occasion ?", sub:"L'occasion fait la différence",
-    opts:[{v:"daily",l:"Quotidien / Travail",i:"☕",d:"Léger toute la journée"},{v:"evening",l:"Soirée / Événement",i:"✨",d:"Présence forte"}] },
+    opts:[
+      {v:"daily",  l:"Quotidien / Travail",  i:"🌅", d:"Léger toute la journée",  ic:"#5F3A1E", bg:"#6b3a1a"},
+      {v:"evening",l:"Soirée / Événement",   i:"🌙", d:"Présence forte inoubliable",ic:"#4A3A00", bg:"#5f4a14"},
+    ] },
   { id:"isGift", q:"C'est un cadeau ?", sub:"On vous aide à choisir",
-    opts:[{v:"gift",l:"Cadeau 🎁",i:"🎁",d:"Pour quelqu'un de spécial",detail:"Marques reconnues recommandées"},{v:"self",l:"Pour moi",i:"🧴",d:"Usage personnel",detail:"Selon vos goûts librement"}] },
+    opts:[
+      {v:"gift",i:"🎁",l:"Cadeau",    d:"Pour quelqu'un de spécial", detail:"Marques reconnues recommandées", ic:"#6B1A1A", bg:"#5f1a1a"},
+      {v:"self",i:"🙋",l:"Pour moi",  d:"Usage personnel",            detail:"Selon vos goûts librement",    ic:"#1A4A3A", bg:"#1a3a2f"},
+    ] },
   { id:"sizeType", q:"Que préférez-vous ?", sub:"Chacun a ses avantages",
-    opts:[{v:"decant",l:"Décante",i:"🧪",d:"10ml — Essayez sans risque",detail:"Idéal pour tester d'abord"},{v:"full",l:"Flacon complet",i:"🫙",d:"50ml–100ml",detail:"Idéal si vous êtes sûr"}] },
+    opts:[
+      {v:"decant",l:"Décante",       i:"🧴",d:"10ml — Essayez sans risque",detail:"Idéal pour tester d'abord",   ic:"#0A3A5F", bg:"#0a2a4f"},
+      {v:"full",  l:"Flacon complet",i:"🫗",d:"50ml–100ml",             detail:"Idéal si vous êtes sûr",        ic:"#3A2A0A", bg:"#4a3a0a"},
+    ] },
 ];
 
 const BUDGET_FR = {
@@ -407,17 +427,37 @@ const PERSONAS = {
 // ═══════════════════════════════════════════════════════════════
 const QS_BASE = [
   { id:"gender", q:"العطر لمن؟", sub:"كنبدأو من الأساس",
-    opts:[{v:"men",l:"رجالي",i:"♂",d:"مسكي وخشبي"},{v:"women",l:"نسائي",i:"♀",d:"زهري وناعم"},{v:"unisex",l:"للجميع",i:"✦",d:"Unisex"}] },
+    opts:[
+      {v:"men",   l:"رجالي",   i:"👨", d:"مسكي وخشبي",       ic:"#1E3A5F", bg:"#1a3a6b"},
+      {v:"women", l:"نسائي",   i:"👩", d:"زهري وناعم",        ic:"#8B1A4A", bg:"#6b1a45"},
+      {v:"unisex",l:"للجميع",  i:"👫", d:"Unisex",            ic:"#5F4A1E", bg:"#6b4a1a"},
+    ] },
   { id:"season", q:"أكثر وقت كتستعمل فيه العطر؟", sub:"الموسم يغير كل شيء",
-    opts:[{v:"summer",l:"صيف / ربيع",i:"☀",d:"منعش وخفيف"},{v:"winter",l:"شتاء / خريف",i:"❄",d:"دافئ وعميق"}] },
+    opts:[
+      {v:"summer",l:"صيف / ربيع",  i:"🌞", d:"منعش وخفيف", ic:"#7A5C00", bg:"#8B6914"},
+      {v:"winter",l:"شتاء / خريف", i:"🌨️", d:"دافئ وعميق", ic:"#1A4A6B", bg:"#1a3a5f"},
+    ] },
   { id:"character", q:"كيفاش تحب الرائحة؟", sub:"شخصيتك العطرية",
-    opts:[{v:"fresh",l:"منعشة ونظيفة",i:"🌊",d:"Bergamot · Sea"},{v:"floral",l:"زهرية وناعمة",i:"🌸",d:"Rose · Jasmine"},{v:"heavy",l:"عميقة وثقيلة",i:"🌑",d:"Oud · Amber · Vanilla"}] },
+    opts:[
+      {v:"fresh", l:"منعشة ونظيفة", i:"🌊", d:"Bergamot · Citrus · Sea",  ic:"#0A4A6B", bg:"#0a3a5f"},
+      {v:"floral",l:"زهرية وناعمة", i:"🌺", d:"Rose · Jasmine · Iris",    ic:"#6B1A45", bg:"#5f1a3a"},
+      {v:"heavy", l:"عميقة وثقيلة", i:"🕯️", d:"Oud · Amber · Vanilla",   ic:"#3A1A0A", bg:"#6b3a1a"},
+    ] },
   { id:"occasion", q:"شنو الاستعمال ديالك للعطر؟", sub:"غنختار حسب مناسبتك",
-    opts:[{v:"daily",l:"يومي وشغل",i:"☕",d:"خفيف طول اليوم"},{v:"evening",l:"سهرات ومناسبات",i:"✨",d:"حضور قوي"}] },
+    opts:[
+      {v:"daily",  l:"يومي وشغل",       i:"🌅", d:"خفيف ومريح طول اليوم",   ic:"#5F3A1E", bg:"#6b3a1a"},
+      {v:"evening",l:"سهرات ومناسبات",  i:"🌙", d:"حضور قوي لا يُنسى",       ic:"#4A3A00", bg:"#5f4a14"},
+    ] },
   { id:"isGift", q:"العطر هدية؟", sub:"غنساعدك تختار أحسن",
-    opts:[{v:"gift",l:"هدية 🎁",i:"🎁",d:"لشخص عزيز",detail:"غنقترح ماركات معروفة"},{v:"self",l:"لي أنا",i:"🧴",d:"للاستخدام الشخصي",detail:"حسب ذوقك بحرية"}] },
+    opts:[
+      {v:"gift",i:"🎁",l:"هدية",   d:"لشخص عزيز",         detail:"غنقترح ماركات معروفة", ic:"#6B1A1A", bg:"#5f1a1a"},
+      {v:"self",i:"🙋",l:"لي أنا",  d:"للاستخدام الشخصي",  detail:"حسب ذوقك بحرية",         ic:"#1A4A3A", bg:"#1a3a2f"},
+    ] },
   { id:"sizeType", q:"شنو تبغي؟", sub:"كل واحد عنده مزاياه",
-    opts:[{v:"decant",l:"Décante",i:"🧪",d:"10ml — تجرب بسعر صغير",detail:"مثالي للتجربة أولاً"},{v:"full",l:"زجاجة كاملة",i:"🫙",d:"50ml–100ml",detail:"مثالي إلا كنتي متأكد"}] },
+    opts:[
+      {v:"decant",l:"Décante",       i:"🧴",d:"10ml — تجرب بسعر صغير",detail:"مثالي للتجربة أولاً", ic:"#0A3A5F", bg:"#0a2a4f"},
+      {v:"full",  l:"زجاجة كاملة",  i:"🫗",d:"50ml–100ml",             detail:"مثالي إلا كنتي متأكد",ic:"#3A2A0A", bg:"#4a3a0a"},
+    ] },
 ];
 
 const BUDGET_OPTIONS = {
@@ -452,7 +492,7 @@ function buildQS(sizeType, lang="ar") {
 // ═══════════════════════════════════════════════════════════════
 const T = {
   bg:"#08070A", gold:"#C9A96E", goldD:"#9A6F35", goldL:"#E8C98A",
-  text:"#F0EAE0", muted:"rgba(240,234,224,0.45)", faded:"rgba(240,234,224,0.2)",
+  text:"#F0EAE0", muted:"rgba(201,169,110,0.7)", faded:"rgba(201,169,110,0.5)",
   border:"rgba(255,255,255,0.08)", borderG:"rgba(201,169,110,0.22)",
 };
 
@@ -804,7 +844,7 @@ function WidgetContent({ onClose, lang: langProp }) {
                 transition:"background .4s" }}/>
             ))}
           </div>
-          <div style={{ fontSize:10, color:T.faded, marginBottom:16 }}>
+          <div style={{ fontSize:12, color:"rgba(201,169,110,0.6)", marginBottom:16 }}>
             {questions[qi]?.sub}
           </div>
           <div style={{ display:"flex", flexDirection:"column", gap:7 }}>
@@ -819,14 +859,14 @@ function WidgetContent({ onClose, lang: langProp }) {
                   textAlign:"right", width:"100%",
                   animation:`up .3s ease ${i*.05}s both`,
                   transition:"all .2s ease" }}>
-                <div style={{ width:36, height:36, flexShrink:0,
-                  background:"rgba(201,169,110,0.06)",
-                  border:"1px solid rgba(201,169,110,0.1)",
-                  borderRadius:9, display:"flex", alignItems:"center",
-                  justifyContent:"center", fontSize:17 }}>{o.i}</div>
+                <div style={{ width:40, height:40, flexShrink:0,
+                  background: o.bg || "rgba(201,169,110,0.1)",
+                  border:"1px solid rgba(255,255,255,0.1)",
+                  borderRadius:10, display:"flex", alignItems:"center",
+                  justifyContent:"center", fontSize:24 }}>{o.i}</div>
                 <div style={{ flex:1 }}>
-                  <div style={{ fontSize:13, fontWeight:700, color:T.text }}>{o.l}</div>
-                  <div style={{ fontSize:10, color:T.faded }}>
+                  <div style={{ fontSize:14, fontWeight:700, color:T.text }}>{o.l}</div>
+                  <div style={{ fontSize:12, color:"rgba(201,169,110,0.65)", marginTop:2 }}>
                     {o.d}{o.detail ? ` — ${o.detail}` : ""}
                   </div>
                 </div>
@@ -1092,6 +1132,10 @@ function TriggerBtn({ onClick, lang="ar" }) {
         direction:"ltr",
         whiteSpace:"nowrap",
       }}>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginLeft:4}}>
+        <path d="M9 3h6M10 3v2.4a4 4 0 0 1-.8 2.4L7 11v9a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-9l-2.2-3.2A4 4 0 0 1 14 5.4V3"/>
+        <path d="M7 14h10"/>
+      </svg>
       {t.triggerBtn}
       <span style={{
         position:"absolute", top:6, right:7,
