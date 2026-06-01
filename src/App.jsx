@@ -129,7 +129,7 @@ const CONFIG = {
 // ═══════════════════════════════════════════════════════════════
 const TRANSLATIONS = {
   ar: {
-    title:       "محتار؟ نختار ليك العطر المناسب في 30 ثانية ⊹",
+    title:       "محتار؟ نختار ليك العطر المناسب في 30 ثانية",
     subtitle:    "أجب على 7 أسئلة قصيرة وسنقترح ليك العطر الأقرب لذوقك — من مجموعة",
     exclusive:   "الحصرية",
     start:       "ابدأ الآن — مجانًا",
@@ -185,14 +185,14 @@ const TRANSLATIONS = {
     giftBadge:     "عطور مناسبة للإهداء",
     giftPersona:   "🎁 اخترنا ليك عطور مناسبة للإهداء",
     giftPersonaSub:"راقية، معروفة، وتترك أثر لا يُنسى",
-    triggerBtn:    "⊹ اكتشف عطرك",
+    triggerBtn:    "اكتشف عطرك",
     // Empty
     talkToUs:      "تحدث معنا",
     decante:       "🧪 Décante",
     full:          "🫙 كاملة",
   },
   fr: {
-    title:       "Trouvez votre parfum idéal en 30 secondes ⊹",
+    title:       "Trouvez votre parfum idéal en 30 secondes",
     subtitle:    "Répondez à 7 questions courtes et on vous propose le parfum le plus proche de vos goûts — collection",
     exclusive:   "exclusive",
     start:       "Commencer — Gratuit",
@@ -248,7 +248,7 @@ const TRANSLATIONS = {
     giftBadge:     "Parfums idéaux pour offrir",
     giftPersona:   "🎁 On a sélectionné des parfums parfaits à offrir",
     giftPersonaSub:"Élégants, reconnus et qui laissent une impression inoubliable",
-    triggerBtn:    "⊹ Trouvez votre parfum",
+    triggerBtn:    "Trouvez votre parfum",
     // Empty
     talkToUs:      "Nous contacter",
     decante:       "🧪 Décante",
@@ -1120,7 +1120,7 @@ function Header({ onClose, isMobile, lang, setLang }) {
             <div style={{ width:30, height:30,
               background:`linear-gradient(135deg,${T.gold},${T.goldD})`,
               borderRadius:8, display:"flex", alignItems:"center",
-              justifyContent:"center", fontSize:14, color:"#120E08", fontWeight:900 }}>⊹</div>
+              justifyContent:"center", fontSize:14, color:"#120E08", fontWeight:900 }}></div>
             <div>
               <div style={{ fontSize:13, fontWeight:900, color:T.text, lineHeight:1.1 }}>
                 TWINS FRAGRANCE
