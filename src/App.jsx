@@ -135,6 +135,12 @@ const TRANSLATIONS = {
     exclusive:   "الحصرية",
     start:       "ابدأ الآن — مجانًا",
     loading:     "بنحلل ذوقك...",
+    loadingMsgs: [
+      "جاري تحليل عائلتك العطرية المفضلة...",
+      `البحث في ${PRODUCTS.length} عطر أصيل...`,
+      "نطابق اختياراتك مع أحسن التركيبات...",
+      "تجهيز استشارتك الشخصية المخصصة...",
+    ],
     loadingGift: "كنبحثو على أحسن هدية 🎁",
     searching:   "كنبحثو في",
     perfumes:    "عطر",
@@ -198,6 +204,12 @@ const TRANSLATIONS = {
     exclusive:   "exclusive",
     start:       "Commencer — Gratuit",
     loading:     "On analyse vos goûts...",
+    loadingMsgs: [
+      "Analyse de votre famille olfactive préférée...",
+      "Recherche parmi plus de 200 parfums authentiques...",
+      "Correspondance avec votre profil unique...",
+      "Préparation de votre consultation personnalisée...",
+    ],
     loadingGift: "On cherche le meilleur cadeau 🎁",
     searching:   "Recherche parmi",
     perfumes:    "parfums",
@@ -467,7 +479,9 @@ const OCCASION_CONTEXT = {
 function generateWhyChosen(p, ans, slotType="best", lang="ar") {
   const isAr = lang !== "fr";
   const char  = mapCharacter(ans.character || "heavy");
-  const occ   = mapOccasion(ans.occasion || "daily");
+  // استعمل مناسبة العطر الحقيقية مش مناسبة الزبون
+  const productOcc = (p.occasion||[])[0] || ans.occasion || "daily";
+  const occ   = mapOccasion(productOcc);
   const imp   = ans.impression;
 
   // نوتات القاعدة → إحساس
@@ -722,7 +736,7 @@ function mapCharacter(char) {
 
 // Map new occasion values
 function mapOccasion(occ) {
-  const map = { dates:"evening", travel:"daily", allday:"daily" };
+  const map = { dates:"dates", travel:"daily", allday:"daily" };
   return map[occ] || occ;
 }
 
@@ -996,6 +1010,11 @@ const ICONS = {
       <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
     </svg>
   ),
+  dates: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+    </svg>
+  ),
   gift: (
     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-9"/>
@@ -1028,7 +1047,7 @@ const ICON_MAP = {
   summer:"summer", winter:"winter", allseasons:"summer",
   fresh:"fresh", floral:"floral", heavy:"heavy",
   woody:"heavy", oriental:"heavy", clean:"fresh",
-  daily:"daily", evening:"evening", dates:"evening",
+  daily:"daily", evening:"evening", dates:"dates",
   travel:"fresh", allday:"daily",
   firstlook:"self", attractive:"evening", elegant:"self",
   confident:"daily", fresh_imp:"fresh", longlast:"heavy",
@@ -1196,7 +1215,7 @@ function NotesDisplay({ notes, matchedNotes=[], lang="ar" }) {
       <button onClick={()=>setExp(e=>!e)} style={{
         display:"flex", alignItems:"center", gap:5,
         background:"transparent", border:"none",
-        color:"rgba(201,169,110,0.55)", fontSize:10,
+        color:"rgba(201,169,110,0.75)", fontSize:10,
         cursor:"pointer", fontFamily:"inherit", padding:0, marginBottom:exp?7:0,
       }}>
         <span style={{ fontSize:8, display:"inline-block",
@@ -1284,7 +1303,7 @@ function PCard({ p, ans, isSmall=false, lang="ar" }) {
             <div style={{ fontSize:11, fontWeight:900, color:T.gold, marginBottom:4 }}>
               {p.price} <span style={{ fontSize:9 }}>د.م</span>
             </div>
-            <div style={{ fontSize:9, color:T.faded }}>{sprays.icon} {sprays.text}</div>
+            <div style={{ fontSize:9, color:"rgba(201,169,110,0.65)" }}>{sprays.icon} {sprays.text}</div>
           </div>
         </div>
         <div style={{ padding:"0 8px 8px", display:"flex", gap:5 }}>
@@ -1395,10 +1414,10 @@ function PCard({ p, ans, isSmall=false, lang="ar" }) {
         borderTop:"1px solid rgba(255,255,255,0.04)",
         background:"rgba(0,0,0,0.18)" }}>
 
-        {/* Occasion badge */}
-        {ans?.occasion && (
+        {/* Occasion badge — من خصائص العطر نفسه */}
+        {p.occasion && (
           <div style={{ fontSize:10, color:"rgba(201,169,110,0.65)", fontWeight:700, marginBottom:8 }}>
-            {getOccasionBadge(ans.occasion, lang)}
+            {getOccasionBadge((p.occasion||[])[0] || "daily", lang)}
           </div>
         )}
 
@@ -1409,9 +1428,9 @@ function PCard({ p, ans, isSmall=false, lang="ar" }) {
           const combined = [why, sensory].filter(Boolean).join(" ");
           return combined ? (
             <div style={{
-              fontSize:10, color:"rgba(240,234,224,0.48)",
-              lineHeight:1.8, marginBottom:8,
-              borderRight:"2px solid rgba(201,169,110,0.15)",
+              fontSize:11, fontWeight:500, color:"rgba(240,234,224,0.72)",
+              lineHeight:1.85, marginBottom:8,
+              borderRight:"2px solid rgba(201,169,110,0.25)",
               paddingRight:8,
             }}>
               {combined}
@@ -1459,12 +1478,13 @@ function PCard({ p, ans, isSmall=false, lang="ar" }) {
 //  WIDGET CONTENT
 // ═══════════════════════════════════════════════════════════════
 function WidgetContent({ onClose, lang: langProp }) {
-  const [step, setStep] = useState("intro");
-  const [qi,   setQi]   = useState(0);
-  const [ans,  setAns]  = useState({});
-  const [res,  setRes]  = useState({ main:[], similar:[] });
-  const [pers, setPers] = useState(null);
-  const [aKey, setAKey] = useState(0);
+  const [step,       setStep]       = useState("intro");
+  const [qi,         setQi]         = useState(0);
+  const [ans,        setAns]        = useState({});
+  const [res,        setRes]        = useState({ main:[], similar:[] });
+  const [pers,       setPers]       = useState(null);
+  const [aKey,       setAKey]       = useState(0);
+  const [loadingIdx, setLoadingIdx] = useState(0);
   const lang = langProp || CONFIG.DEFAULT_LANGUAGE || "ar";
   const t = TRANSLATIONS[lang];
   const questions = buildQS(ans.sizeType, lang);
@@ -1496,7 +1516,16 @@ function WidgetContent({ onClose, lang: langProp }) {
       return;
     }
     setStep("loading");
-    await new Promise(r=>setTimeout(r,650));
+    setLoadingIdx(0);
+    // Cycle through loading messages every 700ms
+    const msgs = TRANSLATIONS[lang]?.loadingMsgs || [];
+    let idx = 0;
+    const interval = setInterval(() => {
+      idx = (idx + 1) % msgs.length;
+      setLoadingIdx(idx);
+    }, 900);
+    await new Promise(r=>setTimeout(r, msgs.length * 900 + 400));
+    clearInterval(interval);
     const results = getResults(na);
     const char = mapCharacter(na.character||"heavy");
     const occ = mapOccasion(na.occasion||"evening");
@@ -1660,14 +1689,49 @@ function WidgetContent({ onClose, lang: langProp }) {
 
       {/* LOADING */}
       {step==="loading" && (
-        <div style={{ textAlign:"center", paddingTop:40,
-          display:"flex", flexDirection:"column", alignItems:"center", gap:14 }}>
-          <div style={{ width:46, height:46,
-            border:"3px solid rgba(201,169,110,0.1)",
-            borderTopColor:T.gold, borderRadius:"50%",
-            animation:"spin .85s linear infinite" }}/>
-          <div style={{ fontSize:14, fontWeight:700, color:T.text }}>{t.loading}</div>
-          <div style={{ fontSize:10, color:T.faded }}>كنبحثو في {PRODUCTS.length} عطر</div>
+        <div style={{ textAlign:"center", paddingTop:50,
+          display:"flex", flexDirection:"column", alignItems:"center", gap:18 }}>
+
+          {/* Spinner مزدوج */}
+          <div style={{ position:"relative", width:60, height:60 }}>
+            <div style={{ position:"absolute", inset:0,
+              border:"2px solid rgba(201,169,110,0.08)",
+              borderTopColor:T.gold, borderRadius:"50%",
+              animation:"spin .9s linear infinite" }}/>
+            <div style={{ position:"absolute", inset:8,
+              border:"2px solid rgba(201,169,110,0.05)",
+              borderBottomColor:"rgba(201,169,110,0.4)", borderRadius:"50%",
+              animation:"spin 1.4s linear infinite reverse" }}/>
+            <div style={{ position:"absolute", inset:0,
+              display:"flex", alignItems:"center", justifyContent:"center",
+              fontSize:18 }}>✦</div>
+          </div>
+
+          {/* رسائل متغيرة */}
+          <div style={{ minHeight:44, display:"flex", flexDirection:"column", alignItems:"center", gap:6 }}>
+            <div style={{
+              fontSize:13, fontWeight:700, color:T.text,
+              animation:"fade .4s ease",
+            }}>
+              <span key={loadingIdx} style={{animation:"fade .4s ease"}}>
+              {(t.loadingMsgs || [])[loadingIdx] || t.loading}
+              </span>
+            </div>
+            {/* Progress dots */}
+            <div style={{ display:"flex", gap:5, marginTop:4 }}>
+              {[0,1,2,3].map(i=>(
+                <div key={i} style={{
+                  width:5, height:5, borderRadius:"50%",
+                  background: i <= loadingIdx ? T.gold : "rgba(201,169,110,0.15)",
+                  transition:"background .3s ease",
+                }}/>
+              ))}
+            </div>
+          </div>
+
+          <div style={{ fontSize:10, color:"rgba(201,169,110,0.35)", marginTop:4 }}>
+            {lang==="fr" ? `Analyse de ${PRODUCTS.length} parfums` : `كنحللو ${PRODUCTS.length} عطر`}
+          </div>
         </div>
       )}
 
@@ -1696,7 +1760,7 @@ function WidgetContent({ onClose, lang: langProp }) {
                   <div style={{ fontSize:15, fontWeight:900, color:"rgba(251,191,36,0.95)", marginBottom:4 }}>
                     {t.giftPersona}
                   </div>
-                  <div style={{ fontSize:10, color:"rgba(240,234,224,0.45)", lineHeight:1.6 }}>
+                  <div style={{ fontSize:11, fontWeight:500, color:"rgba(240,234,224,0.72)", lineHeight:1.8 }}>
                     {t.giftPersonaSub}
                   </div>
                 </div>
@@ -1728,7 +1792,7 @@ function WidgetContent({ onClose, lang: langProp }) {
                   ))}
                 </div>
                 {/* Desc */}
-                <div style={{ fontSize:11, color:"rgba(240,234,224,0.5)", lineHeight:1.75 }}>
+                <div style={{ fontSize:11, fontWeight:500, color:"rgba(240,234,224,0.72)", lineHeight:1.8 }}>
                   {lang==="fr" ? (pers.desc_fr || pers.desc) : pers.desc}
                 </div>
               </div>
@@ -1747,7 +1811,7 @@ function WidgetContent({ onClose, lang: langProp }) {
             <div style={{ marginBottom:16 }}>
               <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:10 }}>
                 <div style={{ flex:1, height:1, background:"rgba(255,255,255,0.06)" }}/>
-                <span style={{ fontSize:11, color:T.muted, fontWeight:700, whiteSpace:"nowrap" }}>
+                <span style={{ fontSize:11, color:"rgba(201,169,110,0.75)", fontWeight:700, whiteSpace:"nowrap" }}>
                   {t.similar}
                 </span>
                 <div style={{ flex:1, height:1, background:"rgba(255,255,255,0.06)" }}/>
