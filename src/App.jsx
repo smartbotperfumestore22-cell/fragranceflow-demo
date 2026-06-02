@@ -280,7 +280,7 @@ const QS_FR = [
     opts:[
       {v:"daily",   l:"Travail / Quotidien", i:"🏢", d:"Léger et agréable toute la journée",  ic:"#1A3A5F", bg:"#1a2a4f"},
       {v:"evening", l:"Soirées",             i:"🎉", d:"Présence forte inoubliable",           ic:"#4A1A6B", bg:"#3a1a5f"},
-      {v:"dates",   l:"Rendez-vous",         i:"❤️", d:"Séduisant et distinctif",              ic:"#6B1A1A", bg:"#5f1a1a"},
+      {v:"dates",   l:"Soirées intimes",         i:"❤️", d:"Séduisant et distinctif",              ic:"#6B1A1A", bg:"#5f1a1a"},
       {v:"travel",  l:"Voyages / Sorties",   i:"✈️", d:"Frais et adapté à toutes les ambiances",ic:"#1A5F3A", bg:"#1a4f2a"},
       {v:"allday",  l:"Tout",                i:"🎁", d:"Polyvalent",                           ic:"#5F4A1E", bg:"#4f3a1a"},
     ] },
@@ -463,14 +463,14 @@ const OCCASION_CONTEXT = {
   ar: {
     daily:   "مثالي للاستعمال اليومي",
     evening: "مثالي للسهرات والمناسبات",
-    dates:   "مثالي للمواعيد والجاذبية",
+    dates:   "مثالي للأمسيات الخاصة والجاذبية",
     travel:  "مثالي للسفر وكل الأجواء",
     allday:  "مناسب لكل المناسبات",
   },
   fr: {
     daily:   "idéal pour le quotidien",
     evening: "idéal pour les soirées",
-    dates:   "idéal pour les rendez-vous",
+    dates:   "idéal pour les soirées intimes",
     travel:  "idéal pour les voyages",
     allday:  "adapté à toutes les occasions",
   },
@@ -1069,7 +1069,7 @@ const QS_BASE = [
     opts:[
       {v:"daily",   l:"الخدمة / يومي",   i:"🏢", d:"خفيف ومريح طول اليوم",    ic:"#1A3A5F", bg:"#1a2a4f"},
       {v:"evening", l:"السهرات",          i:"🎉", d:"حضور قوي لا يُنسى",        ic:"#4A1A6B", bg:"#3a1a5f"},
-      {v:"dates",   l:"المواعيد",         i:"❤️", d:"جذاب ومميز",               ic:"#6B1A1A", bg:"#5f1a1a"},
+      {v:"dates",   l:"الأمسيات الخاصة",         i:"❤️", d:"جذاب ومميز",               ic:"#6B1A1A", bg:"#5f1a1a"},
       {v:"travel",  l:"السفر والخروج",    i:"✈️", d:"منعش ومناسب لكل الأجواء",  ic:"#1A5F3A", bg:"#1a4f2a"},
       {v:"allday",  l:"كلشي",             i:"🎁", d:"متعدد الاستخدامات",        ic:"#5F4A1E", bg:"#4f3a1a"},
     ] },
@@ -1173,16 +1173,35 @@ function getSlotConfig(lang) {
 }
 
 // Context badge per occasion
-function getOccasionBadge(occasion, lang) {
+function getOccasionBadge(productOccasion, lang, userOccasion) {
   const isAr = lang !== "fr";
+
+  // إلا العطر يناسب مناسبة الزبون بالضبط — يبان badge مخصص
+  if (userOccasion === "dates" && (productOccasion === "evening" || productOccasion === "dates")) {
+    return isAr ? "❤️ مثالي للأمسيات الخاصة والرومانسية" : "❤️ Parfait pour les soirées intimes";
+  }
+  if (userOccasion === "dates" && productOccasion === "daily") {
+    return isAr ? "💫 يناسب الأمسيات الخاصة العادية أيضاً" : "💫 Convient aussi pour les soirées intimes";
+  }
+  if (userOccasion === "evening" && productOccasion === "evening") {
+    return isAr ? "🌙 مثالي للسهرات والمناسبات" : "🌙 Idéal pour les soirées";
+  }
+  if (userOccasion === "evening" && productOccasion === "daily") {
+    return isAr ? "💫 يمكن استعماله في السهرات الخاصة" : "💫 Utilisable en soirée également";
+  }
+  if (userOccasion === "travel") {
+    return isAr ? "✈️ مثالي للسفر وكل الأجواء" : "✈️ Idéal pour les voyages";
+  }
+
+  // Badge حسب مناسبة العطر الحقيقية
   const map = {
-    daily:   isAr ? "💼 مثالي للعمل والاستعمال اليومي"   : "💼 Idéal pour le quotidien",
-    evening: isAr ? "🌙 مثالي للسهرات والمناسبات"        : "🌙 Idéal pour les soirées",
-    dates:   isAr ? "❤️ مثالي للمواعيد والجاذبية"        : "❤️ Parfait pour les rendez-vous",
-    travel:  isAr ? "✈️ مثالي للسفر وكل الأجواء"         : "✈️ Idéal pour les voyages",
-    allday:  isAr ? "✨ مناسب لكل المناسبات"              : "✨ Adapté à toutes occasions",
+    daily:   isAr ? "💼 مثالي للاستعمال اليومي"       : "💼 Idéal pour le quotidien",
+    evening: isAr ? "🌙 مثالي للسهرات والمناسبات"     : "🌙 Idéal pour les soirées",
+    dates:   isAr ? "❤️ مثالي للأمسيات الخاصة"               : "❤️ Idéal pour les soirées intimes",
+    travel:  isAr ? "✈️ مثالي للسفر"                  : "✈️ Idéal pour les voyages",
+    allday:  isAr ? "✨ مناسب لكل المناسبات"           : "✨ Adapté à toutes occasions",
   };
-  return map[occasion] || (isAr ? "✨ مناسب لذوقك" : "✨ Adapté à votre goût");
+  return map[productOccasion] || (isAr ? "✨ مناسب لذوقك" : "✨ Adapté à votre goût");
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -1417,7 +1436,7 @@ function PCard({ p, ans, isSmall=false, lang="ar" }) {
         {/* Occasion badge — من خصائص العطر نفسه */}
         {p.occasion && (
           <div style={{ fontSize:10, color:"rgba(201,169,110,0.65)", fontWeight:700, marginBottom:8 }}>
-            {getOccasionBadge((p.occasion||[])[0] || "daily", lang)}
+            {getOccasionBadge((p.occasion||[])[0] || "daily", lang, ans?.occasion)}
           </div>
         )}
 
