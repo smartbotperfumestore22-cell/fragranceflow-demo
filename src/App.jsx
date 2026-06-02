@@ -875,20 +875,20 @@ function getResults(ans) {
 // ═══════════════════════════════════════════════════════════════
 const PERSONAS = {
   "heavy-evening": {
-    ar:"الملكي الفاخر", fr:"Le Royal Luxueux", icon:"🕯️",
-    tags:{ ar:["عميق","سهرات","فاخر"],   fr:["Intense","Soirée","Luxe"] },
+    ar:"الملكي الفاخر", fr:"Le Royal Somptueux", icon:"🕯️",
+    tags:{ ar:["عميق","سهرات","فاخر"],   fr:["Profond","Soirée","Luxe"] },
     desc:"ذوقك يميل للعطور العميقة الراقية اللي تجمع بين الخشب الدافئ ولمسة مسكية ثقيلة — شخصية واثقة وتهتم بالتفاصيل.",
     desc_fr:"Votre goût penche vers les fragrances profondes et luxueuses qui mêlent bois chauds et muscs intenses.",
   },
   "heavy-daily": {
     ar:"الجريء الواثق", fr:"L'Audacieux Confiant", icon:"🕯️",
-    tags:{ ar:["عميق","يومي","جريء"],    fr:["Intense","Quotidien","Audacieux"] },
+    tags:{ ar:["عميق","يومي","جريء"],    fr:["Profond","Quotidien","Audacieux"] },
     desc:"تحب الرائحة القوية حتى في يومك العادي — شخصية تترك أثراً أينما كنت ولا تمر مرور الكرام.",
     desc_fr:"Vous aimez les parfums forts même au quotidien — une personnalité qui laisse une impression durable.",
   },
   "fresh-daily": {
     ar:"المنعش الحيوي", fr:"Le Frais Dynamique", icon:"🌊",
-    tags:{ ar:["منعش","يومي","نظيف"],    fr:["Frais","Quotidien","Propre"] },
+    tags:{ ar:["منعش","يومي","نظيف"],    fr:["Frais","Quotidien","Pur"] },
     desc:"ذوقك يميل للعطور المنعشة النظيفة اللي تجمع بين الحمضيات والمسك الأبيض — شخصية نشيطة وأنيقة.",
     desc_fr:"Votre goût va vers les fragrances fraîches et propres qui mêlent agrumes et muscs blancs — énergie et élégance.",
   },
@@ -905,7 +905,7 @@ const PERSONAS = {
     desc_fr:"Votre goût penche vers les floraux raffinés qui mêlent fleurs douces et touches musquées boisées.",
   },
   "floral-evening": {
-    ar:"الحالم الرومانسي", fr:"Le Romantique Rêveur", icon:"🌺",
+    ar:"الحالم الرومانسي", fr:"Le Rêveur Romantique", icon:"🌺",
     tags:{ ar:["زهري","سهرات","فاخر"],   fr:["Floral","Soirée","Luxe"] },
     desc:"تختار الزهري الفاخر للسهرات — حضور قوي لا يُقاوم يجمع بين الزهور وعمق المسك والعود.",
     desc_fr:"Vous choisissez le floral luxueux pour les soirées — une présence irrésistible mêlant fleurs et profondeur.",
@@ -917,7 +917,7 @@ const PERSONAS = {
     desc_fr:"Votre goût penche vers les boisés chauds mêlant cèdre et santal — personnalité assurée et audacieuse.",
   },
   "woody-evening": {
-    ar:"الملكي الفاخر", fr:"Le Royal Luxueux", icon:"🌲",
+    ar:"الملكي الفاخر", fr:"Le Royal Somptueux", icon:"🌲",
     tags:{ ar:["خشبي","سهرات","فاخر"],  fr:["Boisé","Soirée","Luxe"] },
     desc:"تختار الخشبي العميق للسهرات — عطور تجمع بين الأرز والعود والعنبر في حضور ملكي.",
     desc_fr:"Vous choisissez le boisé profond pour les soirées — oud, cèdre et ambre dans une présence royale.",
@@ -1449,8 +1449,12 @@ function PCard({ p, ans, isSmall=false, lang="ar" }) {
             <div style={{
               fontSize:11, fontWeight:500, color:"rgba(240,234,224,0.72)",
               lineHeight:1.85, marginBottom:8,
-              borderRight:"2px solid rgba(201,169,110,0.25)",
-              paddingRight:8,
+              borderRight: lang==="fr" ? "none" : "2px solid rgba(201,169,110,0.25)",
+              borderLeft:  lang==="fr" ? "2px solid rgba(201,169,110,0.25)" : "none",
+              paddingRight: lang==="fr" ? 0 : 8,
+              paddingLeft:  lang==="fr" ? 8 : 0,
+              direction: lang==="fr" ? "ltr" : "rtl",
+              textAlign: lang==="fr" ? "left" : "right",
             }}>
               {combined}
             </div>
