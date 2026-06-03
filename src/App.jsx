@@ -306,6 +306,7 @@ const QS_FR = [
       {v:"confident", l:"Force et confiance",               i:"💪", d:"Personnalité forte et assurée", ic:"#1A3A1A", bg:"#1a4a1a"},
       {v:"fresh_imp", l:"Fraîcheur et propreté",            i:"🌊", d:"Léger et frais en permanence",  ic:"#0A3A5F", bg:"#0a2a4f"},
       {v:"longlast",  l:"Une trace qui persiste",           i:"🕯️", d:"Sillage fort et mémorable",     ic:"#3A1A0A", bg:"#4a2a0a"},
+      {v:"luxury",    l:"Luxe et prestige",                 i:"👑", d:"Présence royale et authentique",ic:"#5F3A00", bg:"#6b4500"},
     ] },
   { id:"longevity", q:"Quelle intensité souhaitez-vous ?", sub:"La puissance et la durée",
     opts:[
@@ -429,6 +430,7 @@ const IMPRESSION_FEELINGS = {
     confident:  "يمنحك قوة وثقة في كل خطوة",
     fresh_imp:  "يمنحك إحساساً بالنظافة والانتعاش طول اليوم",
     longlast:   "يبقى معك ساعات طويلة ويترك أثراً بعد رحيلك",
+    luxury:     "يمنحك حضوراً ملكياً فاخراً يعكس الثراء والأصالة",
   },
   fr: {
     firstlook:  "mémorable dès la première rencontre",
@@ -437,6 +439,7 @@ const IMPRESSION_FEELINGS = {
     confident:  "vous donne force et assurance à chaque pas",
     fresh_imp:  "une sensation de fraîcheur et de propreté toute la journée",
     longlast:   "persiste des heures et laisse une trace après votre départ",
+    luxury:     "vous confère une présence royale et luxueuse qui reflète raffinement et authenticité",
   },
 };
 
@@ -619,6 +622,16 @@ const SENSORY_MATRIX = {
       "ينقلك لشواطئ هادئة وأجواء مفتوحة منعشة،",
       "ويترك أثراً أكوائياً نظيفاً ومنعشاً طوال اليوم.",
     ],
+    "Saffron": [
+      "فخامة الزعفران الذهبي تفتح الحواس بقوة وأصالة...",
+      "تمنحك طابعاً شرقياً ملكياً لا يخطئه أحد،",
+      "وتترك بصمة ذهبية فاخرة في ذاكرة كل من حولك.",
+    ],
+    "Incense": [
+      "روحانية البخور تحيط بك بعمق وأصالة فريدة...",
+      "تنقلك لأجواء الفخامة الشرقية الراقية،",
+      "وتترك أثراً روحياً عميقاً يبقى طويلاً بعد رحيلك.",
+    ],
   },
   fr: {
     Musk: [
@@ -730,7 +743,7 @@ const GIFT_BRANDS = ["KILIAN","ARMANI","LOUIS VUITTON","DIOR","CHANEL","YSL","GU
 
 // Map new character values to old ones for compatibility
 function mapCharacter(char) {
-  const map = { woody:"heavy", oriental:"heavy", clean:"fresh" };
+  const map = { woody:"heavy", oriental:"heavy", clean:"fresh", luxury:"heavy" };
   return map[char] || char;
 }
 
@@ -946,6 +959,18 @@ const PERSONAS = {
     desc:"تختار المسكي الراقي للسهرات — عطور ناعمة وعميقة في نفس الوقت.",
     desc_fr:"Le musqué raffiné pour les soirées — doux et profond à la fois.",
   },
+  "luxury-daily": {
+    ar:"الثري المتميز", fr:"Le Prestige Discret", icon:"👑",
+    tags:{ ar:["فاخر","يومي","ثري"],    fr:["Luxueux","Quotidien","Prestige"] },
+    desc:"ذوقك يميل للعطور الفاخرة الأصيلة اللي تجمع بين العود والجلد والزعفران — شخصية ثرية لا تمر مرور الكرام.",
+    desc_fr:"Votre goût penche vers les fragrances luxueuses alliant oud, cuir et safran — une personnalité d'exception.",
+  },
+  "luxury-evening": {
+    ar:"الملك الفاخر", fr:"Le Royal Somptueux", icon:"👑",
+    tags:{ ar:["فاخر","سهرات","ملكي"],  fr:["Luxueux","Soirée","Royal"] },
+    desc:"تختار الفاخر الملكي للسهرات — عطور العود والبخور والزعفران في حضور لا يُنسى.",
+    desc_fr:"Le luxe royal pour les soirées — oud, encens et safran dans une présence inoubliable.",
+  },
 };
 
 // ═══════════════════════════════════════════════════════════════
@@ -1040,6 +1065,11 @@ const ICONS = {
       <circle cx="12" cy="14" r="2"/>
     </svg>
   ),
+  luxury: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
+    </svg>
+  ),
 };
 
 const ICON_MAP = {
@@ -1052,6 +1082,7 @@ const ICON_MAP = {
   firstlook:"self", attractive:"evening", elegant:"self",
   confident:"daily", fresh_imp:"fresh", longlast:"heavy",
   light:"fresh", medium:"daily", strong:"heavy",
+
   decant:"decant", full:"full",
 };
 
@@ -1101,6 +1132,7 @@ const QS_BASE = [
       {v:"confident", l:"قوة وثقة",                  i:"💪", d:"شخصية قوية وواثقة",         ic:"#1A3A1A", bg:"#1a4a1a"},
       {v:"fresh_imp", l:"إحساس بالنظافة والانتعاش", i:"🌊", d:"خفيف ومنعش دائماً",         ic:"#0A3A5F", bg:"#0a2a4f"},
       {v:"longlast",  l:"أثر يبقى بعد ما تمشي",     i:"🕯️", d:"sillage قوي وذاكرة",        ic:"#3A1A0A", bg:"#4a2a0a"},
+      {v:"luxury",    l:"فخامة وثراء",               i:"👑", d:"حضور ملكي وأصيل",            ic:"#5F3A00", bg:"#6b4500"},
     ] },
 
   // Q6 — الثبات
@@ -1383,9 +1415,13 @@ function PCard({ p, ans, isSmall=false, lang="ar" }) {
         <div style={{ padding:"13px 13px 10px 10px", flex:1 }}>
           {/* Slot Medal + Why */}
           {slotCfg && (
-            <div style={{ marginBottom:6, display:"flex", alignItems:"center", gap:6 }}>
+            <div style={{ marginBottom:6, display:"flex", alignItems:"center", gap:6,
+              direction:"ltr", justifyContent:"flex-start" }}>
               <span style={{ fontSize:16 }}>{slotCfg.medal}</span>
-              <span style={{ fontSize:10, color:"rgba(201,169,110,0.6)", fontWeight:700 }}>
+              <span style={{ fontSize:10, color:"rgba(201,169,110,0.6)", fontWeight:700,
+                direction: lang==="fr" ? "ltr" : "rtl",
+                display:"block",
+              }}>
                 {slotCfg.why}
               </span>
             </div>
