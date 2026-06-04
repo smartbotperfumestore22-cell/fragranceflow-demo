@@ -7,109 +7,831 @@ const FF_LOGO = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc
 //  PRODUCTS DATABASE
 // ═══════════════════════════════════════════════════════════════
 const PRODUCTS = [
-  { id:"d1", name:"9PM AFNAN", brand:"AFNAN", size:"10 ML", price:60,
-    sizeType:"decant", concentration:"EDP",
-    gender:["men"], season:["winter","fall"], character:["heavy"], occasion:["evening"],
-    image:"https://twinfragrance.shop/cdn/shop/files/IMG-5236.png?v=1771156904&width=400",
-    url:"https://twinfragrance.shop/products/9pm-afnan-10-ml",
-    topSeller:true, onSale:false, boost:false,
-    notes:{ top:["Bergamot","Cardamom","Apple"], middle:["Lavender","Cinnamon","Violet"], base:["Vanilla","Musk","Amber","Sandalwood"] }
-  },
-  { id:"d2", name:"9PM ELEXIR", brand:"AFNAN", size:"10 ML", price:70,
-    sizeType:"decant", concentration:"EDP",
-    gender:["men"], season:["winter","fall"], character:["heavy"], occasion:["evening"],
-    image:"https://twinfragrance.shop/cdn/shop/files/IMG-7844.jpg?v=1760526374&width=400",
-    url:"https://twinfragrance.shop/products/9pm-elexir",
+  { id:"v2", name:"CK One", brand:"Calvin Klein", size:"100ml / 200ml", price:350.0,
+    sizeType:"full", concentration:"EDT",
+    gender:["unisex"], season:["summer", "spring"], character:["fresh", "clean"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2020/05/ck-one-parfum-1-450x675.jpg", url:"https://riha.ma/product/ck-one-calvin-klein/",
     topSeller:false, onSale:false, boost:false,
-    notes:{ top:["Mandarin","Grapefruit","Black Pepper"], middle:["Cinnamon","Nutmeg","Tobacco"], base:["Amber","Musk","Cedarwood","Vanilla"] }
+    notes:{ top:["Lemon", "Green Notes", "Bergamot", "Pineapple", "Mandarin Orange", "Cardamom", "Papaya"], middle:["Lily-of-the-Valley", "Jasmine", "Violet", "Nutmeg", "Rose", "Orris Root", "Freesia"], base:["Green Accord", "Musk", "Cedar", "Sandalwood", "Oakmoss", "Amber"] }
   },
-  { id:"d3", name:"9PM REBEL", brand:"AFNAN", size:"10 ML", price:70,
-    sizeType:"decant", concentration:"EDP",
-    gender:["men"], season:["winter","fall"], character:["heavy"], occasion:["evening"],
-    image:"https://twinfragrance.shop/cdn/shop/files/A318CCDA-8923-4F59-9220-C9C2F62ED55C.png?v=1759527599&width=400",
-    url:"https://twinfragrance.shop/products/9pm-rebel-10ml",
+  { id:"v3", name:"Oud Vanille", brand:"Franck Olivier", size:"100ml", price:350.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["unisex"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2022/01/20220722_194201-scaled-450x675.jpg", url:"https://riha.ma/product/oud-vanille-franck-olivier-franck-olivier/",
     topSeller:false, onSale:false, boost:false,
-    notes:{ top:["Rum","Black Pepper","Elemi"], middle:["Tobacco","Cinnamon","Rose"], base:["Oud","Musk","Patchouli","Vanilla"] }
+    notes:{ top:["Agarwood", "Caramel", "Orange Blossom"], middle:["Vanilla", "Rose", "Incense"], base:["Sandalwood", "Amber", "Musk"] }
   },
-  { id:"d4", name:"9PM NIGHT OUT", brand:"AFNAN", size:"10 ML", price:80,
-    sizeType:"decant", concentration:"EDP",
-    gender:["men"], season:["winter","fall"], character:["heavy"], occasion:["evening"],
-    image:"https://twinfragrance.shop/cdn/shop/files/IMG-3954.jpg?v=1771107377&width=400",
-    url:"https://twinfragrance.shop/products/9pm-night-out",
-    topSeller:true, onSale:false, boost:true,
-    notes:{ top:["Bergamot","Pink Pepper","Ginger"], middle:["Vetiver","Cinnamon","Jasmine"], base:["Sandalwood","Musk","Amber","Vanilla"] }
-  },
-  { id:"d5", name:"ACQUA DI GIO PROFONDO", brand:"ARMANI", size:"10 ML", price:140,
-    sizeType:"decant", concentration:"EDP",
-    gender:["men"], season:["summer","spring"], character:["fresh"], occasion:["daily"],
-    image:"https://twinfragrance.shop/cdn/shop/files/IMG-7486.jpg?v=1775301501&width=400",
-    url:"https://twinfragrance.shop/products/acqua-di-jio-profondo-edp-10ml",
-    topSeller:true, onSale:false, boost:false,
-    notes:{ top:["Aquatic","Bergamot","Lemon"], middle:["Lavender","Rosemary","Sage"], base:["White Musk","Mineral","Amber","Patchouli"] }
-  },
-  { id:"d6", name:"ARABIAN MUSK", brand:"RASASI", size:"10 ML", price:100, originalPrice:145,
-    sizeType:"decant", concentration:"EDP",
-    gender:["men","women","unisex"], season:["winter","fall"], character:["heavy"], occasion:["daily","evening"],
-    image:"https://twinfragrance.shop/cdn/shop/files/IMG-4214.jpg?v=1771492554&width=400",
-    url:"https://twinfragrance.shop/products/arabian-musk-10-ml",
-    topSeller:false, onSale:true, boost:false,
-    notes:{ top:["Rose","Saffron","Bergamot"], middle:["Oud","Incense","Jasmine"], base:["Amber","Musk","Sandalwood","Vanilla"] }
-  },
-  { id:"d7", name:"ANGEL SHARE KILIAN", brand:"KILIAN", size:"10 ML", price:500,
-    sizeType:"decant", concentration:"EDP",
-    gender:["men","women","unisex"], season:["winter","fall"], character:["heavy"], occasion:["evening"],
-    image:"https://twinfragrance.shop/cdn/shop/files/IMG-1784.jpg?v=1761753356&width=400",
-    url:"https://twinfragrance.shop/products/angel-share-kylian-10-ml",
-    topSeller:true, onSale:false, boost:false,
-    notes:{ top:["Cognac","Rum","Cinnamon"], middle:["Tonka Bean","Praline","Caramel"], base:["Vanilla","Cedarwood","Amber","Sandalwood"] }
-  },
-  { id:"d8", name:"AFTERNOON SWIM LV", brand:"LOUIS VUITTON", size:"10 ML", price:500,
-    sizeType:"decant", concentration:"EDP",
-    gender:["men","unisex"], season:["summer","spring"], character:["fresh"], occasion:["daily"],
-    image:"https://twinfragrance.shop/cdn/shop/files/346725B5-2658-42A4-A3F9-52F7FEB12260.png?v=1759527377&width=400",
-    url:"https://twinfragrance.shop/products/afternoon-swim-lv-10ml",
+  { id:"v4", name:"9PM Rebel", brand:"Afnan", size:"100ml", price:490.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["men"], season:["spring", "summer"], character:["fruity", "fresh"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2025/03/9PM-Rebel-Afnan-Eau-de-Parfum-100ml-prix-maroc-450x675.webp", url:"https://riha.ma/product/9pm-rebel-afnan-eau-de-parfum-100ml/",
     topSeller:false, onSale:false, boost:false,
-    notes:{ top:["Lemon","Bergamot","Sea Notes"], middle:["Iris","Jasmine","Hedione"], base:["White Musk","Sandalwood","Cedarwood"] }
+    notes:{ top:["Green Apple", "Mandarin Orange", "Bergamot"], middle:["Pineapple", "Lavender", "Cedarwood"], base:["Oakmoss", "Caramel", "Amber", "Vanilla"] }
   },
-  { id:"f1", name:"9PM AFNAN", brand:"AFNAN", size:"100 ML", price:320,
-    sizeType:"full", concentration:"EDP",
-    gender:["men"], season:["winter","fall"], character:["heavy"], occasion:["evening"],
-    image:"https://twinfragrance.shop/cdn/shop/files/IMG-5236.png?v=1771156904&width=400",
-    url:"https://twinfragrance.shop/products/9pm-afnan-100-ml",
-    topSeller:true, onSale:false, boost:false,
-    notes:{ top:["Bergamot","Cardamom","Apple"], middle:["Lavender","Cinnamon","Violet"], base:["Vanilla","Musk","Amber","Sandalwood"] }
-  },
-  { id:"f2", name:"9PM ELEXIR", brand:"AFNAN", size:"100 ML", price:380,
-    sizeType:"full", concentration:"EDP",
-    gender:["men"], season:["winter","fall"], character:["heavy"], occasion:["evening"],
-    image:"https://twinfragrance.shop/cdn/shop/files/IMG-7844.jpg?v=1760526374&width=400",
-    url:"https://twinfragrance.shop/products/9pm-elexir-100ml",
+  { id:"v5", name:"Baccarat Rouge 540", brand:"Maison Francis Kurkdjian", size:"3ml / 5ml / 10ml", price:120.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["unisex"], season:["allseasons"], character:["oriental", "floral"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2022/08/20220827_163031-scaled-450x675.jpg", url:"https://riha.ma/product/baccarat-rouge-540-maison-francis-kurkdjian-eau-de-parfum/",
     topSeller:false, onSale:false, boost:false,
-    notes:{ top:["Mandarin","Grapefruit","Black Pepper"], middle:["Cinnamon","Nutmeg","Tobacco"], base:["Amber","Musk","Cedarwood","Vanilla"] }
+    notes:{ top:["Saffron", "Jasmine"], middle:["Amberwood", "Ambergris"], base:["Fir Resin", "Cedar"] }
   },
-  { id:"f3", name:"ACQUA DI GIO PROFONDO", brand:"ARMANI", size:"75 ML", price:850,
+  { id:"v6", name:"Roses Vanille", brand:"Mancera", size:"120ml", price:899.0,
     sizeType:"full", concentration:"EDP",
-    gender:["men"], season:["summer","spring"], character:["fresh"], occasion:["daily"],
-    image:"https://twinfragrance.shop/cdn/shop/files/IMG-7486.jpg?v=1775301501&width=400",
-    url:"https://twinfragrance.shop/products/acqua-di-gio-profondo-75ml",
-    topSeller:true, onSale:false, boost:false,
-    notes:{ top:["Aquatic","Bergamot","Lemon"], middle:["Lavender","Rosemary","Sage"], base:["White Musk","Mineral","Amber","Patchouli"] }
-  },
-  { id:"f4", name:"ARABIAN MUSK", brand:"RASASI", size:"100 ML", price:580, originalPrice:680,
-    sizeType:"full", concentration:"EDP",
-    gender:["men","women","unisex"], season:["winter","fall"], character:["heavy"], occasion:["daily","evening"],
-    image:"https://twinfragrance.shop/cdn/shop/files/IMG-4214.jpg?v=1771492554&width=400",
-    url:"https://twinfragrance.shop/products/arabian-musk-100ml",
-    topSeller:false, onSale:true, boost:false,
-    notes:{ top:["Rose","Saffron","Bergamot"], middle:["Oud","Incense","Jasmine"], base:["Amber","Musk","Sandalwood","Vanilla"] }
-  },
-  { id:"f5", name:"9PM REBEL", brand:"AFNAN", size:"100 ML", price:350,
-    sizeType:"full", concentration:"EDP",
-    gender:["men"], season:["winter","fall"], character:["heavy"], occasion:["evening"],
-    image:"https://twinfragrance.shop/cdn/shop/files/A318CCDA-8923-4F59-9220-C9C2F62ED55C.png?v=1759527599&width=400",
-    url:"https://twinfragrance.shop/products/9pm-rebel-100ml",
+    gender:["women"], season:["winter", "fall"], character:["floral", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2019/10/a2bbfab0-d340-4f61-bdc3-3c43dc012443_11zon-450x675.jpg", url:"https://riha.ma/product/roses-vanille/",
     topSeller:false, onSale:false, boost:false,
-    notes:{ top:["Rum","Black Pepper","Elemi"], middle:["Tobacco","Cinnamon","Rose"], base:["Oud","Musk","Patchouli","Vanilla"] }
+    notes:{ top:["Lemon", "Water Notes"], middle:["Rose", "Sugar"], base:["Vanilla", "Sugar", "White Musk", "Cedar"] }
+  },
+  { id:"v7", name:"Instant Crush", brand:"Mancera", size:"120ml", price:899.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["unisex"], season:["winter", "fall", "spring"], character:["oriental", "heavy"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2020/01/94b07ab1-34d7-43b8-8fb1-473cd52fac90_11zon-450x675.jpg", url:"https://riha.ma/product/parfum-instant-crush-mancera/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Saffron", "Ginger", "Sicilian Mandarin", "Sicilian Bergamot"], middle:["Amberwood", "Moroccan Rose", "Egyptian Jasmine", "Indonesian Patchouli Leaf"], base:["Madagascar Vanilla", "White Musk", "Sandalwood", "Oakmoss"] }
+  },
+  { id:"v8", name:"D\u00e9cantage 9PM Rebel", brand:"Afnan", size:"3ml / 5ml / 10ml", price:45.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["spring", "summer"], character:["fruity", "fresh"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2025/03/Decantage-9PM-Rebel-Afnan-Eau-de-Parfum-prix-maroc-1-450x675.webp", url:"https://riha.ma/product/decantage-9pm-rebel-afnan-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Green Apple", "Mandarin Orange", "Bergamot"], middle:["Pineapple", "Lavender", "Cedarwood"], base:["Oakmoss", "Caramel", "Amber", "Vanilla"] }
+  },
+  { id:"v9", name:"CK IN2U FOR HER", brand:"Calvin Klein", size:"100ml / 150ml", price:350.0,
+    sizeType:"full", concentration:"EDT",
+    gender:["women"], season:["summer", "spring"], character:["fresh", "floral"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2020/05/CK-IN2U-FOR-HER-CALVIN-KLEIN-prix-maroc-2-450x675.webp", url:"https://riha.ma/product/ck-in2u-calvin-klein/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pink Grapefruit", "Sicilian Bergamot", "Red Currant Leaf"], middle:["Cactus", "Orchid"], base:["Vanilla", "Red Cedar", "Amber"] }
+  },
+  { id:"v10", name:"Chance Eau Tendre", brand:"Chanel", size:"3ml / 5ml / 10ml", price:65.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["women"], season:["spring", "summer"], character:["floral", "fresh"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2022/09/20220923_192410-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-chance-eau-tendre-chanel-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Quince", "Grapefruit"], middle:["Rose", "Jasmine"], base:["White Musk"] }
+  },
+  { id:"v11", name:"Khamrah", brand:"Lattafa Perfumes", size:"5ml / 10ml", price:30.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["unisex"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2023/11/20231121_190804-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-khamrah-lattafa-pour-femme-et-homme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Cinnamon", "Nutmeg", "Bergamot"], middle:["Dates", "Praline", "Tuberose", "Mahonial"], base:["Vanilla", "Tonka Bean", "Myrrh", "Benzoin", "Amberwood", "Akigalawood"] }
+  },
+  { id:"v12", name:"LIGHT BLUE", brand:"Dolce & Gabbana", size:"100ml", price:780.0,
+    sizeType:"full", concentration:"EDT",
+    gender:["women"], season:["summer", "spring"], character:["fresh", "clean"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2019/10/66c5a8b4-b141-4be4-a20b-8980d2c5fbc6_11zon-450x675.jpg", url:"https://riha.ma/product/light-blue-dolce-gabbana-pour-femme-prix-maroc/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Sicilian Lemon", "Apple", "Cedar", "Bellflower"], middle:["Bamboo", "Jasmine", "White Rose"], base:["Cedar", "Musk", "Amber"] }
+  },
+  { id:"v13", name:"Libre", brand:"Yves Saint Laurent", size:"50ml / 90ml", price:850.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["fall", "winter", "spring"], character:["floral", "oriental"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2019/10/591463d4-c8aa-42a2-be29-7e3e72dc294f_11zon-450x675.jpg", url:"https://riha.ma/product/libre-eau-de-parfum-yves-saint-laurent-prix-maroc/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Lavender", "Mandarin Orange", "Black Currant", "Petitgrain"], middle:["Lavender", "Orange Blossom", "Jasmine"], base:["Madagascar Vanilla", "Musk", "Cedar", "Ambergris"] }
+  },
+  { id:"v14", name:"S\u00cc PASSIONE", brand:"Giorgio Armani", size:"30ml / 50ml / 100ml", price:550.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["spring", "fall", "summer"], character:["floral", "fruity"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2019/09/SI-PASSIONE-GIORGIO-ARMANI-450x675.jpg", url:"https://riha.ma/product/si-passione-eau-de-parfum-prix-maroc/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pear", "Black Currant", "Pink Pepper", "Grapefruit"], middle:["Rose", "Pineapple", "Heliotrope", "Jasmine"], base:["Vanilla", "Cedar", "Amberwood", "Patchouli"] }
+  },
+  { id:"v15", name:"Coco Mademoiselle", brand:"Chanel", size:"5ml / 10ml", price:80.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["women"], season:["allseasons"], character:["oriental", "floral"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2022/09/20220923_192604-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-coco-mademoiselle-chanel-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Orange", "Mandarin Orange", "Bergamot", "Orange Blossom"], middle:["Turkish Rose", "Jasmine", "Mimosa", "Ylang-Ylang"], base:["Patchouli", "White Musk", "Vanilla", "Vetiver", "Tonka Bean", "Opoponax"] }
+  },
+  { id:"v16", name:"La Belle", brand:"Jean Paul Gaultier", size:"30ml / 50ml / 100ml", price:700.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2021/03/La-Belle-Jean-Paul-Gaultier-eau-de-parfum-prix-maroc-2-450x675.webp", url:"https://riha.ma/product/la-belle-jean-paul-gaultier/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pear", "Bergamot"], middle:["Floral Notes", "Leather"], base:["Vanilla", "Vetiver", "Amber", "Musk"] }
+  },
+  { id:"v17", name:"L'Interdit Rouge", brand:"Givenchy", size:"35ml / 50ml / 80ml", price:680.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2022/07/20220602_221315-scaled-450x675.jpg", url:"https://riha.ma/product/linterdit-givenchy-eau-de-parfum-rouge-pour-femme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Ginger", "Blood Orange"], middle:["Tuberose", "Jasmine", "Pimento Leaf"], base:["Sandlwood", "Patchouli", "Vetiver"] }
+  },
+  { id:"v18", name:"Id\u00f4le", brand:"Lanc\u00f4me", size:"5ml / 10ml", price:70.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["women"], season:["spring", "summer"], character:["floral", "clean"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2023/06/20230530_200243-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-idole-lancome/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pear", "Bergamot", "Pink Pepper"], middle:["Rose", "Jasmine"], base:["White Musk", "Vanilla", "Patchouli", "Cedar"] }
+  },
+  { id:"v19", name:"GOOD GIRL", brand:"Carolina Herrera", size:"30ml / 50ml / 80ml", price:520.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2019/10/CAROLINA-HERRERA-GOOD-GIRL-EAU-DE-PARFUM-POUR-FEMME-450x675.webp", url:"https://riha.ma/product/good-girl-carolina-herrera-prix-maroc/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Almond", "Coffee", "Bergamot", "Lemon"], middle:["Tuberose", "Jasmine Sambac", "Orange Blossom", "Orris", "Bulgarian Rose"], base:["Tonka Bean", "Cacao", "Vanilla", "Praline", "Sandalwood", "Amber", "Musk", "Cashmere Wood", "Patchouli", "Cinnamon", "Cedar"] }
+  },
+  { id:"v20", name:"Lost Cherry", brand:"Tom Ford", size:"3ml / 5ml / 10ml", price:190.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["unisex"], season:["winter", "fall"], character:["heavy", "oriental"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2022/09/20220902_193545-scaled-450x675.jpg", url:"https://riha.ma/product/lost-cherry-tom-ford-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Bitter Almond", "Black Cherry", "Cherry Liqueur"], middle:["Sour Cherry", "Plum", "Turkish Rose", "Jasmine Sambac"], base:["Tonka Bean", "Vanilla", "Cinnamon", "Peru Balsam", "Benzoin", "Sandalwood", "Cloves", "Cedar", "Patchouli", "Vetiver"] }
+  },
+  { id:"v21", name:"Yara", brand:"Lattafa Perfumes", size:"100ml", price:250.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["spring", "summer"], character:["floral", "clean"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2023/02/20230216_180056-scaled-450x675.jpg", url:"https://riha.ma/product/yara-lattafa-perfumes-eau-de-parfum-100-ml/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Heliotrope", "Orchid", "Tangerine"], middle:["Gourmand Accord", "Tropical Fruits"], base:["Vanilla", "Musk", "Sandalwood"] }
+  },
+  { id:"v22", name:"Decantage Instant Crush", brand:"Mancera", size:"3ml / 5ml / 10ml", price:50.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["unisex"], season:["winter", "fall", "spring"], character:["oriental", "heavy"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2022/10/23d18360-9054-49fb-a503-6752a8e06ec8_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-instant-crush-mancera-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Saffron", "Ginger", "Sicilian Mandarin", "Sicilian Bergamot"], middle:["Amberwood", "Moroccan Rose", "Egyptian Jasmine", "Indonesian Patchouli Leaf"], base:["Madagascar Vanilla", "White Musk", "Sandalwood", "Oakmoss"] }
+  },
+  { id:"v23", name:"MON PARIS", brand:"Yves Saint Laurent", size:"50ml / 90ml", price:780.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["fall", "spring"], character:["fruity", "floral"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2019/10/56764fa7-7f10-4b35-a963-3fd6b0139ba4_11zon-450x675.jpg", url:"https://riha.ma/product/mon-paris-prix-maroc/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Strawberry", "Raspberry", "Pear", "Calone", "Calabrian Bergamot", "Orange", "Tangerine"], middle:["Datura", "Peony", "Orange Blossom", "Jasmine Sambac", "Chinese Jasmine"], base:["Indonesian Patchouli Leaf", "Patchouli", "White Musk", "Vanila", "Ambroxan", "Moss", "Cedar"] }
+  },
+  { id:"v24", name:"ECHANTILLON LA VIE EST BELLE ELIXIR", brand:"Lanc\u00f4me", size:"Echantillon", price:15.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["women"], season:["winter", "fall"], character:["heavy", "floral"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2025/02/This-Is-Her-Undressed-Zadig-Voltaire-pour-femme-PRIX-MAROC-2-450x675.webp", url:"https://riha.ma/product/echantillon-la-vie-est-belle-elixir-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Liquorice", "Raspberry", "Mandarin Orange"], middle:["Violet", "Rose"], base:["Violet Wood", "Leather", "Resins"] }
+  },
+  { id:"v25", name:"Toscano Leather", brand:"Maison Alhambra", size:"80ml", price:280.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["unisex"], season:["winter", "fall"], character:["heavy", "woody"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2022/09/5-scaled-450x675.jpg", url:"https://riha.ma/product/toscano-leather-de-maison-alhambra-eau-de-parfum-80ml-tom-ford-clone/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Saffron", "Thyme", "Animalic notes"], middle:["Leather", "Raspberry", "Woody Notes", "Jasmine", "Olibanum"], base:["Leather", "Amber", "Woody Notes"] }
+  },
+  { id:"v26", name:"Jardin Exclusif", brand:"Mancera", size:"120ml", price:899.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["unisex"], season:["summer", "spring"], character:["fruity", "fresh"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2020/01/e7c53696-838f-467d-a2ff-12c287963123_11zon-450x675.jpg", url:"https://riha.ma/product/parfum-jardin-exclusif-mancera/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pear", "White Peach", "Caramel", "Lemon", "Black Currant", "Sicilian Orange", "Green Apple"], middle:["Jasmine", "Ambergris", "Moroccan Rose", "Violet"], base:["White Musk", "Madagascar Vanilla", "Sandalwood"] }
+  },
+  { id:"v27", name:"Queen of Seduction", brand:"Antonio Banderas", size:"50ml / 80ml", price:250.0,
+    sizeType:"full", concentration:"EDT",
+    gender:["women"], season:["summer", "spring"], character:["fresh", "aquatic"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2021/02/7665a4b1-afe0-4a91-b05f-0e157ad5bbac_11zon-450x675.jpg", url:"https://riha.ma/product/queen-of-seduction-antonio-banderas/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Watery Notes", "Grapefruit", "Raspberry"], middle:["Peony", "Jasmine", "Iris", "Pink Pepper"], base:["Cedar", "Suede", "Amber"] }
+  },
+  { id:"v28", name:"Id\u00f4le", brand:"Lanc\u00f4me", size:"50ml / 100ml", price:850.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["spring", "summer"], character:["floral", "clean"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2021/03/Idole-Lancome-1-450x675.jpg", url:"https://riha.ma/product/idole-lancome/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pear", "Bergamot", "Pink Pepper"], middle:["Rose", "Jasmine"], base:["White Musk", "Vanilla", "Patchouli", "Cedar"] }
+  },
+  { id:"v29", name:"LOULOU", brand:"Cacharel", size:"50ml", price:500.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["winter", "fall"], character:["heavy", "oriental"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2019/10/LOULOU-CACHAREL-450x675.jpg", url:"https://riha.ma/product/loulou-cacharel-prix-maroc/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Plum", "Chinese Cinnamon wood", "Iris", "Violet", "Anise", "Lily", "Jasmine", "Mimosa", "Cassia"], middle:["Tuberose", "Ylang-Ylang", "Heliotrope", "Orris Root", "Orange Blossom", "Tahitian Tiare Flower"], base:["Incense", "Vanilla", "Benzoin", "Sandalwood", "Musk"] }
+  },
+  { id:"v30", name:"OLYMPEA", brand:"Paco Rabanne", size:"30ml / 50ml / 80ml", price:500.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["fall", "winter", "spring"], character:["oriental", "floral"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2019/10/34115e63-4a31-4e3e-8dae-d50e511ff66b_11zon-450x675.jpg", url:"https://riha.ma/product/paco-rabanne-olympea-eau-de-parfum-pour-femme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Water Jasmine", "Green Mandarin", "Ginger flower"], middle:["Vanilla", "Salt"], base:["Ambergris", "Cashmere Wood", "Sandalwood"] }
+  },
+  { id:"v31", name:"Scandal", brand:"Jean Paul Gaultier", size:"30ml / 50ml", price:580.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["winter", "fall"], character:["heavy", "oriental"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2021/03/Scandal-Jean-Paul-Gaultier-prix-maroc-1-450x675.jpg", url:"https://riha.ma/product/scandal-jean-paul-gaultier-2/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Blood Orange", "Mandarin Orange"], middle:["Honey", "Gardenia", "Orange Blossom", "Jasmine", "Peach"], base:["Beeswax", "Caramel", "Patchouli", "Licorice"] }
+  },
+  { id:"v32", name:"BLACK OPIUM", brand:"Yves Saint Laurent", size:"50ml / 90ml", price:750.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2019/12/0184439e-1aff-465d-b373-bfa9ada18c5a_11zon-450x675.jpg", url:"https://riha.ma/product/black-opium-prix-maroc/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pear", "Pink Pepper", "Orange Blossom"], middle:["Coffee", "Jasmine", "Bitter Almond", "Licorice"], base:["Vanilla", "Patchouli", "Cedar", "Cashmere Wood"] }
+  },
+  { id:"v33", name:"Decantage Libre", brand:"Yves Saint Laurent", size:"3ml / 5ml / 10ml", price:65.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["women"], season:["fall", "winter", "spring"], character:["floral", "oriental"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2023/04/36462adc-4d53-4dab-beba-89dd2dc7dc1c_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-libre-yves-saint-laurent-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Lavender", "Mandarin Orange", "Black Currant", "Petitgrain"], middle:["Lavender", "Orange Blossom", "Jasmine"], base:["Madagascar Vanilla", "Musk", "Cedar", "Ambergris"] }
+  },
+  { id:"v34", name:"Decantage Pegasus Exclusif", brand:"Parfums de Marly", size:"5ml / 10ml", price:150.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["winter", "fall"], character:["heavy", "oriental"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2023/01/4b64c447-b804-42d9-bc06-926af2e7976f_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-pegasus-exclusif-parfums-de-marly/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Cardamom", "Heliotrope", "Pink Pepper", "Bergamot"], middle:["Bitter Almond", "Lavender", "Jasmine", "Geranium"], base:["Vanilla", "Guaiac Wood", "Agarwood", "Sandalwood", "Amber"] }
+  },
+  { id:"v35", name:"Decantage Baccarat Rouge 540 Extrait", brand:"Maison Francis Kurkdjian", size:"5ml / 10ml", price:200.0,
+    sizeType:"decant", concentration:"Extrait",
+    gender:["unisex"], season:["allseasons"], character:["oriental", "heavy"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2023/01/20230124_180607-1-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-baccarat-rouge-540-extrait-de-parfum-maison-francis-kurkdjian/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Bitter Almond", "Saffron"], middle:["Egyptian Jasmine", "Cedar"], base:["Ambergris", "Woody Notes", "Musk"] }
+  },
+  { id:"v36", name:"LIGHT BLUE EAU INTENSE", brand:"Dolce & Gabbana", size:"50ml / 100ml", price:780.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["summer", "spring"], character:["fresh"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2019/10/21a554d1-6b4e-487f-b31f-b869f1f7c31b_11zon-450x675.jpg", url:"https://riha.ma/product/light-blue-eau-intense/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Lemon", "Granny Smith Apple"], middle:["Marigold", "Jasmine"], base:["Musk", "Amberwood"] }
+  },
+  { id:"v37", name:"Decantage S\u00ec Passione", brand:"Giorgio Armani", size:"5ml / 10ml", price:80.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["women"], season:["spring", "fall", "summer"], character:["floral", "fruity"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2023/11/20231113_185956-1-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-si-passione-eau-de-parfum-giorgio-armani/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pear", "Black Currant", "Pink Pepper", "Grapefruit"], middle:["Rose", "Pineapple", "Heliotrope", "Jasmine"], base:["Vanilla", "Cedar", "Amberwood", "Patchouli"] }
+  },
+  { id:"v38", name:"Decantage Signature Authentic", brand:"Montblanc", size:"3ml / 5ml / 10ml", price:55.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["women"], season:["spring", "allseasons"], character:["clean", "floral"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2021/01/37435808-97fd-468e-8d4b-bfaaf4a50162_11zon-450x675.jpg", url:"https://riha.ma/product/signature-montblanc-prix-maroc/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Clementine"], middle:["Magnolia", "Ylang-Ylang", "Peony"], base:["White Musk", "Vanilla", "Benzoin"] }
+  },
+  { id:"v39", name:"Decantage Jardin Exclusif", brand:"Mancera", size:"3ml / 5ml / 10ml", price:55.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["unisex"], season:["summer", "spring"], character:["fruity", "fresh"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2023/03/f14d20a6-97d6-4f67-925d-786bb55d0a53_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-jardin-exclusif-mancera-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pear", "White Peach", "Caramel", "Lemon", "Black Currant", "Sicilian Orange", "Green Apple"], middle:["Jasmine", "Ambergris", "Moroccan Rose", "Violet"], base:["White Musk", "Madagascar Vanilla", "Sandalwood"] }
+  },
+  { id:"v40", name:"Decantage La Belle", brand:"Jean Paul Gaultier", size:"3ml / 5ml / 10ml", price:59.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["women"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2024/09/jean-paul-gaultier-la-belle-450x675.jpg", url:"https://riha.ma/product/decantage-jean-paul-gaultier-la-belle-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pear", "Bergamot"], middle:["Floral Notes", "Leather"], base:["Vanilla", "Vetiver", "Amber", "Musk"] }
+  },
+  { id:"v41", name:"AMEERAT AL ARAB ASDAAF", brand:"Asdaaf", size:"100ml", price:280.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["allseasons"], character:["floral", "oriental"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2023/12/20231215_181146-scaled-450x675.jpg", url:"https://riha.ma/product/ameerat-al-arab-asdaaf-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Citrus", "Bergamot"], middle:["White Musk", "Aloe Vera"], base:["Jasmine", "Woody Notes", "Musk", "Oud"] }
+  },
+  { id:"v42", name:"D\u00e9cantage Hypnotic Poison", brand:"Dior", size:"5ml / 10ml", price:90.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["women"], season:["winter", "fall"], character:["heavy", "oriental"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2023/11/20231113_185203-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-hypnotic-poison-dior-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Coconut", "Plum", "Apricot"], middle:["Brazilian Rosewood", "Jasmine", "Caraway", "Tuberose", "Rose", "Lily-of-the-Valley"], base:["Vanilla", "Almond", "Sandalwood", "Musk"] }
+  },
+  { id:"v43", name:"Decantage French Tobacco", brand:"Ibraheem AlQurashi", size:"3ml / 5ml / 10ml", price:35.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["unisex"], season:["winter", "fall"], character:["heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2024/09/french-tobacco-ibraheem-alqurashi-450x675.jpg", url:"https://riha.ma/product/decantage-french-tobacco-ibraheem-alqurashi/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Citrus", "Incense"], middle:["Tobacco", "Vanilla"], base:["Amber", "Oud", "Musk"] }
+  },
+  { id:"v44", name:"L\u2019INTERDIT \u2013 GIVENCHY", brand:"Givenchy", size:"35ml / 50ml / 80ml / 125ml", price:550.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["fall", "winter"], character:["floral", "heavy"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2019/11/482b8b92-f08a-4467-89be-ae0b0bfa136d_11zon-450x675.jpg", url:"https://riha.ma/product/linterdit-givenchy-eau-de-parfum-prix-maroc/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pear", "Bergamot"], middle:["Tuberose", "Orange Blossom", "Jasmine Sambac"], base:["Patchouli", "Vanilla", "Ambroxan", "Vetiver"] }
+  },
+  { id:"v45", name:"Decantage Narciso Rodriguez for Her", brand:"Narciso Rodriguez", size:"3ml / 5ml / 10ml", price:65.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["women"], season:["fall", "winter", "spring"], character:["woody", "musky"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2023/04/81d45bc5-ee50-48e0-a54f-1786968e7ec0_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-narciso-rodriguez-for-her-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Rose", "Peach"], middle:["Musk", "Amber"], base:["Patchouli", "Sandalwood"] }
+  },
+  { id:"v46", name:"ELLE \u2013 EMPORIO ARMANI", brand:"Giorgio Armani", size:"100ml", price:550.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["fall", "winter", "spring"], character:["oriental", "floral"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2021/01/a0378ccf-08f3-4fe8-a3bc-223d702d763a_11zon-450x675.jpg", url:"https://riha.ma/product/elle-emporio-armani-giorgio-armani/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Lime", "Pear", "Pineapple", "Mandarin Orange", "Bergamot", "Tuberose"], middle:["Heliotrope", "Orris Root", "Jasmine", "Lily-of-the-Valley"], base:["Sandalwood", "Vanilla", "Musk", "Tonka Bean", "Cedar", "Amber"] }
+  },
+  { id:"v47", name:"Decantage Light Blue Eau Intense", brand:"Dolce & Gabbana", size:"3ml / 5ml / 10ml", price:59.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["women"], season:["summer", "spring"], character:["fresh"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2023/04/21a554d1-6b4e-487f-b31f-b869f1f7c31b_11zon-1-450x675.jpg", url:"https://riha.ma/product/decantage-light-blue-eau-intense-dolcegabbana-pour-femme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Lemon", "Granny Smith Apple"], middle:["Marigold", "Jasmine"], base:["Musk", "Amberwood"] }
+  },
+  { id:"v48", name:"Libre Intense Yves Saint Laurent", brand:"Yves Saint Laurent", size:"50ml / 90ml", price:900.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2021/03/Libre-Intense-Yves-Saint-Laurent-1-450x675.jpg", url:"https://riha.ma/product/libre-intense-yves-saint-laurent-prix-maroc/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Lavender", "Mandarin Orange", "Bergamot"], middle:["Lavender", "Tunisian Orange Blossom", "Jasmine Sambac", "Orchid"], base:["Madagascar Vanilla", "Tonka Bean", "Ambergris", "Vetiver"] }
+  },
+  { id:"v49", name:"Decantage Rosendo Mateu N\u00ba 5", brand:"Rosendo Mateu", size:"3ml / 5ml / 10ml", price:69.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["unisex"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2023/03/48da0c72-9db4-47b1-b4fa-a6e5b66d7ea7_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-rosendo-mateu-no-5-olfactive-expressions/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Spices", "Exotic floral notes"], middle:["Carnation", "Lily-of-the-Valley"], base:["Musk", "Vanilla", "Amber"] }
+  },
+  { id:"v50", name:"L\u2019Instant de Guerlain-Guerlain", brand:"Guerlain", size:"100ml", price:899.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["winter", "fall", "spring"], character:["floral", "oriental"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2022/10/7b63fdf7-b0a6-4a4f-9efd-a19e53066601_11zon-450x675.jpg", url:"https://riha.ma/product/linstant-de-guerlain-guerlain-pour-femme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Mandarin Orange", "Red Apple", "Bergamot"], middle:["Magnolia", "Iris", "Ylang-Ylang", "Jasmine"], base:["White Honey", "Vanilla", "Amber", "Benzoin", "Musk"] }
+  },
+  { id:"v51", name:"Decantage Libre Intense", brand:"Yves Saint Laurent", size:"3ml / 5ml / 10ml", price:70.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["women"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2023/04/Libre-Intense-Yves-Saint-Laurent-1-450x675.jpg", url:"https://riha.ma/product/decantage-libre-intense-yves-saint-laurent/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Lavender", "Mandarin Orange", "Bergamot"], middle:["Lavender", "Tunisian Orange Blossom", "Jasmine Sambac", "Orchid"], base:["Madagascar Vanilla", "Tonka Bean", "Ambergris", "Vetiver"] }
+  },
+  { id:"v52", name:"Versace Crystal Noir", brand:"Versace", size:"90ml", price:920.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2019/12/32d0c2fa-68d3-455b-b9f0-252f4469a4ea_11zon-450x675.jpg", url:"https://riha.ma/product/versace-crystal-noir-prix-maroc/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pepper", "Ginger", "Cardamom"], middle:["Coconut", "Gardenia", "Orange Blossom", "Peony"], base:["Sandalwood", "Musk", "Amber"] }
+  },
+  { id:"v53", name:"HERM\u00c8S TWILLY \u2013 HERM\u00c8S", brand:"Herm\u00e8s", size:"50ml / 85ml", price:699.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["spring", "fall", "summer"], character:["fresh", "floral"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2020/12/481be8ff-4537-4fa5-ba6c-fc88df9f64bf_11zon-450x675.jpg", url:"https://riha.ma/product/hermes-twilly-hermes-pour-femme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Ginger", "Bitter Orange", "Bergamot"], middle:["Tuberose", "Orange Blossom", "Jasmine"], base:["Sandalwood", "Vanilla"] }
+  },
+  { id:"v54", name:"D\u00e9cantage J'adore", brand:"Dior", size:"5ml / 10ml", price:90.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["women"], season:["spring", "fall"], character:["floral"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2023/11/20231113_184841-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-jadore-dior-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pear", "Melon", "Magnolia", "Peach", "Mandarin Orange", "Bergamot"], middle:["Jasmine", "Lily-of-the-Valley", "Tuberose", "Freeseia", "Rose", "Orchid", "Plum", "Violet"], base:["Musk", "Vanilla", "Blackberry", "Cedar"] }
+  },
+  { id:"v55", name:"Gaultier Divine", brand:"Jean Paul Gaultier", size:"100ml", price:1050.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["summer", "spring"], character:["sweet", "floral"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2024/05/gaultier-divine-450x675.webp", url:"https://riha.ma/product/gaultier-divine-jean-paul-gaultier-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Calypsone", "Red Berries", "Bergamot"], middle:["Lily", "Ylang-Ylang", "Jasmine"], base:["Beeswax", "Meringue", "Patchouli"] }
+  },
+  { id:"v56", name:"Decantage Hawas Black Rasasi", brand:"Rasasi", size:"3ml / 5ml / 10ml", price:39.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["allseasons"], character:["fresh", "woody"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2024/10/hawas-black-rasasi-450x675.jpg", url:"https://riha.ma/product/decantage-hawas-black-rasasi-pour-homme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pineapple", "Grapefruit", "Bergamot"], middle:["Jasmine", "Patchouli", "Cedarwood"], base:["Oakmoss", "Amber", "Woody Notes"] }
+  },
+  { id:"v57", name:"Gucci Flora Gorgeous Gardenia", brand:"Gucci", size:"100ml", price:1050.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["spring", "summer"], character:["floral", "sweet"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2022/05/5dfa6582-78d1-4ca9-968e-0f04c7be446f_11zon-450x675.jpg", url:"https://riha.ma/product/gucci-flora-gorgeous-gardenia-eau-de-parfum-pour-femme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pear Blossom", "Red Berries", "Italian Mandarin"], middle:["Gardenia", "Frangipani", "Jasmine"], base:["Brown sugar", "Patchouli"] }
+  },
+  { id:"v58", name:"Decantage Burberry Her", brand:"Burberry", size:"3ml / 5ml / 10ml", price:65.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["women"], season:["spring", "summer"], character:["fruity", "floral"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2023/04/e98f0294-f288-406c-8594-555df3fbfa4b_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-burberry-her-eau-de-parfum-pour-femme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Strawberry", "Raspberry", "Blackberry", "Sour Cherry", "Black Currant", "Mandarin Orange", "Lemon"], middle:["Violet", "Jasmine"], base:["Musk", "Vanilla", "Cashmeran", "Woody Notes", "Amber", "Oakmoss", "Patchouli"] }
+  },
+  { id:"v59", name:"Blue Seduction femme", brand:"Antonio Banderas", size:"50ml / 80ml", price:250.0,
+    sizeType:"full", concentration:"EDT",
+    gender:["women"], season:["summer", "spring"], character:["fresh", "fruity"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2021/01/5fc0da9e-5e04-4b52-b883-93d395d3cf9f_11zon-450x675.jpg", url:"https://riha.ma/product/blue-seduction-femme-antonio-banderas/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Melon", "Pear", "Bergamot", "Violet Leaf"], middle:["Gardenia", "Peony", "Jasmine", "Lily-of-the-Valley", "Bulgarian Rose"], base:["Raspberry", "Patchouli", "Musk", "Benzoin"] }
+  },
+  { id:"v60", name:"ESCADA MAGNETISM \u2013 ESCADA", brand:"Escada", size:"75ml", price:550.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["women"], season:["winter", "fall"], character:["sweet", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2021/01/f84ee1b1-2c06-4444-a0bf-f00e9ec4718f_11zon-450x675.jpg", url:"https://riha.ma/product/escada-magnetism-escada-eau-de-parfum-pour-femme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Red Berries", "Black Currant", "Cassia", "Litchi", "Pineapple", "Melon"], middle:["Green Leaves", "Basil", "Almond Blossom", "Iris", "Freeseia", "Heliotrope", "Jasmine", "Magnolia", "Caraway", "Rose", "Lily-of-the-Valley"], base:["Caramel", "Vanilla", "Patchouli", "Benzoin", "Sandalwood", "Musk", "Amber", "Vetiver"] }
+  },
+  { id:"v61", name:"Sculpture Homme Nikos Eau de Toilette 100ML Authentic", brand:"Nikos", size:"100ml", price:390.0,
+    sizeType:"full", concentration:"EDT",
+    gender:["men"], season:["summer", "spring"], character:["fresh"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2020/02/SCULPTURE-HOMME-NIKOS-450x675.jpg", url:"https://riha.ma/product/sculpture-homme-nikos/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Orange Blossom", "Lemon", "Bergamot", "Mandarin Orange"], middle:["Jasmine", "Geranium", "Lily-of-the-Valley", "Rose"], base:["Tonka Bean", "Benzoin", "Amber", "Cedar"] }
+  },
+  { id:"v62", name:"Decantage Dior Homme Intense Eau de Parfum Authentic", brand:"Dior", size:"3ml / 5ml / 10ml", price:55.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["winter", "fall"], character:["heavy", "woody"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2022/09/0adbff35-4f04-419e-810b-42be2d2a94cf_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-dior-homme-intense-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Lavender"], middle:["Iris", "Ambrette", "Pear"], base:["Virginia Cedar", "Vetiver"] }
+  },
+  { id:"v63", name:"Decantage Light Blue Eau Intense Pour Homme Dolce&Gabbana", brand:"Dolce & Gabbana", size:"3ml / 5ml / 10ml", price:55.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["summer"], character:["fresh"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2023/03/2fd3f50e-507a-49a1-abf1-ea88847171e7_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-light-blue-eau-intense-pour-homme-dolcegabbana/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Grapefruit", "Mandarin Orange"], middle:["White Sea Water", "Juniper"], base:["Musk", "Amberwood"] }
+  },
+  { id:"v64", name:"Decantage Bleu de Chanel Eau de Parfum Pour Homme Authentic", brand:"Chanel", size:"3ml / 5ml / 10ml", price:65.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["allseasons"], character:["fresh", "woody"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2022/08/Bleu-de-Chanel-Eau-de-Parfum-pour-homme-450x675.webp", url:"https://riha.ma/product/bleu-de-chanel-eau-de-parfum-pour-homme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Grapefruit", "Lemon", "Mint", "Pink Pepper", "Bergamot", "Aldehydes", "Coriander"], middle:["Ginger", "Nutmeg", "Jasmine", "Melon"], base:["Incense", "Amber", "Cedar", "Sandalwood", "Patchouli", "Labdanum", "Amberwood"] }
+  },
+  { id:"v65", name:"Decantage Eros Versace eau de toilette Pour Homme Authentic", brand:"Versace", size:"3ml / 5ml / 10ml", price:45.0,
+    sizeType:"decant", concentration:"EDT",
+    gender:["men"], season:["summer", "spring"], character:["oriental", "fresh"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2022/09/2ad1b836-f2a2-4035-8a5c-1c0fbe340312_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-eros-versace-eau-de-toilette/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Mint", "Green Apple", "Lemon"], middle:["Tonka Bean", "Geranium", "Ambroxan"], base:["Madagascar Vanilla", "Vetiver", "Oakmoss", "Virginian Cedar", "Atlas Cedar"] }
+  },
+  { id:"v66", name:"Decantage Le Male Le Parfum Jean Paul Gaultier", brand:"Jean Paul Gaultier", size:"3ml / 5ml / 10ml", price:55.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2023/02/20230203_010931-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-le-male-le-parfum-jean-paul-gaultier/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Cardamom"], middle:["Lavender", "Iris"], base:["Vanilla", "Oriental Notes", "Woody Notes"] }
+  },
+  { id:"v67", name:"Decantage Emporio Armani Stronger With You Intensely Eau de Parfum", brand:"Emporio Armani", size:"3ml / 5ml / 10ml", price:55.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2023/03/df90efc4-2070-48fb-bc27-6f2668196732_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-emporio-armani-stronger-with-you-intensely-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pink Pepper", "Juniper", "Violet"], middle:["Toffee", "Cinnamon", "Lavender", "Sage"], base:["Vanilla", "Tonka Bean", "Amber", "Suede"] }
+  },
+  { id:"v68", name:"Decantage Y Eau de Parfum Yves Saint Laurent Pour Homme Authentic", brand:"Yves Saint Laurent", size:"3ml / 5ml / 10ml", price:55.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["allseasons"], character:["fresh", "woody"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2023/02/bccbd1c0-81f5-41c7-827a-462108fe21a5_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-y-eau-de-parfum-yves-saint-laurent/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Apple", "Ginger", "Bergamot"], middle:["Sage", "Juniper Berries", "Geranium"], base:["Amberwood", "Tonka Bean", "Cedar", "Vetiver", "Olibanum"] }
+  },
+  { id:"v69", name:"Y Eau de Parfum Yves Saint Laurent Pour Homme Authentic", brand:"Yves Saint Laurent", size:"60ml / 100ml", price:700.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["men"], season:["allseasons"], character:["fresh", "woody"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2019/09/aa1c244e-cf5d-4fd3-8b41-460d3098fc53_11zon-450x675.jpg", url:"https://riha.ma/product/y-eau-de-parfum-au-maroc/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Apple", "Ginger", "Bergamot"], middle:["Sage", "Juniper Berries", "Geranium"], base:["Amberwood", "Tonka Bean", "Cedar", "Vetiver", "Olibanum"] }
+  },
+  { id:"v70", name:"Decantage Acqua di Gi\u00f2 Profondo Giorgio Armani", brand:"Giorgio Armani", size:"3ml / 5ml / 10ml", price:55.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["summer", "spring"], character:["fresh", "aquatic"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2023/04/08f4baa9-4ca4-418c-88df-6e3e858e17a1_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-acqua-di-gio-profondo-giorgio-armani/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Sea Notes", "Aquozone", "Bergamot", "Green Mandarin"], middle:["Rosemary", "Lavender", "Cypress", "Mastic or Lentisque"], base:["Mineral notes", "Musk", "Patchouli", "Amber"] }
+  },
+  { id:"v71", name:"Decantage The One for Men Dolce&Gabbana eau de parfum", brand:"Dolce & Gabbana", size:"5ml / 10ml", price:70.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2022/11/c1a8d8f4-b094-4b0a-9db4-f245df3c86dd_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-the-one-for-men-dolcegabbana-eau-de-parfum-pour-homme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Grapefruit", "Coriander", "Basil"], middle:["Ginger", "Cardamom", "Orange Blossom"], base:["Tobacco", "Amber", "Cedar"] }
+  },
+  { id:"v72", name:"Versace Eros Eau de parfum pour homme 100ml,200ml", brand:"Versace", size:"100ml / 200ml", price:850.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["men"], season:["fall", "winter", "spring"], character:["oriental", "woody"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2021/02/fda86709-e7de-46c2-adc6-77f81505abb0_11zon-1-450x675.jpg", url:"https://riha.ma/product/versace-eros-eau-de-parfum-pour-homme-100ml/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Mint", "Candy Apple", "Lemon", "Mandarin Orange"], middle:["Ambroxan", "Geranium", "Clary Sage"], base:["Vanilla", "Leather", "Sandalwood", "Cedar", "Bitter Orange", "Patchouli"] }
+  },
+  { id:"v73", name:"Decantage Allure Homme Sport EAU EXTRAIME Chanel Pour Homme Authentic", brand:"Chanel", size:"3ml / 5ml / 10ml", price:65.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["fall", "winter", "spring"], character:["fresh", "woody"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2022/08/20220827_161542-scaled-450x675.jpg", url:"https://riha.ma/product/allure-homme-sport-chanel-eau-de-toilette-pour-homme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Mandarin Orange", "Mint", "Cypress", "Sage"], middle:["Pepper"], base:["Tonka Bean", "Musk", "Sandalwood", "Cedar"] }
+  },
+  { id:"v74", name:"Decantage Le Male Elixir Jean Paul Gaultier", brand:"Jean Paul Gaultier", size:"3ml / 5ml / 10ml", price:55.0,
+    sizeType:"decant", concentration:"Parfum",
+    gender:["men"], season:["winter", "fall"], character:["sweet", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2023/10/20231005_105249-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-le-male-elixir-jean-paul-gaultier/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Lavender", "Mint"], middle:["Vanilla", "Benzoin"], base:["Honey", "Tonka Bean", "Tobacco"] }
+  },
+  { id:"v75", name:"Decantage Cool Water Davidoff Eau de toilette", brand:"Davidoff", size:"5ml / 10ml", price:45.0,
+    sizeType:"decant", concentration:"EDT",
+    gender:["men"], season:["summer", "spring"], character:["fresh", "clean"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2022/12/20221221_180446-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-cool-water-davidoff-eau-de-toilette/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Sea water", "Lavender", "Mint", "Green Notes", "Rosemary", "Calone", "Coriander"], middle:["Sandalwood", "Jasmine", "Geranium", "Neroli"], base:["Musk", "Tobacco", "Oakmoss", "Cedar", "Ambergris"] }
+  },
+  { id:"v76", name:"Club de Nuit Intense Man \u2013 Armaf", brand:"Armaf", size:"100ml", price:550.0,
+    sizeType:"full", concentration:"EDT",
+    gender:["men"], season:["spring", "summer", "fall"], character:["woody", "fresh"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2021/11/club-de-nuit-intense-parfum-450x675.jpg", url:"https://riha.ma/product/club-de-nuit-intense-man-armaf/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Lemon", "Pineapple", "Bergamot", "Black Currant", "Apple"], middle:["Birch", "Jasmine", "Rose"], base:["Ambergris", "Musk", "Patchouli", "Vanilla"] }
+  },
+  { id:"v77", name:"Decantage Le Beau Jean Paul Gaultier eau de parfum", brand:"Jean Paul Gaultier", size:"3ml / 5ml / 10ml", price:55.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["summer", "spring"], character:["woody", "oriental"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2023/03/20230308_182657-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-le-beau-jean-paul-gaultier-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pineapple", "Iris", "Cypress", "Ginger"], middle:["Coconut", "Woody Notes"], base:["Tonka Bean", "Sandalwood", "Amber", "Ambergris"] }
+  },
+  { id:"v78", name:"Decantage Sauvage EAU DE TOILETTE Dior pour homme", brand:"Dior", size:"3ml / 5ml / 10ml", price:55.0,
+    sizeType:"decant", concentration:"EDT",
+    gender:["men"], season:["allseasons"], character:["fresh", "woody"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2022/08/18a1eddd-dc8e-4de7-828f-9cd814c8c5f7_11zon-450x675.jpg", url:"https://riha.ma/product/sauvage-dior-pour-homme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Calabrian Bergamot", "Pepper"], middle:["Sichuan Pepper", "Lavender", "Pink Pepper", "Vetiver", "Patchouli", "Geranium", "Elemi"], base:["Ambroxan", "Cedar", "Labdanum"] }
+  },
+  { id:"v79", name:"Decantage Tom Ford Ombre Leather eau de parfum", brand:"Tom Ford", size:"3ml / 5ml / 10ml", price:69.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["unisex"], season:["winter", "fall"], character:["heavy", "leather"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2022/09/20220923_191556-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-tom-ford-ombre-leather-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Cardamom"], middle:["Leather", "Jasmine Sambac"], base:["Amber", "Moss", "Patchouli"] }
+  },
+  { id:"v80", name:"Decantage Ultra Male Jean Paul Gaultier eau de toilette intense", brand:"Jean Paul Gaultier", size:"3ml / 5ml / 10ml", price:50.0,
+    sizeType:"decant", concentration:"EDT",
+    gender:["men"], season:["winter", "fall"], character:["sweet", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-16-at-1.33.54-AM-450x675.jpg", url:"https://riha.ma/product/decantage-ultra-male-jean-paul-gaultier-eau-de-toilette-intense/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pear", "Lavender", "Mint", "Bergamot", "Lemon"], middle:["Cinnamon", "Clary Sage", "Caraway"], base:["Black Vanilla Husk", "Amber", "Patchouli", "Cedar"] }
+  },
+  { id:"v81", name:"Decantage Versace Pour Homme Dylan Blue Versace eau de toilette", brand:"Versace", size:"3ml / 5ml / 10ml", price:50.0,
+    sizeType:"decant", concentration:"EDT",
+    gender:["men"], season:["spring", "summer", "fall"], character:["woody", "fresh"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2022/09/d0714fd9-ea34-409c-80ca-0212ca73b7d4_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-versace-pour-homme-dylan-blue-versace-eau-de-toilette/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Calabrian Bergamot", "Water Notes", "Grapefruit", "Fig Leaf"], middle:["Ambroxan", "Black Pepper", "Patchouli", "Papyrus", "Violet Leaf"], base:["Incense", "Musk", "Tonka Bean", "Saffron"] }
+  },
+  { id:"v82", name:"COOL WATER 125ml \u2013 DAVIDOFF", brand:"Davidoff", size:"125ml", price:450.0,
+    sizeType:"full", concentration:"EDT",
+    gender:["men"], season:["summer", "spring"], character:["fresh", "clean"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2019/10/COOL-WATER-125ml-DAVIDOFF-prix-maroc-450x675.jpg", url:"https://riha.ma/product/cool-water-davidoff/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Sea water", "Lavender", "Mint", "Green Notes", "Rosemary", "Calone", "Coriander"], middle:["Sandalwood", "Jasmine", "Geranium", "Neroli"], base:["Musk", "Tobacco", "Oakmoss", "Cedar", "Ambergris"] }
+  },
+  { id:"v83", name:"ULTRA MALE \u2013 JEAN PAUL GAULTIER", brand:"Jean Paul Gaultier", size:"125ml", price:1000.0,
+    sizeType:"full", concentration:"EDT",
+    gender:["men"], season:["winter", "fall"], character:["sweet", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2020/07/Ultra-Male-Jean-Paul-Gaultier-eau-de-toilette-intense-prix-maroc-450x675.webp", url:"https://riha.ma/product/ultra-male-jean-paul-gaultier/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pear", "Lavender", "Mint", "Bergamot", "Lemon"], middle:["Cinnamon", "Clary Sage", "Caraway"], base:["Black Vanilla Husk", "Amber", "Patchouli", "Cedar"] }
+  },
+  { id:"v84", name:"Decantage Prada L'Homme Prada Eau de parfum", brand:"Prada", size:"5ml / 10ml", price:90.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["spring", "allseasons"], character:["clean", "floral"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2022/12/20221221_180612-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-prada-lhomme-prada-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Neroli", "Black Pepper", "Cardamom", "Caraway"], middle:["Iris", "Violet", "Geranium", "Mate"], base:["Amber", "Cedar", "Patchouli", "Sandalwood"] }
+  },
+  { id:"v85", name:"Decantage Sauvage Eau de Parfum Dior pour homme", brand:"Dior", size:"3ml / 5ml / 10ml", price:55.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["allseasons"], character:["fresh", "woody"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2022/08/de8f633a-c2f5-46cf-9355-0fa05780b7c0_11zon-450x675.jpg", url:"https://riha.ma/product/sauvage-eau-de-parfum-dior-pour-homme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Calabrian Bergamot"], middle:["Sichuan Pepper", "Lavender", "Star Anise", "Nutmeg"], base:["Ambroxan", "Vanilla"] }
+  },
+  { id:"v86", name:"Blue Jeans 75ml -Versace", brand:"Versace", size:"75ml", price:399.0,
+    sizeType:"full", concentration:"EDT",
+    gender:["men"], season:["spring", "summer"], character:["fresh"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2021/04/685bfe1d-0408-4512-9273-cb1b56e69065_11zon-1-450x675.jpg", url:"https://riha.ma/product/blue-jeans-versace/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Citrus", "Bergamot", "Juniper", "Anise", "Brazilian Rosewood", "Basil"], middle:["Lavender", "Rose", "Carnation", "Heliotrope", "Jasmine", "Geranium", "Fir", "Sage", "Lily-of-the-Valley"], base:["Vanilla", "Tonka Bean", "Sandalwood", "Iris", "Musk", "Amber", "Cedar", "Oakmoss", "Patchouli"] }
+  },
+  { id:"v87", name:"Decantage Emporio Armani Stronger With You Absolutely \u2013 Giorgio Armani", brand:"Giorgio Armani", size:"3ml / 5ml / 10ml", price:55.0,
+    sizeType:"decant", concentration:"Parfum",
+    gender:["men"], season:["winter", "fall"], character:["heavy", "oriental"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2023/11/20231113_190039-1-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-emporio-armani-stronger-with-you-absolutely-giorgio-armani/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Rum", "Elemi", "Bergamot"], middle:["Lavender", "Davana"], base:["Chestnut", "Madagascar Vanilla", "Cedar", "Patchouli"] }
+  },
+  { id:"v88", name:"Le Male Elixir Jean Paul Gaultier", brand:"Jean Paul Gaultier", size:"75ml / 125ml", price:890.0,
+    sizeType:"full", concentration:"Parfum",
+    gender:["men"], season:["winter", "fall"], character:["sweet", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2023/10/20231004_184231-scaled-450x675.jpg", url:"https://riha.ma/product/le-male-elixir-jean-paul-gaultier/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Lavender", "Mint"], middle:["Vanilla", "Benzoin"], base:["Honey", "Tonka Bean", "Tobacco"] }
+  },
+  { id:"v89", name:"Decantage Eros Versace eau de parfum", brand:"Versace", size:"3ml / 5ml / 10ml", price:50.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["fall", "winter", "spring"], character:["oriental", "woody"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2022/12/0d9b8b9b-eaa2-47e2-a19f-fb577438ca54_11zon-1-450x675.jpg", url:"https://riha.ma/product/decantage-eros-versace-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Mint", "Candy Apple", "Lemon", "Mandarin Orange"], middle:["Ambroxan", "Geranium", "Clary Sage"], base:["Vanilla", "Leather", "Sandalwood", "Cedar", "Bitter Orange", "Patchouli"] }
+  },
+  { id:"v90", name:"Decantage Red Tobacco Mancera eau de parfum", brand:"Mancera", size:"3ml / 5ml / 10ml", price:50.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["winter", "fall"], character:["heavy", "oriental"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2022/10/40b1cbaf-e0e1-4822-bf28-aee98472740a_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-red-tobacco-mancera-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Cinnamon", "Agarwood", "Incense", "Saffron", "Nutmeg", "Green Apple", "White Pear"], middle:["Patchouli", "Jasmine"], base:["Tobacco", "Madagascar Vanilla", "Amber", "Sandalwood", "Guaiac Wood", "White Musk", "Haitian Vetiver"] }
+  },
+  { id:"v91", name:"ACQUA DI GI\u00d2 PROFONDO _ GIORGIO ARMANI", brand:"Giorgio Armani", size:"100ml", price:880.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["men"], season:["summer", "spring"], character:["fresh", "aquatic"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2024/07/ACQUA-DI-GIO--450x675.jpg", url:"https://riha.ma/product/acqua-di-gio-profondo-giorgio-armani/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Sea Notes", "Aquozone", "Bergamot", "Green Mandarin"], middle:["Rosemary", "Lavender", "Cypress", "Mastic or Lentisque"], base:["Mineral notes", "Musk", "Patchouli", "Amber"] }
+  },
+  { id:"v92", name:"Decantage Sauvage Elixir \u2013 Dior", brand:"Dior", size:"3ml / 5ml / 10ml", price:89.0,
+    sizeType:"decant", concentration:"Extrait",
+    gender:["men"], season:["winter", "fall"], character:["heavy", "woody"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2023/10/417d70cd-dbf1-4c61-8bf5-2d83cf13c4f4_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-sauvage-elixir-dior/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Nutmeg", "Cinnamon", "Cardamom", "Grapefruit"], middle:["Lavender"], base:["Licorice", "Sandalwood", "Amber", "Patchouli", "Haitian Vetiver"] }
+  },
+  { id:"v93", name:"CEDRAT BOISE \u2013 MANCERA", brand:"Mancera", size:"120ml", price:899.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["unisex"], season:["spring", "summer", "fall"], character:["woody", "fresh"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2019/10/556c07f0-1fb5-4138-a131-0e11399ba787_11zon-450x675.jpg", url:"https://riha.ma/product/cedrat-boise-mancera-prix-maroc/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Sicilian Lemon", "Black Currant", "Bergamot", "Spicy Notes"], middle:["Fruity Notes", "Patchouli Leaf", "Water Jasmine"], base:["Cedar", "Leather", "Sandalwood", "Vanilla", "Moss", "White Musk"] }
+  },
+  { id:"v94", name:"Decantage Allure Homme Edition Blanche Chanel eau de parfum", brand:"Chanel", size:"3ml / 5ml / 10ml", price:65.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["spring", "summer"], character:["fresh", "clean"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2022/10/20221022_152715-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-allure-homme-edition-blanche-chanel-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Lemon", "Bergamot"], middle:["Woody Notes", "Sandalwood"], base:["Madagascar Vanilla", "Vetiver", "Amber"] }
+  },
+  { id:"v95", name:"Emporio Armani Stronger With You Intensely Giorgio ArmaniEau de Parfum Pour Homme Authentic", brand:"Giorgio Armani", size:"50ml / 100ml / 150ml", price:650.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["men"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2024/07/STRONGER-WITH-YOU-2-450x675.jpg", url:"https://riha.ma/product/stronger-with-you-intensely-prix-au-maroc/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pink Pepper", "Juniper", "Violet"], middle:["Toffee", "Cinnamon", "Lavender", "Sage"], base:["Vanilla", "Tonka Bean", "Amber", "Suede"] }
+  },
+  { id:"v96", name:"Decantage Cedrat Boise Mancera eau de parfum", brand:"Mancera", size:"3ml / 5ml / 10ml", price:50.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["unisex"], season:["spring", "summer", "fall"], character:["woody", "fresh"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2022/10/7793fce5-460a-4916-bab7-7b89e8818b1e_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-cedrat-boise-mancera-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Sicilian Lemon", "Black Currant", "Bergamot", "Spicy Notes"], middle:["Fruity Notes", "Patchouli Leaf", "Water Jasmine"], base:["Cedar", "Leather", "Sandalwood", "Vanilla", "Moss", "White Musk"] }
+  },
+  { id:"v97", name:"Decantage Bleu de Chanel Parfum Chanel pour homme", brand:"Chanel", size:"3ml / 5ml / 10ml", price:69.0,
+    sizeType:"decant", concentration:"Parfum",
+    gender:["men"], season:["allseasons"], character:["woody", "fresh"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2022/08/Decantage-Bleu-de-Chanel-Parfum-Chanel-pour-homme-450x675.webp", url:"https://riha.ma/product/bleu-de-chanel-parfum-chanel-pour-homme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Lemon Zest", "Bergamot", "Mint", "Artemisia"], middle:["Lavender", "Pineapple", "Geranium", "Green Notes"], base:["Sandalwood", "Cedar", "Amberwood", "Iso E Super", "Tonka Bean"] }
+  },
+  { id:"v98", name:"Decantage XJ 1861 Naxos Xerjoff pour homme et femme", brand:"Xerjoff", size:"3ml / 5ml / 10ml", price:99.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["unisex"], season:["winter", "fall", "spring"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2024/01/a1ae5318-78fc-4e82-aef3-fc05c23d40a3_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-xj-1861-naxos-xerjoff-pour-homme-et-femme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Lavender", "Bergamot", "Lemon"], middle:["Honey", "Cinnamon", "Cashmeran", "Jasmine"], base:["Tobacco", "Vanilla", "Tonka Bean"] }
+  },
+  { id:"v99", name:"JOOP HOMME \u2013 JOOP", brand:"Joop", size:"125ml", price:450.0,
+    sizeType:"full", concentration:"EDT",
+    gender:["men"], season:["winter", "fall"], character:["heavy", "oriental"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2019/10/JOOP-HOMME-JOOP-prix-maroc-450x675.jpg", url:"https://riha.ma/product/joop-homme-joop-2/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Orange Blossom", "Mandarin Orange", "Bergamot", "Amalfi Lemon"], middle:["Cinnamon", "Heliotrope", "Jasmine", "Cardamom", "Lily-of-the-Valley"], base:["Vanilla", "Tonka Bean", "Sandalwood", "Amber", "Patchouli", "Musk", "Tobacco"] }
+  },
+  { id:"v100", name:"Decantage Allure Homme Sport Eau toilette Chanel", brand:"Chanel", size:"3ml / 5ml / 10ml", price:65.0,
+    sizeType:"decant", concentration:"EDT",
+    gender:["men"], season:["summer", "spring"], character:["fresh", "woody"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2023/05/20230510_200431-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-allure-homme-sport-eau-toilette-chanel/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Citrus", "Green"], middle:["Fresh Spicy", "Aromatic"], base:["Vanilla", "Amber", "Musk"] }
+  },
+  { id:"v101", name:"EROS - VERSACE", brand:"Versace", size:"100ml / 200ml", price:750.0,
+    sizeType:"full", concentration:"EDT",
+    gender:["men"], season:["summer", "spring"], character:["oriental", "fresh"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2020/06/2ca51f4b-8dc6-4723-be4d-76f0d7397b23_11zon-450x675.jpg", url:"https://riha.ma/product/eros-versace-prix-maroc-2/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Mint", "Green Apple", "Lemon"], middle:["Tonka Bean", "Geranium", "Ambroxan"], base:["Madagascar Vanilla", "Vetiver", "Oakmoss", "Virginian Cedar", "Atlas Cedar"] }
+  },
+  { id:"v102", name:"Le Male Le Parfum Intense-Jean Paul Gaultier", brand:"Jean Paul Gaultier", size:"75ml / 125ml", price:850.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["men"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2021/02/Le-Male-Le-Parfum-Intense-prix-maroc-450x675.webp", url:"https://riha.ma/product/le-male-jean-paul-gaultier-4/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Cardamom"], middle:["Lavender", "Iris"], base:["Vanilla", "Oriental Notes", "Woody Notes"] }
+  },
+  { id:"v103", name:"Le Beau Jean Paul Gaultier eau de parfum intense", brand:"Jean Paul Gaultier", size:"75ml / 125ml", price:880.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["men"], season:["summer", "spring"], character:["woody", "oriental"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2023/03/JEAN-PAUL-GAULRIER-LE-BEAU-scaled-1-450x675.jpg", url:"https://riha.ma/product/le-beau-jean-paul-gaultier-eau-de-parfum-intense-125ml/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Pineapple", "Iris", "Cypress", "Ginger"], middle:["Coconut", "Woody Notes"], base:["Tonka Bean", "Sandalwood", "Amber", "Ambergris"] }
+  },
+  { id:"v104", name:"Decantage La Nuit de L'Homme Eau \u00c9lectrique Yves Saint Laurent", brand:"Yves Saint Laurent", size:"3ml / 5ml / 10ml", price:65.0,
+    sizeType:"decant", concentration:"EDT",
+    gender:["men"], season:["fall", "winter"], character:["oriental", "fresh"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2023/04/234a26fa-0202-4cdf-8566-994be964795d_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-la-nuit-de-lhomme-eau-electrique-yves-saint-laurent/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Mandarin Orange", "Lemon", "Green Apple"], middle:["Lavender", "Geranium", "Sage", "Orange Blossom"], base:["Vanilla", "Tonka Bean", "Cashmere Wood", "Cedar", "Patchouli", "Vetiver"] }
+  },
+  { id:"v105", name:"Decantage Tom Ford Tobacco Vanille Eau de Parfum", brand:"Tom Ford", size:"3ml / 5ml / 10ml", price:110.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["unisex"], season:["winter", "fall"], character:["heavy", "oriental"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2022/12/20221220_013729-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-tom-ford-tobacco-vanille-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Tobacco Leaf", "Spicy Notes"], middle:["Vanilla", "Cacao", "Tonka Bean", "Tobacco Blossom"], base:["Dried Fruits", "Woody Notes"] }
+  },
+  { id:"v106", name:"Yes I Am The King Legend pour homme", brand:"Geparlys", size:"100ml", price:300.0,
+    sizeType:"full", concentration:"EDT",
+    gender:["men"], season:["allseasons"], character:["fresh", "woody"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2022/02/cc-3-450x675.jpg", url:"https://riha.ma/product/yes-i-am-the-king/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Citrus", "Grapefruit"], middle:["Geranium", "Lavender"], base:["Amber", "Woody Notes", "Patchouli"] }
+  },
+  { id:"v107", name:"Decantage Le Beau Paradise Garden Jean Paul Gaultier eau de parfum", brand:"Jean Paul Gaultier", size:"3ml / 5ml / 10ml", price:55.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["men"], season:["summer", "spring"], character:["fresh", "floral"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2024/08/I_0005_www.riha_.ma_-450x675.jpg", url:"https://riha.ma/product/decantage-le-beau-paradise-garden-jean-paul-gaultier-eau-de-parfum/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Watery Notes", "Mint", "Green Notes", "Ginger"], middle:["Coconut", "Fig", "Salt"], base:["Sandalwood", "Tonka Bean"] }
+  },
+  { id:"v108", name:"Decantage Bleu de Chanel eau de toilette pour Homme", brand:"Chanel", size:"5ml / 10ml", price:80.0,
+    sizeType:"decant", concentration:"EDT",
+    gender:["men"], season:["summer", "spring"], character:["fresh", "woody"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2022/12/20221220_014014-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-bleu-de-chanel-eau-de-toilette-pour-homme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Grapefruit", "Lemon", "Mint", "Pink Pepper"], middle:["Ginger", "Nutmeg", "Jasmine", "Iso E Super"], base:["Incense", "Vetiver", "Cedar", "Sandalwood", "Patchouli", "Labdanum", "White Musk"] }
+  },
+  { id:"v109", name:"Blue Seduction Antonio Banderas-ANTONIO BANDERAS", brand:"Antonio Banderas", size:"100ml", price:350.0,
+    sizeType:"full", concentration:"EDT",
+    gender:["men"], season:["summer", "spring"], character:["fresh"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2022/01/91925d22-06c0-4ad6-8837-27967cee4f73_11zon-450x675.jpg", url:"https://riha.ma/product/blue-seduction-antonio-banderas-antonio-banderas/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Melon", "Bergamot", "Mint", "Black Currant"], middle:["Seawater", "Green Apple", "Nutmeg", "Cardamom", "Cappuccino"], base:["Woody Notes", "Amber"] }
+  },
+  { id:"v110", name:"Decantage Layton eau de Parfum de Marly", brand:"Parfums de Marly", size:"3ml / 5ml / 10ml", price:89.0,
+    sizeType:"decant", concentration:"EDP",
+    gender:["unisex"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2022/09/c0f2f034-819a-40ac-b716-b084cf19a9fe_11zon-450x675.jpg", url:"https://riha.ma/product/layton-eau-de-parfum-de-marly/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Apple", "Lavender", "Bergamot", "Mandarin Orange"], middle:["Geranium", "Violet", "Jasmine"], base:["Vanilla", "Cardamom", "Sandalwood", "Pepper", "Guaiac Wood", "Patchouli"] }
+  },
+  { id:"v111", name:"CK One Calvin Klein Eau de Toilette Authentic", brand:"Calvin Klein", size:"100ml / 200ml", price:350.0,
+    sizeType:"full", concentration:"EDT",
+    gender:["unisex"], season:["summer", "spring"], character:["fresh", "clean"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2020/05/ck-one-parfum-1-450x675.jpg", url:"https://riha.ma/product/ck-one-calvin-klein/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Lemon", "Green Notes", "Bergamot", "Pineapple", "Mandarin Orange", "Cardamom", "Papaya"], middle:["Lily-of-the-Valley", "Jasmine", "Violet", "Nutmeg", "Rose", "Orris Root", "Freesia"], base:["Green Accord", "Musk", "Cedar", "Sandalwood", "Oakmoss", "Amber"] }
+  },
+  { id:"v112", name:"Cedrat Boise Intense Extrait De Parfum Mancera pour homme-120ml", brand:"Mancera", size:"120ml", price:899.0,
+    sizeType:"full", concentration:"Extrait",
+    gender:["men"], season:["spring", "summer", "fall"], character:["woody", "fresh"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2022/05/ba5b7649-267e-4fa5-8d16-51562c7e94b6_11zon-450x675.jpg", url:"https://riha.ma/product/cedrat-boise-mancera-pour-homme-120ml/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Sicilian Citrus", "Black Currant", "Spices"], middle:["Leather", "Cambodian Oud", "White Sandalwood", "Patchouli", "Jasmine"], base:["Fruity Notes", "Oakmoss", "Ambergris", "Vanilla", "White Musk"] }
+  },
+  { id:"v113", name:"Decantage Dior Homme Parfum pour Homme", brand:"Dior", size:"3ml / 5ml / 10ml", price:110.0,
+    sizeType:"decant", concentration:"Parfum",
+    gender:["men"], season:["winter", "fall"], character:["heavy", "woody"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2022/12/b8def9e6-514f-4c6c-9b61-67748656222c_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-dior-homme-parfum-pour-homme/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Tuscan Iris", "Italian Orange"], middle:["Leather", "Rose"], base:["Ambrette", "Oud", "Cedar", "Sandalwood"] }
+  },
+  { id:"v114", name:"Red Tobacco Mancera Pour Homme Eau De Parfum 120ML", brand:"Mancera", size:"120ml", price:899.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["men"], season:["winter", "fall"], character:["heavy", "oriental"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2020/05/637f81aa-16b3-4018-ab12-874bbd1fa945_11zon-450x675.jpg", url:"https://riha.ma/product/perfum-red-tobacoo-mancera/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Cinnamon", "Agarwood", "Incense", "Saffron", "Nutmeg", "Green Apple", "White Pear"], middle:["Patchouli", "Jasmine"], base:["Tobacco", "Madagascar Vanilla", "Amber", "Sandalwood", "Guaiac Wood", "White Musk", "Haitian Vetiver"] }
+  },
+  { id:"v115", name:"Club De Nuit Sillage Armaf-ARMAF", brand:"Armaf", size:"105ml", price:490.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["unisex"], season:["summer", "spring"], character:["fresh", "clean"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2022/01/club-de-nuit-sillage-prix-2-450x675.jpg", url:"https://riha.ma/product/club-de-nuit-sillage-armaf-armaf/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Bergamot", "Black Currant", "Lemon", "Lime", "Violet Leaf", "Ginger"], middle:["Iris", "Jasmine", "Rose"], base:["Musk", "Ambroxan", "Sandalwood", "Cedar"] }
+  },
+  { id:"v116", name:"Oud Vanille Franck Olivier-FRANCK OLIVIER", brand:"Franck Olivier", size:"100ml", price:350.0,
+    sizeType:"full", concentration:"EDP",
+    gender:["unisex"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    image:"https://riha.ma/wp-content/uploads/2022/01/20220722_194201-scaled-450x675.jpg", url:"https://riha.ma/product/oud-vanille-franck-olivier-franck-olivier/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Agarwood", "Caramel", "Orange Blossom"], middle:["Vanilla", "Rose", "Incense"], base:["Sandalwood", "Amber", "Musk"] }
+  },
+  { id:"v117", name:"Decantage Lacoste L.12.12 Blanc", brand:"Lacoste", size:"3ml / 5ml / 10ml", price:49.0,
+    sizeType:"decant", concentration:"EDT",
+    gender:["men"], season:["summer", "spring"], character:["fresh", "clean"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2023/05/20230508_193325-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-lacoste-l-12-12-blanc/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Grapefruit", "Rosemary", "Cardamom"], middle:["Ylang-Ylang", "Tuberose"], base:["Cedar", "Leather", "Suede", "Vetiver"] }
+  },
+  { id:"v118", name:"Decantage Y Le Parfum Yves Saint Laurent", brand:"Yves Saint Laurent", size:"3ml / 5ml / 10ml", price:59.0,
+    sizeType:"decant", concentration:"Parfum",
+    gender:["men"], season:["allseasons"], character:["fresh", "woody"], occasion:["allday"],
+    image:"https://riha.ma/wp-content/uploads/2023/04/35457cb3-0050-4328-9377-cf1320791f1d_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-y-le-parfum-yves-saint-laurent/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Apple", "Aldehydes", "Grapefruit", "Ginger"], middle:["Sage", "Lavender", "Geranium"], base:["Tonka Bean", "Cedar", "Olibanum", "Patchouli"] }
+  },
+  { id:"v119", name:"Yes im the king eau de toilette 100ml - Sauvage dior Clone", brand:"Geparlys", size:"100ml", price:300.0,
+    sizeType:"full", concentration:"EDT",
+    gender:["men"], season:["winter", "fall"], character:["fresh", "woody"], occasion:["daily"],
+    image:"https://riha.ma/wp-content/uploads/2022/10/f2d7ec56-0161-4883-9771-7714928dc962_11zon-450x675.jpg", url:"https://riha.ma/product/yes-im-the-king-eau-de-parfum-100ml-sauvage-dior-clone/",
+    topSeller:false, onSale:false, boost:false,
+    notes:{ top:["Bergamot", "Pepper"], middle:["Sichuan Pepper", "Lavender", "Pink Pepper", "Vetiver", "Patchouli", "Geranium", "Elemi"], base:["Ambroxan", "Cedar", "Labdanum"] }
   },
 ];
 
@@ -691,31 +1413,73 @@ function generateSensoryDesc(p, lang="ar") {
   const isAr = lang !== "fr";
   const matrix = SENSORY_MATRIX[lang] || SENSORY_MATRIX["ar"];
 
-  // ابحث على النوتة المهيمنة في base ثم middle ثم top
-  const allNotes = [
+  // ابحث على النوتة المهيمنة في base أولاً ثم middle ثم top
+  const basePriority = [
     ...(p.notes?.base   || []),
     ...(p.notes?.middle || []),
     ...(p.notes?.top    || []),
   ];
 
   // أول نوتة عندها entry في المصفوفة
-  let match = null;
-  for (const note of allNotes) {
-    if (matrix[note]) { match = matrix[note]; break; }
-    // partial match
-    const key = Object.keys(matrix).find(k => note.toLowerCase().includes(k.toLowerCase()));
-    if (key) { match = matrix[key]; break; }
+  let hookNote = null;
+  let hookMatch = null;
+
+  for (const note of basePriority) {
+    if (matrix[note]) { hookNote=note; hookMatch=matrix[note]; break; }
+    const key = Object.keys(matrix).find(k=>note.toLowerCase().includes(k.toLowerCase()));
+    if (key) { hookNote=key; hookMatch=matrix[key]; break; }
   }
 
-  if (!match) {
-    // fallback عام
+  if (!hookMatch) {
     return isAr
       ? "عطر يجمع بين الأناقة والعمق في توازن مثالي."
       : "Un parfum alliant élégance et profondeur en parfaite harmonie.";
   }
 
-  // نرجع الـ 3 أجزاء كجملة واحدة
-  return `${match[0]} ${match[1]} ${match[2]}`;
+  // جمع نوتات إضافية لتغني الوصف
+  const topNotes   = p.notes?.top    || [];
+  const midNotes   = p.notes?.middle || [];
+  const baseNotes  = p.notes?.base   || [];
+
+  // ابحث على نوتة top مختلفة عن الـ hook
+  const topFeel = topNotes
+    .filter(n => n !== hookNote)
+    .map(n => {
+      const k = Object.keys(matrix).find(kk=>n.toLowerCase().includes(kk.toLowerCase()));
+      return k ? matrix[k][0].replace("...", "") : null;
+    })
+    .filter(Boolean)[0];
+
+  // ابحث على نوتة middle مختلفة
+  const midFeel = midNotes
+    .filter(n => n !== hookNote)
+    .map(n => {
+      const k = Object.keys(matrix).find(kk=>n.toLowerCase().includes(kk.toLowerCase()));
+      return k ? matrix[k][1].replace("...", "") : null;
+    })
+    .filter(Boolean)[0];
+
+  // بناء الوصف المركب
+  const [hook, emotion, trail] = hookMatch;
+
+  if (isAr) {
+    let desc = hook;
+    if (topFeel && topFeel !== hook) {
+      desc += ` مع لمسة من ${topFeel.replace("إحساس فوري بـ","").replace("انفجار","").replace("انتعاش","الانتعاش").trim()}،`;
+    }
+    desc += ` ${emotion}`;
+    desc += ` ${trail}`;
+    return desc;
+  } else {
+    let desc = hook;
+    if (topFeel) {
+      const clean = topFeel.replace("Une sensation immédiate","").replace("Un","une").trim();
+      if (clean && clean.length > 5) desc += ` avec une touche de ${clean.toLowerCase()},`;
+    }
+    desc += ` ${emotion}`;
+    desc += ` ${trail}`;
+    return desc;
+  }
 }
 
 const SLOT_WHY = {
@@ -742,9 +1506,26 @@ const NOTES_PREFS = {
 const GIFT_BRANDS = ["KILIAN","ARMANI","LOUIS VUITTON","DIOR","CHANEL","YSL","GUERLAIN","MANCERA"];
 
 // Map new character values to old ones for compatibility
+// UI character → internal sub-tags
+const CHARACTER_SUBTAGS = {
+  "fresh":    ["fresh", "citrus"],      // منعش وحمضي
+  "clean":    ["clean", "musky"],       // نظيف ومسكي
+  "oriental": ["oriental", "sweet"],    // حلو وشرقي
+  "floral":   ["floral"],
+  "woody":    ["woody"],
+  "heavy":    ["heavy", "oriental"],
+  "luxury":   ["heavy", "oriental", "woody"],
+};
+
 function mapCharacter(char) {
-  const map = { woody:"heavy", oriental:"heavy", clean:"fresh", luxury:"heavy" };
+  const map = { luxury:"heavy" };
   return map[char] || char;
+}
+
+// Check if product character matches user selection (with subtags)
+function charMatches(pCharacter, userChar) {
+  const subtags = CHARACTER_SUBTAGS[userChar] || [userChar];
+  return (pCharacter||[]).some(c => subtags.includes(c));
 }
 
 // Map new occasion values
@@ -786,44 +1567,174 @@ function scoreP(p, ans) {
 
   let s = 0;
 
-  // Gender
-  if ((p.gender||[]).includes(ans.gender)||(p.gender||[]).includes("unisex")) s+=3;
+  // ══════════════════════════════════════════════════════
+  // SCORING — أوزان مبنية على أولوية حقيقية
+  // Gender 30 | Character 25 | Occasion 20 | Season 15 | Longevity 10
+  // ══════════════════════════════════════════════════════
 
-  // Season — allseasons matches everything
-  const season = mapSeason(ans.season);
-  if (!season || (p.season||[]).includes(season)) s+=2;
+  // ── GENDER — وزن 25 ────────────────────────────────────
+  if ((p.gender||[]).includes(ans.gender)) s+=25;
+  else if ((p.gender||[]).includes("unisex")) s+=12;
+  else return 0; // جنس خاطئ = يتحذف
 
-  // Character — map new values to existing
+  // ── CHARACTER — وزن 25 (مع subtags) ─────────────────────
   const char = mapCharacter(ans.character);
-  if ((p.character||[]).includes(char)) s+=3;
-
-  // Occasion — map new values
-  const occ = mapOccasion(ans.occasion);
-  if ((p.occasion||[]).includes(occ)) s+=2;
-
-  // Budget — hard filter أعلاه، هنا نضيف bonus للعطور في وسط الميزانية
-  if (ans.budget) s+=2; // كل عطر وصل لهنا هو في الميزانية
-
-  // Notes matching
-  const prefs = NOTES_PREFS[char]||[];
-  const allNotes = [...(p.notes?.top||[]),...(p.notes?.middle||[]),...(p.notes?.base||[])];
-  s += Math.min(allNotes.filter(n=>prefs.some(pn=>n.toLowerCase().includes(pn.toLowerCase()))).length*0.4, 2);
-
-  // Longevity match
-  if (ans.longevity) s += longevityScore(ans.longevity, p.concentration);
-
-  // Impression boost
-  if (ans.impression === "longlast") s += p.concentration === "Extrait" ? 1.5 : 0;
-  if (ans.impression === "attractive" || ans.impression === "firstlook") {
-    if (GIFT_BRANDS.includes(p.brand)) s += 1;
+  const charMatch = charMatches(p.character, ans.character);
+  if (charMatch) {
+    // Perfect match على subtag معين = bonus إضافي
+    const subtags = CHARACTER_SUBTAGS[ans.character] || [ans.character];
+    const exactSubtag = (p.character||[]).filter(c=>subtags.includes(c)).length;
+    s += 25 + Math.min(exactSubtag * 3, 6); // +3 لكل subtag مطابق max +6
+  } else {
+    const freshGroup   = ["fresh","clean","citrus","musky"];
+    const heavyGroup   = ["heavy","oriental","sweet","woody"];
+    const userFresh    = freshGroup.includes(ans.character) || freshGroup.includes(char);
+    const userHeavy    = heavyGroup.includes(ans.character) || heavyGroup.includes(char);
+    const pHeavy       = (p.character||[]).some(c=>heavyGroup.includes(c));
+    const pFresh       = (p.character||[]).some(c=>freshGroup.includes(c));
+    if ((userFresh && pHeavy) || (userHeavy && pFresh)) s -= 20;
+    else s -= 10;
   }
 
-  // Gift boost
-  if (ans.isGift && GIFT_BRANDS.includes(p.brand)) s+=2;
+  // ── OCCASION — وزن 15 ─────────────────────────────────
+  const occ = mapOccasion(ans.occasion);
+  if ((p.occasion||[]).includes(occ) || (p.occasion||[]).includes(ans.occasion)) s+=15;
+  else if ((ans.occasion==="evening"||ans.occasion==="dates") &&
+           (p.occasion||[]).every(o=>o==="daily")) s-=18;
+  else s-=3;
 
+  // ── SEASON — وزن 15 ────────────────────────────────────
+  const season = mapSeason(ans.season);
+  if (!season || (p.season||[]).includes(season)) s+=15;
+  else if (season==="summer" && (p.season||[]).every(ss=>ss==="winter"||ss==="fall")) s-=10;
+  else if (season==="winter" && (p.season||[]).every(ss=>ss==="summer"||ss==="spring")) s-=10;
+  // عطر صيفي + زبون اختار سهرات → penalty إضافي
+  else if ((p.season||[]).every(ss=>ss==="summer"||ss==="spring") &&
+           (ans.occasion==="evening"||ans.occasion==="dates")) s-=8;
+  else s+=5;
+
+  // ── LONGEVITY — وزن 10 ─────────────────────────────────
+  if (ans.longevity) {
+    const lvl  = { light:1, medium:2, strong:3 }[ans.longevity] || 2;
+    const conc = { EDC:1, EDT:2, EDP:3, Extrait:4 }[p.concentration] || 2;
+    const diff = Math.abs(lvl - (conc-1));
+    if (diff===0) s+=10;
+    else if (diff===1) s+=5;
+    else if (diff===2) s-=6;
+    else s-=10; // EDT مع strong = penalty كبير
+  }
+
+  // ── IMPRESSION — يعدل الترتيب ضمن نفس الـ character ───
+  if (ans.impression) {
+    const imp = ans.impression;
+    if (imp==="confident"||imp==="luxury") {
+      if ((p.character||[]).some(c=>["heavy","woody","oriental"].includes(c))) s+=8;
+      const richNotes = ["Oud","Leather","Incense","Saffron","Tobacco","Amber","Resin"];
+      const allN = [...(p.notes?.base||[]),...(p.notes?.middle||[])];
+      if (allN.some(n=>richNotes.some(rn=>n.toLowerCase().includes(rn.toLowerCase())))) s+=4;
+      if (imp==="luxury" && p.concentration==="Extrait") s+=3;
+    }
+    if (imp==="longlast") {
+      if (p.concentration==="Extrait") s+=8;
+      else if (p.concentration==="EDP") s+=4;
+      else s-=3;
+    }
+    if (imp==="attractive"||imp==="firstlook") {
+      if (GIFT_BRANDS.includes(p.brand)) s+=6;
+      else s+=2;
+    }
+    if (imp==="elegant") {
+      if ((p.character||[]).some(c=>["woody","floral","clean","fresh"].includes(c))) s+=6;
+      // عطور aggressive (Leather+Tobacco+Oud) ≠ أناقة هادئة
+      const aggressiveNotes = ["Leather","Tobacco","Oud","Incense"];
+      const allN2 = [...(p.notes?.base||[]),...(p.notes?.middle||[])];
+      const aggCount = allN2.filter(n=>aggressiveNotes.some(an=>n.toLowerCase().includes(an.toLowerCase()))).length;
+      if (aggCount >= 2) s -= 8;
+    }
+    if (imp==="fresh_imp") {
+      if ((p.character||[]).some(c=>["fresh","clean"].includes(c))) s+=6;
+    }
+  }
+
+  // ── TIER 5: NOTES MATCHING + PENALTY ───────────────────
+  const prefs = NOTES_PREFS[char]||[];
+  const allNotes = [...(p.notes?.top||[]),...(p.notes?.middle||[]),...(p.notes?.base||[])];
+
+  // Bonus — نوتات تطابق العائلة
+  const matchCount = allNotes.filter(n=>prefs.some(pn=>n.toLowerCase().includes(pn.toLowerCase()))).length;
+  s += Math.min(matchCount*0.5, 2);
+
+  // ── NOTES BONUS/PENALTY ±10 ────────────────────────────
+  // إلا الزبون اختار fresh — النوتات الثقيلة كتعارض ذوقه
+  const freshAntiNotes  = ["Vanilla","Sandalwood","Tobacco","Leather","Oud","Incense","Amber","Resin","Patchouli","Caramel","Ginger","Spice","Cinnamon","Cardamom","Pepper","Tonka","Honey","Wood"];
+  const freshProNotes   = ["Bergamot","Lemon","Citrus","Grapefruit","Sea Notes","Aquatic","Mint","Green Notes","Neroli","Lime","Orange"];
+  const heavyProNotes   = ["Oud","Amber","Leather","Tobacco","Incense","Saffron","Resin","Musk","Sandalwood","Patchouli"];
+  const floralProNotes  = ["Rose","Jasmine","Iris","Lily","Peony","Violet","Ylang","Magnolia","Gardenia"];
+
+  // Notes scoring حسب الـ subtags
+  const userChar = ans.character;
+
+  if (userChar === "fresh") {
+    // منعش وحمضي → يبحث عن Citrus + Fresh notes
+    const citrусMatch = allNotes.filter(n=>freshProNotes.some(fn=>n.toLowerCase().includes(fn.toLowerCase()))).length;
+    s += Math.min(citrусMatch * 3, 12);
+    const heavyMatch = allNotes.filter(n=>freshAntiNotes.some(an=>n.toLowerCase().includes(an.toLowerCase()))).length;
+    s -= Math.min(heavyMatch * 4, 20);
+  }
+  else if (userChar === "clean") {
+    // نظيف ومسكي → يبحث عن Musk + Clean notes
+    const cleanNotes = ["Musk","White Musk","Soap","Clean","Powder","Iris","Neroli","Cotton","Aldehyde"];
+    const cleanMatch = allNotes.filter(n=>cleanNotes.some(cn=>n.toLowerCase().includes(cn.toLowerCase()))).length;
+    s += Math.min(cleanMatch * 3, 12);
+    // Penalty للنوتات الثقيلة جداً
+    const heavyAnti = ["Oud","Leather","Tobacco","Incense"];
+    const heavyMatch = allNotes.filter(n=>heavyAnti.some(an=>n.toLowerCase().includes(an.toLowerCase()))).length;
+    s -= Math.min(heavyMatch * 3, 12);
+  }
+  else if (userChar === "oriental") {
+    // حلو وشرقي → Vanilla + Amber + Sweet
+    const sweetNotes = ["Vanilla","Caramel","Tonka","Honey","Sweet","Sugar","Praline","Toffee"];
+    const orientalNotes = ["Amber","Oud","Incense","Saffron","Resins","Benzoin"];
+    const sweetMatch = allNotes.filter(n=>sweetNotes.some(sn=>n.toLowerCase().includes(sn.toLowerCase()))).length;
+    const orMatch = allNotes.filter(n=>orientalNotes.some(on=>n.toLowerCase().includes(on.toLowerCase()))).length;
+    s += Math.min((sweetMatch + orMatch) * 2, 10);
+    // Penalty للنوتات المنعشة جداً
+    const freshPenalty = ["Citrus","Grapefruit","Aquatic","Sea","Marine"];
+    const fpMatch = allNotes.filter(n=>freshPenalty.some(fp=>n.toLowerCase().includes(fp.toLowerCase()))).length;
+    s -= Math.min(fpMatch * 3, 9);
+  }
+  else if (userChar === "floral") {
+    const floralMatch = allNotes.filter(n=>floralProNotes.some(fn=>n.toLowerCase().includes(fn.toLowerCase()))).length;
+    s += Math.min(floralMatch * 3, 12);
+  }
+  else if (char === "heavy" || userChar === "heavy") {
+    const richMatch = allNotes.filter(n=>heavyProNotes.some(hn=>n.toLowerCase().includes(hn.toLowerCase()))).length;
+    s += Math.min(richMatch * 2, 8);
+  }
+
+  // Impression bonus على النوتات
+  if (ans.impression === "fresh_imp") {
+    const freshMatch = allNotes.filter(n=>freshProNotes.some(fn=>n.toLowerCase().includes(fn.toLowerCase()))).length;
+    s += Math.min(freshMatch, 4);
+  }
+  if (ans.impression === "luxury" || ans.impression === "confident") {
+    const richMatch = allNotes.filter(n=>heavyProNotes.some(hn=>n.toLowerCase().includes(hn.toLowerCase()))).length;
+    s += Math.min(richMatch, 4);
+  }
+
+  // ── BOOSTERS ─────────────────────────────────────────
+  if (ans.budget)  s+=1;
+  if (ans.isGift && GIFT_BRANDS.includes(p.brand)) {
+    s+=2;
+    if (ans.impression==="elegant") {
+      if ((p.character||[]).some(c=>["woody","fresh","clean"].includes(c))) s+=3;
+      if ((p.character||[]).some(c=>["oriental","heavy"].includes(c))) s-=2;
+    }
+  }
   if (p.boost)     s+=10;
-  if (p.onSale)    s+=0.4;
-  if (p.topSeller) s+=0.4;
+  if (p.topSeller) s+=0.5;
+  if (p.onSale)    s+=0.3;
+
   return s;
 }
 
@@ -833,7 +1744,7 @@ function scoreP(p, ans) {
 function getResults(ans) {
   const scored = PRODUCTS
     .map(p=>({...p, _s:scoreP(p,ans)}))
-    .filter(p=>p._s>=5)
+    .filter(p=>p._s>=40) // minimum meaningful score
     .sort((a,b)=>b._s-a._s);
 
   if (!scored.length) return { main:[], similar:[] };
@@ -849,35 +1760,45 @@ function getResults(ans) {
   }));
 
   const mainIds = main.map(p=>p.id);
+  const usedIds = new Set(mainIds); // نتتبع كل IDs مستخدمة
 
-  // ── Similar — topSeller + onSale + مشابهين ────────
-  const topSeller = scored.find(p=>p.topSeller && !mainIds.includes(p.id));
-  const onSale    = scored.find(p=>p.onSale    && !mainIds.includes(p.id) && p.id!==topSeller?.id);
+  // ── Gender filter helper ─────────────────────────────
+  const userGender = ans.gender || "unisex";
+  const genderOk = p => {
+    const g = p.gender || [];
+    if (userGender==="men")   return g.includes("men")   || g.includes("unisex");
+    if (userGender==="women") return g.includes("women") || g.includes("unisex");
+    return true;
+  };
 
-  // عطور مشابهة — shuffle
-  const sizeType = ans.sizeType || "full";
-  const char     = mapCharacter(ans.character || "heavy");
+  // ── topSeller — نفس الجنس ────────────────────────────
+  const char = mapCharacter(ans.character || "heavy");
+  const topSeller = scored.find(p=> p.topSeller && !usedIds.has(p.id) && genderOk(p));
+  if (topSeller) usedIds.add(topSeller.id);
+
+  // ── عطور مشابهة — نفس الجنس + نفس الـ character ────
   let pool = PRODUCTS.filter(p=>
+    !usedIds.has(p.id) &&
+    genderOk(p) &&
     (ans.sizeType ? p.sizeType===ans.sizeType : true) &&
-    (p.character||[]).includes(char) &&
-    !mainIds.includes(p.id) &&
-    p.id !== topSeller?.id &&
-    p.id !== onSale?.id
+    ((p.character||[]).includes(char)||(p.character||[]).includes(ans.character))
   ).sort(()=>Math.random()-0.5);
 
+  // fallback — نفس الجنس فقط
   if (pool.length < 1) {
-    pool = PRODUCTS.filter(p=>
-      !mainIds.includes(p.id) &&
-      p.id !== topSeller?.id &&
-      p.id !== onSale?.id
-    ).sort(()=>Math.random()-0.5);
+    pool = PRODUCTS.filter(p=> !usedIds.has(p.id) && genderOk(p))
+      .sort(()=>Math.random()-0.5);
   }
 
-  // قسم "قد يعجبك" — عطرين فقط: topSeller + مشابه
+  // fallback أخير
+  if (pool.length < 1) {
+    pool = PRODUCTS.filter(p=> !usedIds.has(p.id)).sort(()=>Math.random()-0.5);
+  }
+
+  // ── قسم "قد يعجبك" — 2 عطور مختلفين ────────────────
   const extraPool = [];
   if (topSeller) extraPool.push({...topSeller, extraType:"topSeller"});
   if (pool[0])   extraPool.push({...pool[0],   extraType:"similar"});
-  // إلا ما كانش topSeller — عطرين مشابهين
   if (!topSeller && pool[1]) extraPool.push({...pool[1], extraType:"similar"});
 
   return { main, similar: extraPool.slice(0,2) };
@@ -1589,8 +2510,32 @@ function WidgetContent({ onClose, lang: langProp }) {
     const char = mapCharacter(na.character||"heavy");
     const occ = mapOccasion(na.occasion||"evening");
     const pKey = `${na.character||char}-${occ}`;
-    const p = PERSONAS[pKey] || PERSONAS["heavy-evening"];
-    setRes(results); setPers(p);
+    const basePers = PERSONAS[pKey] || PERSONAS["heavy-evening"];
+    const IMP_DESC_AR = {
+      luxury:     "تميلين/تميل للعطور الراقية التي تجمع بين النعومة والفخامة، وتترك حضوراً أنيقاً يدوم في الذاكرة دون مبالغة.",
+      longlast:   "تبحث/تبحثين عن عطر يدوم ويترك أثراً بعد المغادرة — رائحة تُعرف بها.",
+      attractive: "تبحث/تبحثين عن عطر يجذب الأنظار ويترك انطباعاً لا يُنسى عند كل لقاء.",
+      elegant:    "ذوقك يميل للأناقة الهادئة — عطر يعكس رقيك دون أن يصرخ في كل مكان.",
+      confident:  "تميل/تميلين إلى العطور الخشبية الفاخرة ذات الحضور القوي والثبات العالي — تفضل/تفضلين ترك انطباع واثق يصعب نسيانه.",
+      fresh_imp:  "تفضل/تفضلين الإحساس بالنظافة والانتعاش طوال اليوم في كل مكان.",
+      firstlook:  "تريد/تريدين أن يتذكرك الجميع من أول لقاء — عطر يصنع انطباعاً أولاً قوياً.",
+    };
+    const IMP_DESC_FR = {
+      luxury:     "Votre goût penche vers les fragrances raffinées alliant douceur et luxe, laissant une présence élégante et mémorable.",
+      longlast:   "Vous cherchez un parfum qui dure et laisse une trace après votre départ — une vraie signature olfactive.",
+      attractive: "Vous recherchez un parfum qui attire les regards et laisse une impression inoubliable.",
+      elegant:    "Votre goût penche vers l'élégance discrète — un parfum qui reflète votre raffinement sans ostentation.",
+      confident:  "Vous êtes attiré(e) par les fragrances boisées et intenses, avec une forte projection et une longue tenue — une présence assurée impossible à ignorer.",
+      fresh_imp:  "Vous préférez la sensation de fraîcheur et de propreté tout au long de la journée.",
+      firstlook:  "Vous voulez que tout le monde se souvienne de vous dès la première rencontre.",
+    };
+    const impKey = na.impression;
+    const enrichedPers = {
+      ...basePers,
+      desc:    impKey && IMP_DESC_AR[impKey] ? IMP_DESC_AR[impKey] : basePers.desc,
+      desc_fr: impKey && IMP_DESC_FR[impKey] ? IMP_DESC_FR[impKey] : basePers.desc_fr,
+    };
+    setRes(results); setPers(enrichedPers);
     setStep(results.main.length?"results":"empty");
   };
 
