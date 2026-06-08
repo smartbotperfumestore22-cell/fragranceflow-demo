@@ -14,7 +14,7 @@ const PRODUCTS = [
     topSeller:false, onSale:false, boost:false,
     notes:{ top:["Lemon", "Green Notes", "Bergamot", "Pineapple", "Mandarin Orange", "Cardamom", "Papaya"], middle:["Lily-of-the-Valley", "Jasmine", "Violet", "Nutmeg", "Rose", "Orris Root", "Freesia"], base:["Green Accord", "Musk", "Cedar", "Sandalwood", "Oakmoss", "Amber"] }
   },
-  { id:"v3", name:"Oud Vanille", brand:"Franck Olivier", size:"100ml", price:350.0,
+  { id:"v3", tagline:"مزيج دافئ من العود والفانيلا يمنح طابعاً شرقياً مريحاً وهادئاً", tagline_fr:"Un mélange chaud d'oud et vanille, oriental et apaisant", name:"Oud Vanille", brand:"Franck Olivier", size:"100ml", price:350.0,
     sizeType:"full", concentration:"EDP",
     gender:["unisex"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
     image:"https://riha.ma/wp-content/uploads/2022/01/20220722_194201-scaled-450x675.jpg", url:"https://riha.ma/product/oud-vanille-franck-olivier-franck-olivier/",
@@ -87,6 +87,7 @@ const PRODUCTS = [
   { id:"v13", name:"Libre", brand:"Yves Saint Laurent", size:"50ml / 90ml", price:850.0,
     sizeType:"full", concentration:"EDP",
     gender:["women"], season:["fall", "winter", "spring"], character:["floral", "oriental"], occasion:["allday"],
+    impression:["elegant","attractive","confident"],
     image:"https://riha.ma/wp-content/uploads/2019/10/591463d4-c8aa-42a2-be29-7e3e72dc294f_11zon-450x675.jpg", url:"https://riha.ma/product/libre-eau-de-parfum-yves-saint-laurent-prix-maroc/",
     topSeller:false, onSale:false, boost:false,
     notes:{ top:["Lavender", "Mandarin Orange", "Black Currant", "Petitgrain"], middle:["Lavender", "Orange Blossom", "Jasmine"], base:["Madagascar Vanilla", "Musk", "Cedar", "Ambergris"] }
@@ -100,7 +101,7 @@ const PRODUCTS = [
   },
   { id:"v15", name:"Coco Mademoiselle", brand:"Chanel", size:"5ml / 10ml", price:80.0,
     sizeType:"decant", concentration:"EDP",
-    gender:["women"], season:["allseasons"], character:["oriental", "floral"], occasion:["allday"],
+    gender:["women"], season:["allseasons"], character:["floral", "oriental"], occasion:["allday"],
     image:"https://riha.ma/wp-content/uploads/2022/09/20220923_192604-scaled-450x675.jpg", url:"https://riha.ma/product/decantage-coco-mademoiselle-chanel-eau-de-parfum/",
     topSeller:false, onSale:false, boost:false,
     notes:{ top:["Orange", "Mandarin Orange", "Bergamot", "Orange Blossom"], middle:["Turkish Rose", "Jasmine", "Mimosa", "Ylang-Ylang"], base:["Patchouli", "White Musk", "Vanilla", "Vetiver", "Tonka Bean", "Opoponax"] }
@@ -184,7 +185,7 @@ const PRODUCTS = [
   },
   { id:"v27", name:"Queen of Seduction", brand:"Antonio Banderas", size:"50ml / 80ml", price:250.0,
     sizeType:"full", concentration:"EDT",
-    gender:["women"], season:["summer", "spring"], character:["fresh", "aquatic"], occasion:["daily"],
+    gender:["women"], season:["summer", "spring"], character:["fresh", "fruity"], occasion:["daily"],
     image:"https://riha.ma/wp-content/uploads/2021/02/7665a4b1-afe0-4a91-b05f-0e157ad5bbac_11zon-450x675.jpg", url:"https://riha.ma/product/queen-of-seduction-antonio-banderas/",
     topSeller:false, onSale:false, boost:false,
     notes:{ top:["Watery Notes", "Grapefruit", "Raspberry"], middle:["Peony", "Jasmine", "Iris", "Pink Pepper"], base:["Cedar", "Suede", "Amber"] }
@@ -330,8 +331,9 @@ const PRODUCTS = [
     notes:{ top:["Lemon", "Granny Smith Apple"], middle:["Marigold", "Jasmine"], base:["Musk", "Amberwood"] }
   },
   { id:"v48", name:"Libre Intense Yves Saint Laurent", brand:"Yves Saint Laurent", size:"50ml / 90ml", price:900.0,
-    sizeType:"full", concentration:"EDP",
+    sizeType:"full", concentration:"Parfum",
     gender:["women"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
+    impression:["luxury","longlast","attractive"],
     image:"https://riha.ma/wp-content/uploads/2021/03/Libre-Intense-Yves-Saint-Laurent-1-450x675.jpg", url:"https://riha.ma/product/libre-intense-yves-saint-laurent-prix-maroc/",
     topSeller:false, onSale:false, boost:false,
     notes:{ top:["Lavender", "Mandarin Orange", "Bergamot"], middle:["Lavender", "Tunisian Orange Blossom", "Jasmine Sambac", "Orchid"], base:["Madagascar Vanilla", "Tonka Bean", "Ambergris", "Vetiver"] }
@@ -485,7 +487,7 @@ const PRODUCTS = [
   },
   { id:"v70", name:"Decantage Acqua di Gi\u00f2 Profondo Giorgio Armani", brand:"Giorgio Armani", size:"3ml / 5ml / 10ml", price:55.0,
     sizeType:"decant", concentration:"EDP",
-    gender:["men"], season:["summer", "spring"], character:["fresh", "aquatic"], occasion:["daily"],
+    gender:["men"], season:["summer", "spring"], character:["fresh", "citrus"], occasion:["daily"],
     image:"https://riha.ma/wp-content/uploads/2023/04/08f4baa9-4ca4-418c-88df-6e3e858e17a1_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-acqua-di-gio-profondo-giorgio-armani/",
     topSeller:false, onSale:false, boost:false,
     notes:{ top:["Sea Notes", "Aquozone", "Bergamot", "Green Mandarin"], middle:["Rosemary", "Lavender", "Cypress", "Mastic or Lentisque"], base:["Mineral notes", "Musk", "Patchouli", "Amber"] }
@@ -500,6 +502,7 @@ const PRODUCTS = [
   { id:"v72", name:"Versace Eros Eau de parfum pour homme 100ml,200ml", brand:"Versace", size:"100ml / 200ml", price:850.0,
     sizeType:"full", concentration:"EDP",
     gender:["men"], season:["fall", "winter", "spring"], character:["oriental", "woody"], occasion:["evening"],
+    impression:["attractive","confident","firstlook"],
     image:"https://riha.ma/wp-content/uploads/2021/02/fda86709-e7de-46c2-adc6-77f81505abb0_11zon-1-450x675.jpg", url:"https://riha.ma/product/versace-eros-eau-de-parfum-pour-homme-100ml/",
     topSeller:false, onSale:false, boost:false,
     notes:{ top:["Mint", "Candy Apple", "Lemon", "Mandarin Orange"], middle:["Ambroxan", "Geranium", "Clary Sage"], base:["Vanilla", "Leather", "Sandalwood", "Cedar", "Bitter Orange", "Patchouli"] }
@@ -632,7 +635,7 @@ const PRODUCTS = [
   },
   { id:"v91", name:"ACQUA DI GI\u00d2 PROFONDO _ GIORGIO ARMANI", brand:"Giorgio Armani", size:"100ml", price:880.0,
     sizeType:"full", concentration:"EDP",
-    gender:["men"], season:["summer", "spring"], character:["fresh", "aquatic"], occasion:["daily"],
+    gender:["men"], season:["summer", "spring"], character:["fresh", "citrus"], occasion:["daily"],
     image:"https://riha.ma/wp-content/uploads/2024/07/ACQUA-DI-GIO--450x675.jpg", url:"https://riha.ma/product/acqua-di-gio-profondo-giorgio-armani/",
     topSeller:false, onSale:false, boost:false,
     notes:{ top:["Sea Notes", "Aquozone", "Bergamot", "Green Mandarin"], middle:["Rosemary", "Lavender", "Cypress", "Mastic or Lentisque"], base:["Mineral notes", "Musk", "Patchouli", "Amber"] }
@@ -647,6 +650,7 @@ const PRODUCTS = [
   { id:"v93", name:"CEDRAT BOISE \u2013 MANCERA", brand:"Mancera", size:"120ml", price:899.0,
     sizeType:"full", concentration:"EDP",
     gender:["unisex"], season:["spring", "summer", "fall"], character:["woody", "fresh"], occasion:["allday"],
+    impression:["elegant","confident","firstlook"],
     image:"https://riha.ma/wp-content/uploads/2019/10/556c07f0-1fb5-4138-a131-0e11399ba787_11zon-450x675.jpg", url:"https://riha.ma/product/cedrat-boise-mancera-prix-maroc/",
     topSeller:false, onSale:false, boost:false,
     notes:{ top:["Sicilian Lemon", "Black Currant", "Bergamot", "Spicy Notes"], middle:["Fruity Notes", "Patchouli Leaf", "Water Jasmine"], base:["Cedar", "Leather", "Sandalwood", "Vanilla", "Moss", "White Musk"] }
@@ -658,7 +662,7 @@ const PRODUCTS = [
     topSeller:false, onSale:false, boost:false,
     notes:{ top:["Lemon", "Bergamot"], middle:["Woody Notes", "Sandalwood"], base:["Madagascar Vanilla", "Vetiver", "Amber"] }
   },
-  { id:"v95", name:"Emporio Armani Stronger With You Intensely Giorgio ArmaniEau de Parfum Pour Homme Authentic", brand:"Giorgio Armani", size:"50ml / 100ml / 150ml", price:650.0,
+  { id:"v95", tagline:"عطر دافئ وحسي بطابع شرقي فاخر — يجمع القوة والأناقة في مزيج لا يُنسى", tagline_fr:"Chaud, sensuel et oriental — une alliance de force et d'élégance inoubliable", name:"Emporio Armani Stronger With You Intensely Giorgio ArmaniEau de Parfum Pour Homme Authentic", brand:"Giorgio Armani", size:"50ml / 100ml / 150ml", price:650.0,
     sizeType:"full", concentration:"EDP",
     gender:["men"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
     image:"https://riha.ma/wp-content/uploads/2024/07/STRONGER-WITH-YOU-2-450x675.jpg", url:"https://riha.ma/product/stronger-with-you-intensely-prix-au-maroc/",
@@ -686,7 +690,7 @@ const PRODUCTS = [
     topSeller:false, onSale:false, boost:false,
     notes:{ top:["Lavender", "Bergamot", "Lemon"], middle:["Honey", "Cinnamon", "Cashmeran", "Jasmine"], base:["Tobacco", "Vanilla", "Tonka Bean"] }
   },
-  { id:"v99", name:"JOOP HOMME \u2013 JOOP", brand:"Joop", size:"125ml", price:450.0,
+  { id:"v99", tagline:"عطر جريء ولافت بحلاوة قوية وحضور واضح لا يمر مرور الكرام", tagline_fr:"Audacieux et marquant, sucré et intense, il ne passe pas inaperçu", name:"JOOP HOMME \u2013 JOOP", brand:"Joop", size:"125ml", price:450.0,
     sizeType:"full", concentration:"EDT",
     gender:["men"], season:["winter", "fall"], character:["heavy", "oriental"], occasion:["evening"],
     image:"https://riha.ma/wp-content/uploads/2019/10/JOOP-HOMME-JOOP-prix-maroc-450x675.jpg", url:"https://riha.ma/product/joop-homme-joop-2/",
@@ -786,7 +790,8 @@ const PRODUCTS = [
   },
   { id:"v113", name:"Decantage Dior Homme Parfum pour Homme", brand:"Dior", size:"3ml / 5ml / 10ml", price:110.0,
     sizeType:"decant", concentration:"Parfum",
-    gender:["men"], season:["winter", "fall"], character:["heavy", "woody"], occasion:["evening"],
+    gender:["men"], season:["winter", "fall"], character:["woody", "heavy"], occasion:["evening"],
+    impression:["luxury","elegant","confident"],
     image:"https://riha.ma/wp-content/uploads/2022/12/b8def9e6-514f-4c6c-9b61-67748656222c_11zon-450x675.jpg", url:"https://riha.ma/product/decantage-dior-homme-parfum-pour-homme/",
     topSeller:false, onSale:false, boost:false,
     notes:{ top:["Tuscan Iris", "Italian Orange"], middle:["Leather", "Rose"], base:["Ambrette", "Oud", "Cedar", "Sandalwood"] }
@@ -805,7 +810,7 @@ const PRODUCTS = [
     topSeller:false, onSale:false, boost:false,
     notes:{ top:["Bergamot", "Black Currant", "Lemon", "Lime", "Violet Leaf", "Ginger"], middle:["Iris", "Jasmine", "Rose"], base:["Musk", "Ambroxan", "Sandalwood", "Cedar"] }
   },
-  { id:"v116", name:"Oud Vanille Franck Olivier-FRANCK OLIVIER", brand:"Franck Olivier", size:"100ml", price:350.0,
+  { id:"v116", tagline:"مزيج دافئ من العود والفانيلا يمنح طابعاً شرقياً مريحاً وهادئاً", tagline_fr:"Un mélange chaud d'oud et vanille, oriental et apaisant", name:"Oud Vanille Franck Olivier-FRANCK OLIVIER", brand:"Franck Olivier", size:"100ml", price:350.0,
     sizeType:"full", concentration:"EDP",
     gender:["unisex"], season:["winter", "fall"], character:["oriental", "heavy"], occasion:["evening"],
     image:"https://riha.ma/wp-content/uploads/2022/01/20220722_194201-scaled-450x675.jpg", url:"https://riha.ma/product/oud-vanille-franck-olivier-franck-olivier/",
@@ -836,15 +841,46 @@ const PRODUCTS = [
 ];
 
 // ═══════════════════════════════════════════════════════════════
-//  CONFIG — غير هاد القيمة لكل متجر
+//  CONFIG — يقرأ من widget.js أو يستخدم القيم الافتراضية
 // ═══════════════════════════════════════════════════════════════
+const _EXT = (typeof window !== "undefined" && window.__FF_CONFIG__) || {};
+
 const CONFIG = {
-  DEFAULT_LANGUAGE: "ar",  // "ar" للدارجة | "fr" للفرنسية
-  TRIGGER_BOTTOM:   24,   // المسافة من الأسفل — زد الرقم إلا كاين زر آخر (مثال: 90)
-  TRIGGER_RIGHT:    20,   // المسافة من اليمين
-  HAS_DECANT:       true,  // false إلا الموقع ما عندوش décantes
-  HAS_FULL:         true,  // false إلا الموقع يبيع فقط décantes
-  DEFAULT_SIZE:      "full", // "full" أو "decant" — الحجم الافتراضي في سؤال الميزانية
+  // ── هوية المتجر ──────────────────────────────────────────────
+  STORE_NAME:       _EXT.STORE_NAME       || "Twins Fragrance",
+  WHATSAPP:         _EXT.WHATSAPP         || "212600000000",
+  STORE_LOGO:       _EXT.STORE_LOGO       || "",
+
+  // ── قاعدة البيانات ───────────────────────────────────────────
+  SHEETS_API_URL:   _EXT.SHEETS_API_URL   || "",
+  ANALYTICS_URL:    _EXT.ANALYTICS_URL    || _EXT.SHEETS_API_URL || "",
+
+  // ── اللغة ────────────────────────────────────────────────────
+  DEFAULT_LANGUAGE: _EXT.DEFAULT_LANGUAGE || "ar",
+
+  // ── أنواع المنتجات ────────────────────────────────────────────
+  HAS_DECANT:       _EXT.HAS_DECANT !== undefined ? _EXT.HAS_DECANT : true,
+  HAS_FULL:         _EXT.HAS_FULL   !== undefined ? _EXT.HAS_FULL   : true,
+  DEFAULT_SIZE:     _EXT.DEFAULT_SIZE     || "full",
+
+  // ── العملة ───────────────────────────────────────────────────
+  CURRENCY:         _EXT.CURRENCY         || "درهم",
+
+  // ── موضع الزر ────────────────────────────────────────────────
+  TRIGGER_BOTTOM:   _EXT.TRIGGER_BOTTOM   || 24,
+  TRIGGER_RIGHT:    _EXT.TRIGGER_RIGHT    || 20,
+
+  // ── Campaign Tags — التاجر يختار شنو يدفع هاد الشهر ─────────
+  // خيارات: "decants" | "men" | "women" | "summer" | "winter" | "new_arrivals" | null
+  ACTIVE_CAMPAIGN:  _EXT.ACTIVE_CAMPAIGN  || null,
+
+  // ── Boost Levels — نقاط إضافية لعطور محددة ──────────────────
+  // كيتطبق فقط إلا العطر مطابق >= 60% للذوق
+  // 0=normal | 10=featured | 20=premium | 30=aggressive
+  BOOST_LEVELS:     _EXT.BOOST_LEVELS     || {},
+
+  // ── سؤال الميزانية — false إلا كان المتجر كولشي بثمن واحد ───
+  HAS_BUDGET_QUESTION: _EXT.HAS_BUDGET_QUESTION !== undefined ? _EXT.HAS_BUDGET_QUESTION : true,
 };
 
 // ═══════════════════════════════════════════════════════════════
@@ -852,8 +888,8 @@ const CONFIG = {
 // ═══════════════════════════════════════════════════════════════
 const TRANSLATIONS = {
   ar: {
-    title:       "محتار؟ نختار ليك العطر المناسب في 30 ثانية",
-    subtitle:    "أجب على 7 أسئلة قصيرة وسنقترح ليك العطر الأقرب لذوقك — من مجموعة",
+    title:       "✨ اكتشف شخصيتك العطرية",
+    subtitle:    "واحصل على أفضل العطور المناسبة لك في 30 ثانية — من مجموعة",
     exclusive:   "الحصرية",
     start:       "ابدأ الآن — مجانًا",
     loading:     "بنحلل ذوقك...",
@@ -870,6 +906,10 @@ const TRANSLATIONS = {
     fromStore:   "من مجموعة",
     similar:     "🔀 قد يعجبك أيضاً",
     tryAgain:    "← جرب مرة أخرى",
+    favoriteQ:   "أي عطر شعرت أنه الأقرب لذوقك؟",
+    favoriteThanks: "شكراً 🙏",
+    favoriteSubthanks: "سنستخدم اختيارك لتحسين اقتراحات العطور.",
+    favoriteHint: "رأيك يساعدنا نحسنو التوصيات",
     buyBtn:      "اشتري الآن ↗",
     waBtn:       "WA",
     noResult:    "ما لقيناش نتيجة مطابقة",
@@ -922,7 +962,7 @@ const TRANSLATIONS = {
   },
   fr: {
     title:       "Trouvez votre parfum idéal en 30 secondes",
-    subtitle:    "Répondez à 7 questions courtes et on vous propose le parfum le plus proche de vos goûts — collection",
+    subtitle:    "Et obtenez les meilleures recommandations en 30 secondes — collection",
     exclusive:   "exclusive",
     start:       "Commencer — Gratuit",
     loading:     "On analyse vos goûts...",
@@ -939,6 +979,10 @@ const TRANSLATIONS = {
     fromStore:   "de la collection",
     similar:     "🔀 Vous pourriez aussi aimer",
     tryAgain:    "← Recommencer",
+    favoriteQ:   "Lequel vous semble le plus proche de votre goût ?",
+    favoriteThanks: "Merci 🙏",
+    favoriteSubthanks: "Votre choix nous aidera à améliorer nos recommandations.",
+    favoriteHint: "Votre avis améliore nos recommandations",
     buyBtn:      "Acheter ↗",
     waBtn:       "WA",
     noResult:    "Aucun résultat trouvé",
@@ -1017,8 +1061,9 @@ const QS_FR = [
       {v:"floral",  l:"Floral",             i:"🌸", d:"Rose · Jasmin · Iris",         ic:"#6B1A45", bg:"#5f1a3a"},
       {v:"woody",   l:"Boisé",              i:"🌲", d:"Cèdre · Santal · Oud",         ic:"#3A2A0A", bg:"#4a3a0a"},
       {v:"fresh",   l:"Frais et Hespéridé", i:"🍋", d:"Bergamote · Citrus · Aquatique",ic:"#0A4A6B", bg:"#0a3a5f"},
-      {v:"oriental",l:"Doux et Oriental",   i:"🍬", d:"Vanille · Ambre · Caramel",    ic:"#6B3A00", bg:"#5f2a00"},
-      {v:"clean",   l:"Propre et Musqué",   i:"🧼", d:"Musc · Clean · Poudré",        ic:"#3A3A5F", bg:"#2a2a4f"},
+      {v:"oriental",l:"Oriental et Profond",i:"🪔", d:"Oud · Ambre · Encens",          ic:"#6B3A00", bg:"#5f2a00"},
+      {v:"sweet",   l:"Doux et Chaleureux", i:"🍬", d:"Vanille · Caramel · Tonka",     ic:"#7A3A00", bg:"#6a2a00"},
+      {v:"clean",   l:"Propre et Musqué",   i:"🧼", d:"Musc · Clean · Poudré",         ic:"#3A3A5F", bg:"#2a2a4f"},
     ] },
   { id:"impression", q:"Quelle impression voulez-vous laisser ?", sub:"La sensation que vous voulez donner",
     opts:[
@@ -1030,13 +1075,7 @@ const QS_FR = [
       {v:"longlast",  l:"Une trace qui persiste",           i:"🕯️", d:"Sillage fort et mémorable",     ic:"#3A1A0A", bg:"#4a2a0a"},
       {v:"luxury",    l:"Luxe et prestige",                 i:"👑", d:"Présence royale et authentique",ic:"#5F3A00", bg:"#6b4500"},
     ] },
-  { id:"longevity", q:"Quelle intensité souhaitez-vous ?", sub:"La puissance et la durée",
-    opts:[
-      {v:"light",  l:"Léger",   i:"🌿", d:"2-4h — Doux et discret",       ic:"#1A4A1A", bg:"#1a3a1a"},
-      {v:"medium", l:"Moyen",   i:"⚖️", d:"4-8h — Équilibré",              ic:"#3A3A1A", bg:"#4a4a1a"},
-      {v:"strong", l:"Intense", i:"💎", d:"+8h — Présence inoubliable",    ic:"#4A2A00", bg:"#5f3a00"},
-    ] },
-];
+  ];
 
 const BUDGET_FR = {
   decant:[
@@ -1058,6 +1097,12 @@ const PERSONAS_FR = {
   "heavy-evening": { ar:"الكلاسيكي الفاخر", fr:"Le Classique Luxueux",  desc_fr:"Votre goût penche vers les fragrances profondes et royales — un parfum qui dure et laisse une trace." },
   "heavy-daily":   { ar:"الجريء المعاصر",    fr:"L'Audacieux Moderne",   desc_fr:"Vous aimez les parfums forts même au quotidien — une personnalité qui marque les esprits." },
   "fresh-daily":   { ar:"الأنيق المنعش",     fr:"L'Élégant Frais",       desc_fr:"Votre goût va vers le frais et propre qui reflète confiance et élégance simple." },
+  "fresh-elegant": {
+    ar:"المنعش الأنيق", fr:"Le Frais Élégant", icon:"✨",
+    tags:{ ar:["منعش","أنيق","جاذبية"],  fr:["Frais","Élégant","Charme"] },
+    desc:"تميل للعطور المنعشة الراقية التي تمنحك كاريزما طبيعية وحضوراً واثقاً — منعش يلفت الأنظار دون مبالغة.",
+    desc_fr:"Votre goût penche vers les fragrances fraîches et raffinées qui dégagent une élégance naturelle et une présence assurée.",
+  },
   "fresh-evening": { ar:"الحديث الجذاب",     fr:"Le Moderne Séduisant",  desc_fr:"Vous choisissez le frais même en soirée — une personnalité unique et distinctive." },
   "floral-daily":  { ar:"الناعم الرومانسي",  fr:"Le Romantique Délicat", desc_fr:"Votre goût penche vers le floral doux qui reflète élégance et raffinement." },
   "floral-evening":{ ar:"الأنثوي الفاخر",    fr:"Le Luxueux Féminin",    desc_fr:"Vous choisissez le floral luxueux pour les soirées — une présence inoubliable." },
@@ -1201,65 +1246,456 @@ const OCCASION_CONTEXT = {
   },
 };
 
+// حساب match percentage
+function calcMatchScore(p, ans) {
+  const criteria = [];
+
+  // Gender — نعرض القيمة الفعلية مش "الجنس"
+  const genderLabel = ans.gender==="women" ? "نسائي" : ans.gender==="men" ? "رجالي" : "للجنسين";
+  const genderLabelFr = ans.gender==="women" ? "Femme" : ans.gender==="men" ? "Homme" : "Mixte";
+  if ((p.gender||[]).includes(ans.gender)) criteria.push({label_ar:genderLabel, label_fr:genderLabelFr, match:true});
+  else if ((p.gender||[]).includes("unisex")) criteria.push({label_ar:"للجنسين", label_fr:"Mixte", match:true});
+  else criteria.push({label_ar:genderLabel, label_fr:genderLabelFr, match:false});
+
+  // Character
+  const char = mapCharacter(ans.character);
+  const charMatch = (p.character||[]).includes(char)||(p.character||[]).includes(ans.character);
+  criteria.push({
+    label_ar: ans.character==="fresh"?"منعش وحمضي":ans.character==="clean"?"مسكي ونظيف":ans.character==="floral"?"زهري":ans.character==="woody"?"خشبي":ans.character==="oriental"?"شرقي وعميق":ans.character==="sweet"?"حلو ودافئ":"عميق وثقيل",
+    label_fr: ans.character,
+    match: charMatch
+  });
+
+  // Occasion
+  const occ = mapOccasion(ans.occasion);
+  const occMatch = (p.occasion||[]).includes(occ)||(p.occasion||[]).includes(ans.occasion)||(p.occasion||[]).includes("allday");
+  criteria.push({
+    label_ar: ans.occasion==="daily"?"يومي":ans.occasion==="evening"?"سهرات":ans.occasion==="travel"?"سفر":"متعدد",
+    label_fr: ans.occasion,
+    match: occMatch
+  });
+
+  // Season
+  const season = mapSeason(ans.season);
+  const seasonMatch = !season || (p.season||[]).includes(season) || (p.season||[]).includes("allseasons");
+  criteria.push({
+    label_ar: ans.season==="summer"?"صيف":ans.season==="winter"?"شتاء":ans.season==="spring"?"ربيع":ans.season==="fall"?"خريف":"طول العام",
+    label_fr: ans.season||"All seasons",
+    match: seasonMatch
+  });
+
+  // Longevity
+  if (ans.longevity) {
+    const lvl  = {light:1,medium:2,strong:3}[ans.longevity]||2;
+    const conc = {EDC:1,EDT:2,EDP:3,Parfum:4,Extrait:4}[p.concentration]||2;
+    const diff = Math.abs(lvl-(conc-1));
+    criteria.push({
+      label_ar: ans.longevity==="light"?"ثبات خفيف":ans.longevity==="medium"?"ثبات متوسط":"ثبات قوي",
+      label_fr: ans.longevity,
+      match: diff<=1
+    });
+  }
+
+  // Notes match — يفرق بين العطور المتشابهة
+  const allNotesC = [...(p.notes?.top||[]),...(p.notes?.middle||[]),...(p.notes?.base||[])];
+  const charKeyC  = mapCharacter(ans.character||"heavy");
+  const prefsC    = NOTES_PREFS[charKeyC] || [];
+  const notesMatchC = allNotesC.filter(n=>prefsC.some(pn=>n.toLowerCase().includes(pn.toLowerCase()))).length;
+  if (notesMatchC > 0) {
+    criteria.push({
+      label_ar: `${notesMatchC} نوتة مطابقة`,
+      label_fr: `${notesMatchC} note${notesMatchC>1?"s":""} correspondante${notesMatchC>1?"s":""}`,
+      match: true
+    });
+  } else if (notesMatchC === 0 && allNotesC.length > 0) {
+    // ما فيهاش تطابق في النوتات — مش مطابق كامل
+    criteria.push({
+      label_ar: "نوتات غير مطابقة",
+      label_fr: "Notes peu correspondantes",
+      match: false
+    });
+  } else {
+    // 0 نوتات غير مطابقة = مطابقة كاملة
+    criteria.push({
+      label_ar: "مطابقة كاملة لاختياراتك",
+      label_fr: "Correspond parfaitement",
+      match: true
+    });
+  }
+
+  // Impression match
+  if (ans.impression) {
+    const impCharMap = {
+      confident:["heavy","woody","oriental"],
+      luxury:["heavy","oriental","woody"],
+      attractive:["fresh","citrus","clean"],
+      elegant:["floral","clean","fresh","woody"],
+      fresh_imp:["fresh","clean","citrus"],
+      longlast:["heavy","oriental"],
+      firstlook:["fresh","citrus","floral"],
+    };
+    const impChars = impCharMap[ans.impression] || [];
+    const impMatch = impChars.length === 0 || (p.character||[]).some(c=>impChars.includes(c));
+    const impLabels = {
+      confident:"قوة وثقة", luxury:"فخامة وثراء", attractive:"جاذبية",
+      elegant:"أناقة هادئة", fresh_imp:"نظافة وانتعاش",
+      longlast:"أثر طويل", firstlook:"انطباع أول"
+    };
+    criteria.push({
+      label_ar: impLabels[ans.impression] || ans.impression,
+      label_fr: ans.impression,
+      match: impMatch
+    });
+  }
+
+  // ── حساب الـ pct من نفس الـ scoreP weights ──────────────────
+  // Gender 25 | Character 25 | Occasion 15 | Season 15 | Longevity 10 | Notes 10
+  const MAX_SCORE = 100;
+  let weightedScore = 0;
+
+  // Gender (25 pts)
+  if ((p.gender||[]).includes(ans.gender)) weightedScore += 25;
+  else if ((p.gender||[]).includes("unisex")) weightedScore += 12;
+
+  // Character (25 pts)
+  const charKey = mapCharacter(ans.character||"heavy");
+  if ((p.character||[]).includes(charKey)||(p.character||[]).includes(ans.character))
+    weightedScore += 25;
+  else weightedScore += 5;
+
+  // Occasion (15 pts)
+  const occKey = mapOccasion(ans.occasion);
+  if ((p.occasion||[]).includes(occKey)||(p.occasion||[]).includes(ans.occasion)||(p.occasion||[]).includes("allday"))
+    weightedScore += 15;
+  else weightedScore += 3;
+
+  // Season (15 pts)
+  const seasKey = mapSeason(ans.season);
+  if (!seasKey||(p.season||[]).includes(seasKey)) weightedScore += 15;
+  else weightedScore += 5;
+
+  // Longevity (10 pts)
+  if (ans.longevity) {
+    const lvl  = {light:1,medium:2,strong:3}[ans.longevity]||2;
+    const conc = {EDC:1,EDT:2,EDP:3,Parfum:4,Extrait:4}[p.concentration]||2;
+    const diff = Math.abs(lvl-(conc-1));
+    if (diff===0) weightedScore += 10;
+    else if (diff===1) weightedScore += 6;
+    else weightedScore += 2;
+  } else { weightedScore += 8; }
+
+  // Notes (10 pts)
+  const allNotes = [...(p.notes?.top||[]),...(p.notes?.middle||[]),...(p.notes?.base||[])];
+  const prefs    = NOTES_PREFS[charKey] || [];
+  const notesMatch = allNotes.filter(n=>prefs.some(pn=>n.toLowerCase().includes(pn.toLowerCase()))).length;
+  weightedScore += Math.min(notesMatch * 2, 10);
+
+  // حساب النسبة من الـ weighted criteria مباشرة
+  // ماشي من الـ _pct ديال الـ slot لأنه ما يعكسش المعايير الحقيقية
+  const rawPct = Math.round(weightedScore);
+
+  // إلا عندو _pct من الـ slot — استخدمه كـ ceiling فقط
+  // يعني ما يقدرش يكون أعلى من الـ slot pct
+  // لكن يقدر ينزل إلا المعايير ناقصة
+  // الـ pct المعروض = _pct مباشرة من الـ scoring الحقيقي
+  const pct = p._pct !== undefined ? p._pct : Math.min(rawPct, 100);
+
+  return { pct, criteria };
+}
+
 function generateWhyChosen(p, ans, slotType="best", lang="ar") {
   const isAr = lang !== "fr";
-  const char  = mapCharacter(ans.character || "heavy");
-  // استعمل مناسبة العطر الحقيقية مش مناسبة الزبون
+
+  // ── استخدم character العطر الحقيقي — مش character الزبون ──
+  const pChar    = (p.character||[])[0] || mapCharacter(ans.character || "heavy");
+  const char     = mapCharacter(ans.character || "heavy");
   const productOcc = (p.occasion||[])[0] || ans.occasion || "daily";
-  const occ   = mapOccasion(productOcc);
-  const imp   = ans.impression;
+  const occ      = mapOccasion(productOcc);
+  const imp      = ans.impression;
 
-  // نوتات القاعدة → إحساس
+  // نوتات القاعدة والافتتاحية
   const baseNotes = p.notes?.base || [];
+  const topNotes  = p.notes?.top  || [];
   const baseFeel  = baseNotes.slice(0,2).map(n=>NOTE_FEELINGS[lang]?.[n]).filter(Boolean);
-
-  // نوتات الافتتاحية → انتعاش أو دفء
-  const topNotes  = p.notes?.top || [];
   const topFeel   = topNotes.slice(0,1).map(n=>NOTE_FEELINGS[lang]?.[n]).filter(Boolean);
 
-  const charBase  = CHARACTER_BASE[lang]?.[char] || "";
-  const impFeel   = IMPRESSION_FEELINGS[lang]?.[imp] || "";
+  // الوصف الأساسي من character العطر نفسه — مش character الزبون
+  const charBase  = CHARACTER_BASE[lang]?.[pChar] || CHARACTER_BASE[lang]?.[char] || "";
   const occCtx    = OCCASION_CONTEXT[lang]?.[occ] || "";
 
-  // ── SLOT BEST (🥇) — لماذا هو الأنسب ──────────────
+  // الـ impression يُضاف فقط إلا كان منسجم مع character العطر
+  const impIsCompatible = (()=>{
+    const heavyImps = ["luxury","confident","longlast","firstlook","attractive"];
+    const freshImps = ["fresh_imp","elegant","firstlook","attractive"];
+    const pIsHeavy  = ["heavy","oriental","woody"].includes(pChar);
+    const pIsFresh  = ["fresh","clean","citrus"].includes(pChar);
+    if (pIsHeavy && heavyImps.includes(imp)) return true;
+    if (pIsFresh && freshImps.includes(imp)) return true;
+    if (["floral"].includes(pChar) && ["elegant","attractive","firstlook"].includes(imp)) return true;
+    return false;
+  })();
+
+  const impFeel = impIsCompatible ? (IMPRESSION_FEELINGS[lang]?.[imp] || "") : "";
+
+  // ── SLOT BEST (🥇) — 70% character العطر + 30% سبب الاختيار ──
   if (slotType === "best") {
+
+    // وصف عام حسب character العطر الحقيقي
+    // القاعدة الذهبية:
+    // Fresh/Fruity/Citrus/Aquatic → انتعاش، حيوية، يومي، نظافة، خفة
+    // Oriental/Woody/Heavy/Leather → حضور، فخامة، قوة، سهرات، عمق
+    const charDescAr = {
+      fresh:    "عطر منعش وخفيف يمنحك إحساساً بالحيوية والنظافة طوال اليوم",
+      citrus:   "عطر حمضي ومنعش ينفجر بالانتعاش من أول رشة — خفيف وسهل اللبس",
+      fruity:   "عطر فاكهي خفيف يعطي إحساساً بالحيوية والانتعاش في كل الأوقات",
+      clean:    "عطر نظيف ومسكي يمنح إحساساً بالنقاء والراحة طوال اليوم",
+      musky:    "عطر مسكي ناعم يترك أثراً هادئاً ونظيفاً على البشرة",
+      floral:   "عطر زهري راقٍ يجمع الأنوثة والأناقة بلمسة عصرية",
+      woody:    "عطر خشبي دافئ بحضور واضح يعكس الثقة والتميز",
+      oriental: "عطر شرقي عميق بحضور قوي يناسب السهرات والمناسبات الخاصة",
+      sweet:    "عطر حلو ودافئ يمنح إحساساً بالراحة والدفء في كل الأوقات",
+      heavy:    "عطر ثقيل وعميق بحضور فاخر يترك أثراً لا يُنسى",
+      sweet:    "عطر حلو ودافئ يجمع الأناقة والعمق في مزيج فريد",
+      elegant:  "عطر متوازن وراقٍ يجمع الانتعاش والعمق بأسلوب مميز",
+      luxury:   "عطر فاخر بحضور ملكي قوي يناسب المناسبات الراقية",
+    };
+    const charDescFr = {
+      fresh:    "Un parfum frais et léger qui procure vitalité et sensation de propreté toute la journée",
+      citrus:   "Un parfum hespéridé vif et énergisant — léger et facile à porter",
+      fruity:   "Un fruité léger et vivant, idéal pour se sentir frais et dynamique",
+      clean:    "Un parfum propre et musqué, sensation de pureté et de confort prolongée",
+      musky:    "Un musqué doux et naturel qui laisse un sillage discret et agréable",
+      floral:   "Un floral raffiné alliant féminité moderne et élégance naturelle",
+      woody:    "Un boisé chaleureux avec une présence affirmée qui reflète confiance et distinction",
+      oriental: "Un oriental profond et enveloppant, idéal pour les soirées et occasions spéciales",
+      heavy:    "Un parfum intense et luxueux à la présence forte et inoubliable",
+      sweet:    "Un parfum doux et chaleureux alliant profondeur et sophistication",
+      elegant:  "Un parfum équilibré et raffiné, entre fraîcheur et profondeur",
+      luxury:   "Un parfum de luxe à la présence royale, pour les occasions d'exception",
+    };
+
     if (isAr) {
-      const feel = baseFeel.length ? `يجمع ${baseFeel.join(" و")}` : charBase;
-      return `${feel}${impFeel ? ` — ${impFeel}` : ""}${occCtx ? ` · ${occCtx}` : ""}`;
+      // ── 3 طبقات ──────────────────────────────────────────
+      // طبقة 1: Personality — DNA ديال العطر من النوتات الحقيقية
+
+      // بناء جملة personality من النوتات المهيمنة
+      const buildPersonalityAr = () => {
+        if (p.tagline) return p.tagline;
+
+        // النوتات الكلها مرتبة حسب الأهمية
+        const allN = [
+          ...(p.notes?.base||[]),
+          ...(p.notes?.middle||[]),
+          ...(p.notes?.top||[]),
+        ].filter(n => {
+          // نستثني نوتات generic جداً
+          const generic = ["musk","white musk","water","alcohol"];
+          return !generic.some(g=>n.toLowerCase().includes(g));
+        });
+
+        // قاموس تعبيري للنوتات
+        const NOTE_EXPR = {
+          "Vanilla":     "حلاوة الفانيلا الدافئة",
+          "Cacao":       "عمق الكاكاو الغني",
+          "Cocoa":       "عمق الكاكاو الغني",
+          "Caramel":     "حلاوة الكراميل المذابة",
+          "Tonka Bean":  "دفء حبة التونكا الناعمة",
+          "Benzoin":     "عمق البنزوين الراتنجي",
+          "Incense":     "روحانية البخور الغامضة",
+          "Oud":         "أصالة العود العميق",
+          "Amber":       "دفء العنبر المخملي",
+          "Patchouli":   "عمق الباتشولي الترابي",
+          "Sandalwood":  "نعومة خشب الصندل",
+          "Leather":     "جرأة الجلد الفاخر",
+          "Tobacco":     "دفء التبغ الكلاسيكي",
+          "Rose":        "رقة الورد الناعمة",
+          "Jasmine":     "أريج الياسمين الزهري",
+          "Bergamot":    "انتعاش البرغموت الحمضي",
+          "Lemon":       "نضارة الليمون المشرقة",
+          "Apple":       "حلاوة التفاح الفاكهية",
+          "Raspberry":   "طراوة التوت الحمراء",
+          "Cedar":       "نبل خشب الأرز",
+          "Musk":        "نقاء المسك الأبيض",
+          "Saffron":     "فخامة الزعفران الذهبي",
+          "Iris":        "أناقة زهرة الأيريس",
+          "Vetiver":     "عمق الفيتيفير الأرضي",
+        };
+
+        // ابحث على أول نوتتين معبّرتين
+        const expressive = allN.map(n => {
+          const key = Object.keys(NOTE_EXPR).find(k=>n.toLowerCase().includes(k.toLowerCase()));
+          return key ? NOTE_EXPR[key] : null;
+        }).filter(Boolean);
+
+        if (expressive.length >= 2) {
+          return `${expressive[0]} تلتقي بـ${expressive[1]} — ${charDescAr[pChar] || "عطر مميز بطابع فريد"}`;
+        } else if (expressive.length === 1) {
+          return `${expressive[0]} تمنح هذا العطر ${charDescAr[pChar] || "طابعاً مميزاً وفريداً"}`;
+        }
+        // fallback
+        return charDescAr[pChar] || charDescAr[char] || charBase || "عطر متوازن ومميز";
+      };
+      const p1 = buildPersonalityAr();
+
+      // طبقة 2: Why it matches — بالنوتات الحقيقية + الستايل
+      const buildWhyAr = () => {
+        const allN = [
+          ...(p.notes?.top||[]),
+          ...(p.notes?.middle||[]),
+          ...(p.notes?.base||[]),
+        ];
+
+        // قاموس نوتات مختصر للـ why
+        const NOTE_SHORT = {
+          "Vanilla":"الفانيلا", "Cacao":"الكاكاو", "Cocoa":"الكاكاو",
+          "Tonka Bean":"التونكا", "Caramel":"الكراميل", "Benzoin":"البنزوين",
+          "Incense":"البخور", "Oud":"العود", "Amber":"العنبر",
+          "Patchouli":"الباتشولي", "Sandalwood":"الصندل", "Leather":"الجلد",
+          "Tobacco":"التبغ", "Saffron":"الزعفران", "Rose":"الورد",
+          "Jasmine":"الياسمين", "Bergamot":"البرغموت", "Cedar":"الأرز",
+          "Musk":"المسك", "Iris":"الأيريس", "Vetiver":"الفيتيفير",
+        };
+
+        // ابحث على 2-3 نوتات مميزة
+        const namedNotes = allN.map(n => {
+          const key = Object.keys(NOTE_SHORT).find(k=>n.toLowerCase().includes(k.toLowerCase()));
+          return key ? NOTE_SHORT[key] : null;
+        }).filter(Boolean).filter((v,i,a)=>a.indexOf(v)===i).slice(0,3);
+
+        const charLabel = {
+          fresh:"الانتعاش والخفة", citrus:"الحمضية والانتعاش",
+          fruity:"الحيوية الفاكهية", clean:"النظافة والأناقة",
+          floral:"الأنوثة الزهرية", woody:"العمق الخشبي",
+          oriental:"الطابع الشرقي الدافئ", heavy:"الحضور القوي",
+          sweet:"الدفء والحلاوة", musky:"النقاء والناعومة",
+        }[pChar] || "الطابع المميز";
+
+        if (namedNotes.length >= 2) {
+          return `قريب من ذوقك لأنه يجمع بين ${namedNotes.slice(0,-1).join(" و")} و${namedNotes[namedNotes.length-1]} في ${charLabel}`;
+        } else if (namedNotes.length === 1) {
+          return `قريب من ذوقك لأن ${namedNotes[0]} يمنحه ${charLabel}`;
+        }
+        return `قريب من ذوقك لأنه يجمع ${charLabel}`;
+      };
+      const p2 = buildWhyAr();
+
+      // طبقة 3: Use case — المناسبة حسب العطر + ذوق الزبون
+      const USE_AR = {
+        daily:   "مناسب للاستعمال اليومي في كل الأوقات",
+        evening: "مناسب للأمسيات الخاصة والخروجات الليلية",
+        dates:   "مناسب للأمسيات الرومانسية والمواعيد الخاصة",
+        travel:  "مناسب للسفر وكل المناسبات",
+        allday:  "مناسب لجميع المناسبات",
+      };
+
+      // إلا العطر allday والزبون يبغي سهرات → نذكر السهرات
+      const userWantsEvening = ans.occasion==="evening" || ans.occasion==="dates";
+      const getUseCase = () => {
+        if (occ === "allday" || occ === "daily") {
+          if (userWantsEvening) return "يمكن استعماله في المناسبات الخاصة والسهرات";
+        }
+        return USE_AR[occ] || USE_AR["allday"];
+      };
+      const p3 = getUseCase();
+
+      return `${p1}. ${p2}. ${p3}.`;
+
     } else {
-      const feel = baseFeel.length ? `alliant ${baseFeel.join(" et ")}` : charBase;
-      return `${feel}${impFeel ? ` — ${impFeel}` : ""}${occCtx ? ` · ${occCtx}` : ""}`;
+      // طبقة 1
+      const p1 = (p.tagline_fr || p.tagline)
+        ? (p.tagline_fr || p.tagline)
+        : (charDescFr[pChar] || charDescFr[char] || charBase || "Un parfum équilibré");
+
+      // طبقة 2
+      const WHY_FR = {
+        fresh:    "Proche de vos préférences car il offre la fraîcheur et légèreté recherchées",
+        citrus:   "Proche de vos préférences car il allie agrumes et vivacité",
+        floral:   "Proche de vos préférences car il allie féminité et élégance florale",
+        woody:    "Proche de vos préférences car il allie profondeur boisée et présence",
+        oriental: "Proche de vos préférences car il réunit caractère oriental et chaleur sucrée",
+        heavy:    "Proche de vos préférences car il offre présence forte et sillage durable",
+        sweet:    "Proche de vos préférences car il allie douceur et chaleur enveloppante",
+      };
+      const p2 = WHY_FR[pChar] || WHY_FR[char] || "";
+
+      // طبقة 3
+      const USE_FR = {
+        daily:   "Idéal pour un usage quotidien",
+        evening: "Idéal pour les soirées et sorties nocturnes",
+        dates:   "Idéal pour les soirées romantiques",
+        travel:  "Idéal pour voyager et toutes les occasions",
+        allday:  "Convient à toutes les occasions",
+      };
+      const p3 = USE_FR[occ] || USE_FR["allday"];
+
+      return `${p1}. ${p2}. ${p3}.`;
     }
   }
 
-  // ── SLOT MID (🥈) — زاوية مختلفة: الافتتاحية والانتعاش ──
+  // ── SLOT MID (🥈) — قريب من ذوقك ولكن...
   if (slotType === "mid") {
+    // هل العطر أخف أو أثقل من ذوق الزبون؟
+    const userIsHeavy  = ["heavy","oriental","woody"].includes(char);
+    const prodIsFresh  = ["fresh","clean","citrus","fruity"].includes(pChar);
+    const prodIsHeavy  = ["heavy","oriental","woody"].includes(pChar);
+    const userIsFresh  = ["fresh","clean","citrus","fruity"].includes(char);
+
     if (isAr) {
-      const feel = topFeel.length ? `يبدأ بـ${topFeel[0]}` : "بداية منعشة";
-      const base = baseFeel.length ? ` وينتهي بـ${baseFeel[0]}` : "";
-      return `${feel}${base} — إلا كنتي تبغي دفئاً أكثر وحضوراً أوضح، هذا العطر يضيف لمسة تبقى في الذاكرة.`;
+      if (userIsHeavy && prodIsFresh) {
+        // زبون يبغي ثقيل — العطر منعش
+        return `يختلف قليلاً عن اختيارك نحو الفخامة الثقيلة — يقدم لك بديلاً أكثر انتعاشاً وحيوية${occCtx ? ` · ${occCtx}` : ""}، مع الحفاظ على لمسة من الأناقة والتميز.`;
+      } else if (userIsFresh && prodIsHeavy) {
+        // زبون يبغي منعش — العطر ثقيل
+        return `أثقل قليلاً من اختيارك المنعش — لكنه يضيف حضوراً وعمقاً أكثر${occCtx ? ` · ${occCtx}` : ""}، مناسب إلا أردت تغيير الأسلوب أحياناً.`;
+      } else {
+        // نفس العائلة — فرق في النوتات أو الثبات
+        const baseDesc = charBase || "عطر مميز";
+        const noteHint = baseFeel.length ? ` مع لمسة من ${baseFeel[0]}` : "";
+        return `${baseDesc}${noteHint} — قريب من ذوقك مع طابع مختلف${occCtx ? ` · ${occCtx}` : ""}.`;
+      }
     } else {
-      const feel = topFeel.length ? `Commence par ${topFeel[0]}` : "Une ouverture fraîche";
-      const base = baseFeel.length ? ` et se pose sur ${baseFeel[0]}` : "";
-      return `${feel}${base} — si vous préférez plus de chaleur et de présence, ce parfum ajoute une touche mémorable.`;
+      if (userIsHeavy && prodIsFresh) {
+        return `Légèrement différent de votre préférence pour les parfums intenses — offre une alternative plus fraîche et légère${occCtx ? ` · ${occCtx}` : ""}, tout en conservant une touche d'élégance.`;
+      } else if (userIsFresh && prodIsHeavy) {
+        return `Plus intense que votre choix habituel — mais apporte plus de présence et de profondeur${occCtx ? ` · ${occCtx}` : ""}.`;
+      } else {
+        const baseDesc = charBase || "parfum distinctif";
+        const noteHint = baseFeel.length ? ` avec une touche de ${baseFeel[0]}` : "";
+        return `${baseDesc}${noteHint} — proche de vos préférences avec un caractère différent.`;
+      }
     }
   }
 
-  // ── SLOT THIRD (🥉) — بديل بجانب مختلف ──────────────
+  // ── SLOT THIRD (🥉) — بديل مختلف يستحق التجربة ──
   if (slotType === "third") {
-    const conc = p.concentration;
-    const isExtrait = conc === "Extrait";
+    const userIsHeavy  = ["heavy","oriental","woody"].includes(char);
+    const prodIsFresh  = ["fresh","clean","citrus","fruity"].includes(pChar);
+    const userIsFresh  = ["fresh","clean","citrus","fruity"].includes(char);
+    const prodIsHeavy  = ["heavy","oriental","woody"].includes(pChar);
+
     if (isAr) {
-      const diffNote = baseFeel[1] || baseFeel[0] || charBase;
-      return `بديل لمن يبغي ${isExtrait ? "حضوراً أقوى وثباتاً أطول" : "طابعاً أكثر تميزاً"} — ${diffNote ? `مع ${diffNote}` : ""} مع الحفاظ على نفس ذوقك العام.`;
+      if (userIsHeavy && prodIsFresh) {
+        return `بديل أخف وأكثر مرونة من العطور الفاخرة الثقيلة التي تميل إليها — مناسب للاستعمال اليومي وللأجواء الحارة.`;
+      } else if (userIsFresh && prodIsHeavy) {
+        return `بديل أكثر عمقاً وحضوراً من عطورك المنعشة المعتادة — يستحق التجربة لمن يريد تغيير الأسلوب.`;
+      } else {
+        const baseDesc = charBase || "عطر مميز";
+        return `${baseDesc} — بديل رائع يعبر عن نفس التوجه بطريقة فريدة ومختلفة.`;
+      }
     } else {
-      const diffNote = baseFeel[1] || baseFeel[0] || charBase;
-      return `Pour ceux qui préfèrent ${isExtrait ? "une présence plus forte et plus durable" : "un caractère plus distinctif"} — ${diffNote ? `avec ${diffNote}` : ""} dans le même esprit.`;
+      if (userIsHeavy && prodIsFresh) {
+        return `Une alternative plus légère et flexible aux parfums luxueux intenses — idéale pour le quotidien.`;
+      } else if (userIsFresh && prodIsHeavy) {
+        return `Une alternative plus profonde et présente que vos fragrances fraîches habituelles — à découvrir.`;
+      } else {
+        return `${charBase || "Parfum distinctif"} — une belle alternative qui exprime le même univers différemment.`;
+      }
     }
   }
 
-  return "";
+  return charBase || "";
 }
+
 
 // ═══════════════════════════════════════════════════════════════
 //  SENSORY MAPPING MATRIX — 3 أجزاء ديناميكية
@@ -1290,14 +1726,14 @@ const SENSORY_MATRIX = {
       "وتترك أثراً حلواً ومميزاً يبقى في الذاكرة.",
     ],
     Oud: [
-      "فخامة عربية أصيلة تفرض هيبتها بقوة...",
-      "تعكس طابعاً ملكياً وشخصية واثقة في كل لقاء،",
+      "فخامة عميقة وراقية تفرض حضورها بقوة...",
+      "تعكس شخصية واثقة ومميزة في كل لقاء،",
       "وتضمن لك حضوراً ساطعاً يبقى حتى بعد مغادرتك.",
     ],
     Leather: [
-      "قوة حادة تفرض هيبتها بأناقة واثقة...",
-      "تعكس شخصية قوية ومستقلة لا تمر مرور الكرام،",
-      "وتترك انطباعاً لا يُنسى من القوة والحضور الراقي.",
+      "طابع جلدي فاخر بلمسة خشبية دافئة يمنحه شخصية قوية ومميزة...",
+      "يعكس جرأة واضحة وحضوراً لا يُنسى في كل مكان،",
+      "ويترك بصمة قوية وفاخرة تعكس الثقة والتميز.",
     ],
     Sandalwood: [
       "لمسة خشبية دافئة ومتزنة تلامس الحواس برفق...",
@@ -1327,12 +1763,12 @@ const SENSORY_MATRIX = {
     Jasmine: [
       "أريج الياسمين الغني يملأ الجو بدفء زهري...",
       "يمنحك جاذبية طبيعية وحضوراً رومانسياً آسراً،",
-      "ويترك أثراً زهرياً فاخراً يبقى في ذاكرة الجميع.",
+      "ويترك أثراً زهرياً أنيقاً ناعماً يبقى في ذاكرة من حولك.",
     ],
     Patchouli: [
-      "عمق ترابي دافئ يمنحك طابعاً فريداً من نوعه...",
-      "يعكس شخصية جريئة ومستقلة تقدر التميز،",
-      "ويترك أثراً عميقاً غير تقليدي لا يُنسى.",
+      "عمق ترابي دافئ يضيف طابعاً مميزاً للعطر...",
+      "يمنحه شخصية واضحة وحضوراً متوازناً،",
+      "ويترك أثراً دافئاً خفياً يزيد من جماله.",
     ],
     Tobacco: [
       "دفء تبغ فاخر يمنحك طابعاً كلاسيكياً راقياً...",
@@ -1353,6 +1789,57 @@ const SENSORY_MATRIX = {
       "روحانية البخور تحيط بك بعمق وأصالة فريدة...",
       "تنقلك لأجواء الفخامة الشرقية الراقية،",
       "وتترك أثراً روحياً عميقاً يبقى طويلاً بعد رحيلك.",
+    ],
+    // نوتات تميز العطور عن بعضها
+    Ginger: [
+      "توهج حار وحيوي يفتح الحواس بتوازن رائع...",
+      "يمنحك شخصية عصرية واثقة تناسب بيئة العمل والخروج،",
+      "ويترك حضوراً دافئاً أنيقاً ومتوازناً طوال اليوم.",
+    ],
+    Sage: [
+      "نقاء عشبي أخضر يمنح إحساساً باليقظة والثقة...",
+      "يناسب الشخصية العملية الأنيقة التي تقدر التفاصيل،",
+      "ويترك أثراً نظيفاً ومميزاً يعكس الاحترافية والأناقة.",
+    ],
+    Apple: [
+      "انتعاش فاكهي شبابي يضخ الطاقة من أول رشة...",
+      "يمنحك شخصية حيوية جذابة ومرحة تناسب الخروجات،",
+      "ويترك أثراً خفيفاً ومحبباً يجعلك قريباً من الآخرين.",
+    ],
+    "Pink Pepper": [
+      "توابل حارة خفيفة تضيف جرأة لطيفة ومميزة...",
+      "توحي بشخصية واثقة وجذابة تترك انطباعاً مختلفاً،",
+      "وتترك بصمة فريدة تجمع الجرأة والأناقة بتناغم.",
+    ],
+    Cardamom: [
+      "حرارة الهيل الدافئة تمنح العطر طابعاً توابلياً عصرياً...",
+      "يضيف دفئاً بهيجاً يجعل العطر فريداً ولا يُنسى،",
+      "ويترك أثراً دافئاً مميزاً يعكس ذوقاً رفيعاً.",
+    ],
+    Lavender: [
+      "هدوء اللافندر الجبلي يلف الحواس بسلام عميق...",
+      "يمنحك ثقة هادئة ونظافة راقية في كل الأوقات،",
+      "ويترك أثراً منعشاً ومريحاً يحسن المزاج طوال اليوم.",
+    ],
+    Cedar: [
+      "قوة الأرز النظيفة تمنحك ثباتاً وهدوءاً فورياً...",
+      "توحي بشخصية متزنة وواثقة من نفسها في كل مكان،",
+      "وتترك بصمة خشبية راقية تعكس النضج والأناقة.",
+    ],
+    Orange: [
+      "حمضية برتقالية مشرقة تنفجر بحيوية من أول رشة...",
+      "تمنحك نشاطاً فورياً وابتسامة خفية طوال اليوم،",
+      "وتترك أثراً منعشاً يعكس شخصيتك المرحة والحيوية.",
+    ],
+    Raspberry: [
+      "حلاوة التوت الحمراء تضيف دفئاً فاكهياً لطيفاً...",
+      "تمنح العطر شخصية ناعمة وجذابة ومميزة،",
+      "وتترك أثراً حلواً ومريحاً يستحق التكرار.",
+    ],
+    Aquatic: [
+      "نسيم أكواتيك نظيف يمنح إحساساً بالحرية الفورية...",
+      "يذكرك بالهواء الطلق والأجواء المنفتحة المنعشة،",
+      "ويترك أثراً بحرياً نظيفاً ومنعشاً طوال اليوم.",
     ],
   },
   fr: {
@@ -1382,9 +1869,9 @@ const SENSORY_MATRIX = {
       "garantissant une présence éclatante qui persiste longtemps après votre départ.",
     ],
     Leather: [
-      "Une force tranchante s'impose avec élégance et assurance...",
-      "reflétant une personnalité forte et indépendante qui ne passe pas inaperçue,",
-      "laissant une impression inoubliable de puissance et de présence raffinée.",
+      "Un caractère cuiré luxueux avec une touche boisée chaude, une personnalité forte et distinctive...",
+      "reflétant une audace affirmée et une présence inoubliable,",
+      "laissant une empreinte puissante et raffinée qui reflète confiance et singularité.",
     ],
     Sandalwood: [
       "Une touche boisée chaude et équilibrée effleure les sens avec douceur...",
@@ -1413,24 +1900,39 @@ function generateSensoryDesc(p, lang="ar") {
   const isAr = lang !== "fr";
   const matrix = SENSORY_MATRIX[lang] || SENSORY_MATRIX["ar"];
 
-  // ابحث على النوتة المهيمنة في base أولاً ثم middle ثم top
-  const basePriority = [
-    ...(p.notes?.base   || []),
-    ...(p.notes?.middle || []),
-    ...(p.notes?.top    || []),
-  ];
+  // character العطر الحقيقي
+  const pChar = (p.character||[])[0] || "fresh";
+  const isFreshType = ["fresh","citrus","fruity","clean","musky"].includes(pChar);
+  const isHeavyType = ["heavy","oriental","woody","leather"].includes(pChar);
+
+  // حسب character العطر — نختار من أين نبدأ
+  // Fresh/Fruity: ابدأ من top notes (الانتعاش) ← ماشي base
+  // Heavy/Oriental: ابدأ من base notes (العمق)
+  const searchOrder = isFreshType
+    ? [...(p.notes?.top||[]), ...(p.notes?.middle||[]), ...(p.notes?.base||[])]
+    : [...(p.notes?.base||[]), ...(p.notes?.middle||[]), ...(p.notes?.top||[])];
+
+  // نوتات heavy ما تظهرش في وصف عطر fresh
+  const heavyNotes = ["Patchouli","Oud","Leather","Tobacco","Incense","Resin","Labdanum"];
+  const filteredSearch = isFreshType
+    ? searchOrder.filter(n => !heavyNotes.some(h=>n.toLowerCase().includes(h.toLowerCase())))
+    : searchOrder;
 
   // أول نوتة عندها entry في المصفوفة
   let hookNote = null;
   let hookMatch = null;
 
-  for (const note of basePriority) {
+  for (const note of filteredSearch) {
     if (matrix[note]) { hookNote=note; hookMatch=matrix[note]; break; }
     const key = Object.keys(matrix).find(k=>note.toLowerCase().includes(k.toLowerCase()));
     if (key) { hookNote=key; hookMatch=matrix[key]; break; }
   }
 
+  // إلا ما لقيناش — fallback حسب character
   if (!hookMatch) {
+    if (isFreshType) return isAr
+      ? "يبدأ بانتعاش حيوي ويترك أثراً لطيفاً ومتوازناً."
+      : "Démarre avec une fraîcheur vive et laisse un sillage léger et équilibré.";
     return isAr
       ? "عطر يجمع بين الأناقة والعمق في توازن مثالي."
       : "Un parfum alliant élégance et profondeur en parfaite harmonie.";
@@ -1459,26 +1961,34 @@ function generateSensoryDesc(p, lang="ar") {
     })
     .filter(Boolean)[0];
 
-  // بناء الوصف المركب
+  // بناء الوصف — 3 جمل: شخصية العطر + استعمال + إحساس
   const [hook, emotion, trail] = hookMatch;
 
+  // نوتة middle لتغني الوصف
+  const midNote = midNotes.filter(n=>n!==hookNote)[0] || "";
+  const midKey  = midNote ? Object.keys(matrix).find(k=>midNote.toLowerCase().includes(k.toLowerCase())) : null;
+  const midDesc = midKey ? matrix[midKey][1] : "";
+
+  // نوتة top لتحديد الافتتاحية
+  const topNote = topNotes.filter(n=>n!==hookNote)[0] || topNotes[0] || "";
+  const topKey  = topNote ? Object.keys(matrix).find(k=>topNote.toLowerCase().includes(k.toLowerCase())) : null;
+  const topOpen = topKey ? matrix[topKey][0].replace("...","") : "";
+
   if (isAr) {
-    let desc = hook;
-    if (topFeel && topFeel !== hook) {
-      desc += ` مع لمسة من ${topFeel.replace("إحساس فوري بـ","").replace("انفجار","").replace("انتعاش","الانتعاش").trim()}،`;
-    }
-    desc += ` ${emotion}`;
-    desc += ` ${trail}`;
-    return desc;
+    // جملة 1: شخصية العطر الحقيقية (من hook)
+    const j1 = hook.replace("...","");
+    // جملة 2: استعمال (من middle أو character)
+    const j2 = midDesc
+      ? midDesc.replace("...","")
+      : emotion.replace("...","");
+    // جملة 3: الإحساس النهائي (من trail)
+    const j3 = trail.replace("...","");
+    return `${j1} ${j2} ${j3}`;
   } else {
-    let desc = hook;
-    if (topFeel) {
-      const clean = topFeel.replace("Une sensation immédiate","").replace("Un","une").trim();
-      if (clean && clean.length > 5) desc += ` avec une touche de ${clean.toLowerCase()},`;
-    }
-    desc += ` ${emotion}`;
-    desc += ` ${trail}`;
-    return desc;
+    const j1 = hook.replace("...","");
+    const j2 = midDesc ? midDesc.replace("...","") : emotion.replace("...","");
+    const j3 = trail.replace("...","");
+    return `${j1} ${j2} ${j3}`;
   }
 }
 
@@ -1501,16 +2011,25 @@ const SLOT_WHY = {
 const NOTES_PREFS = {
   heavy:  ["Vanilla","Amber","Oud","Musk","Sandalwood","Tobacco","Patchouli","Incense"],
   fresh:  ["Bergamot","Lemon","Aquatic","Sea Notes","Lavender","Rosemary","Mint"],
+  // clean مسكي نظيف = White Musk, Clean Musk, Powdery — ماشي Vanilla
+  clean:  ["White Musk","Musk","Clean","Powdery","Ambroxan","Cashmeran","Woody Notes"],
   floral: ["Rose","Jasmine","Iris","Violet","Lily","Hedione"],
 };
 const GIFT_BRANDS = ["KILIAN","ARMANI","LOUIS VUITTON","DIOR","CHANEL","YSL","GUERLAIN","MANCERA"];
+
+const CLEAN_BRANDS = [
+  "Narciso Rodriguez","Lancôme","Giorgio Armani","Chanel","Dior",
+  "Calvin Klein","Issey Miyake","Hermès","Byredo","Maison Margiela",
+];
+
 
 // Map new character values to old ones for compatibility
 // UI character → internal sub-tags
 const CHARACTER_SUBTAGS = {
   "fresh":    ["fresh", "citrus"],      // منعش وحمضي
   "clean":    ["clean", "musky"],       // نظيف ومسكي
-  "oriental": ["oriental", "sweet"],    // حلو وشرقي
+  "oriental": ["oriental", "heavy"],    // شرقي وعميق — ماشي حلو
+  "sweet":    ["sweet", "oriental"],    // حلو ودافئ — ممكن يكون فيه شرقي
   "floral":   ["floral"],
   "woody":    ["woody"],
   "heavy":    ["heavy", "oriental"],
@@ -1520,6 +2039,68 @@ const CHARACTER_SUBTAGS = {
 function mapCharacter(char) {
   const map = { luxury:"heavy" };
   return map[char] || char;
+}
+
+// Impression تلقائي من العائلة + المناسبة
+function autoImpressions(character, occasion) {
+  const chars = character || [];
+  const occ   = occasion   || [];
+  const has   = (arr, ...vals) => vals.some(v => arr.includes(v));
+
+  // heavy/oriental/woody + evening → luxury فقط للـ heavy الثقيل
+  if (has(chars,"heavy") && has(occ,"evening","dates"))
+    return ["luxury","elegant","confident"];
+
+  // oriental + evening → attractive + elegant (ماشي luxury تلقائياً)
+  if (has(chars,"oriental") && has(occ,"evening","dates"))
+    return ["attractive","elegant","confident"];
+
+  // sweet + evening → attractive, luxury
+  if (has(chars,"sweet") && has(occ,"evening","dates"))
+    return ["attractive","luxury","longlast"];
+
+  // woody + evening → elegant, confident
+  if (has(chars,"woody") && has(occ,"evening","dates"))
+    return ["elegant","confident","luxury"];
+
+  // oriental/heavy + daily → confident, elegant
+  if (has(chars,"heavy","oriental") && has(occ,"daily","allday"))
+    return ["confident","elegant","luxury"];
+
+  // woody + daily → confident, elegant
+  if (has(chars,"woody") && has(occ,"daily","allday"))
+    return ["confident","elegant"];
+
+  // sweet + daily → attractive, longlast
+  if (has(chars,"sweet") && has(occ,"daily","allday"))
+    return ["attractive","longlast","elegant"];
+
+  // floral + evening/dates → attractive, elegant
+  if (has(chars,"floral") && has(occ,"evening","dates"))
+    return ["attractive","elegant","firstlook"];
+
+  // floral + daily → elegant, firstlook
+  if (has(chars,"floral") && has(occ,"daily","allday"))
+    return ["elegant","firstlook","attractive"];
+
+  // fresh + dates → ماشي romantic تلقائياً — attractive فقط
+  if (has(chars,"fresh") && has(occ,"dates"))
+    return ["attractive","elegant","firstlook"];
+
+  // fresh/citrus + travel → fresh_imp, elegant
+  if (has(chars,"fresh","citrus") && has(occ,"travel"))
+    return ["fresh_imp","elegant","confident"];
+
+  // clean/musky + daily → elegant, fresh_imp
+  if (has(chars,"clean","musky") && has(occ,"daily","allday"))
+    return ["elegant","fresh_imp","attractive"];
+
+  // fresh + evening → attractive, elegant
+  if (has(chars,"fresh") && has(occ,"evening","dates"))
+    return ["attractive","elegant","firstlook"];
+
+  // default
+  return ["elegant","confident"];
 }
 
 // Check if product character matches user selection (with subtags)
@@ -1572,79 +2153,111 @@ function scoreP(p, ans) {
   // Gender 30 | Character 25 | Occasion 20 | Season 15 | Longevity 10
   // ══════════════════════════════════════════════════════
 
-  // ── GENDER — وزن 25 ────────────────────────────────────
-  if ((p.gender||[]).includes(ans.gender)) s+=25;
-  else if ((p.gender||[]).includes("unisex")) s+=12;
+  // ══════════════════════════════════════════════════════
+  //  NEW WEIGHTS: Character 40 | Occasion 25 | Gender 15
+  //               Impression 10 | Performance 10
+  // ══════════════════════════════════════════════════════
+
+  // ══════════════════════════════════════════════════════
+  //  WEIGHTS: Family 35 | Occasion 25 | Impression 20
+  //           Gender 10 | Season 5 | Notes 5
+  // ══════════════════════════════════════════════════════
+
+  // ── GENDER — وزن 10 ──────────────────────────────────
+  if ((p.gender||[]).includes(ans.gender)) s += 10;
+  else if ((p.gender||[]).includes("unisex")) s += 4; // unisex أقل من gender exact
   else return 0; // جنس خاطئ = يتحذف
 
-  // ── CHARACTER — وزن 25 (مع subtags) ─────────────────────
+  // ── CHARACTER/FAMILY — وزن 35 ──────────────────────────
   const char = mapCharacter(ans.character);
   const charMatch = charMatches(p.character, ans.character);
   if (charMatch) {
-    // Perfect match على subtag معين = bonus إضافي
     const subtags = CHARACTER_SUBTAGS[ans.character] || [ans.character];
     const exactSubtag = (p.character||[]).filter(c=>subtags.includes(c)).length;
-    s += 25 + Math.min(exactSubtag * 3, 6); // +3 لكل subtag مطابق max +6
+    s += 35 + Math.min(exactSubtag * 3, 6); // max 41
   } else {
-    const freshGroup   = ["fresh","clean","citrus","musky"];
-    const heavyGroup   = ["heavy","oriental","sweet","woody"];
-    const userFresh    = freshGroup.includes(ans.character) || freshGroup.includes(char);
-    const userHeavy    = heavyGroup.includes(ans.character) || heavyGroup.includes(char);
-    const pHeavy       = (p.character||[]).some(c=>heavyGroup.includes(c));
-    const pFresh       = (p.character||[]).some(c=>freshGroup.includes(c));
-    if ((userFresh && pHeavy) || (userHeavy && pFresh)) s -= 20;
-    else s -= 10;
+    const freshGroup = ["fresh","clean","citrus","musky","fruity"];
+    const heavyGroup = ["heavy","oriental","sweet","woody","leather"];
+    const userFresh  = freshGroup.includes(ans.character) || freshGroup.includes(char);
+    const userHeavy  = heavyGroup.includes(ans.character) || heavyGroup.includes(char);
+    const pHeavy     = (p.character||[]).some(c=>heavyGroup.includes(c));
+    const pFresh     = (p.character||[]).some(c=>freshGroup.includes(c));
+    if ((userFresh && pHeavy) || (userHeavy && pFresh)) s -= 40; // عائلة معاكسة → max score 75%
+    else s -= 20; // نفس المجموعة — subtag مختلف
   }
 
-  // ── OCCASION — وزن 15 ─────────────────────────────────
+  // ── OCCASION — وزن 25 ────────────────────────────────
   const occ = mapOccasion(ans.occasion);
-  if ((p.occasion||[]).includes(occ) || (p.occasion||[]).includes(ans.occasion)) s+=15;
-  else if ((ans.occasion==="evening"||ans.occasion==="dates") &&
-           (p.occasion||[]).every(o=>o==="daily")) s-=18;
-  else s-=3;
+  const isEveningUser = ans.occasion==="evening" || ans.occasion==="dates";
+  const prodIsEveningOnly = (p.occasion||[]).every(o=>o==="evening"||o==="dates");
+  const prodIsDailyOnly   = (p.occasion||[]).every(o=>o==="daily");
+  const prodIsAllDay      = (p.occasion||[]).includes("allday") || (p.occasion||[]).length > 1;
 
-  // ── SEASON — وزن 15 ────────────────────────────────────
+  if ((p.occasion||[]).includes(occ) || (p.occasion||[]).includes(ans.occasion)) {
+    s += 20;
+    if (isEveningUser && prodIsEveningOnly) s += 5;
+  } else if (isEveningUser && prodIsDailyOnly) {
+    // عطر يومي صرف لزبون يبغي سهرات — penalty قوي جداً
+    s -= 28;
+  } else if (!isEveningUser && prodIsEveningOnly) {
+    // زبون يبغي يومي + عطر سهرات فقط — penalty
+    s -= 18;
+  } else if (prodIsAllDay) {
+    // مناسب لكل المناسبات — نص البونوس
+    s += 8;
+  } else {
+    s -= 3;
+  }
+
+  // ── SEASON — وزن 5 ─────────────────────────────────────
   const season = mapSeason(ans.season);
-  if (!season || (p.season||[]).includes(season)) s+=15;
-  else if (season==="summer" && (p.season||[]).every(ss=>ss==="winter"||ss==="fall")) s-=10;
-  else if (season==="winter" && (p.season||[]).every(ss=>ss==="summer"||ss==="spring")) s-=10;
-  // عطر صيفي + زبون اختار سهرات → penalty إضافي
+  if (!season || (p.season||[]).includes(season)) s+=5;
+  else if (season==="summer" && (p.season||[]).every(ss=>ss==="winter"||ss==="fall")) s-=5;
+  else if (season==="winter" && (p.season||[]).every(ss=>ss==="summer"||ss==="spring")) s-=5;
+  // عطر صيفي + زبون اختار سهرات → penalty إضافي قوي
   else if ((p.season||[]).every(ss=>ss==="summer"||ss==="spring") &&
-           (ans.occasion==="evening"||ans.occasion==="dates")) s-=8;
+           (ans.occasion==="evening"||ans.occasion==="dates")) s -= 8;
   else s+=5;
 
-  // ── LONGEVITY — وزن 10 ─────────────────────────────────
+  // ── LONGEVITY — performance hint صغير فقط ──────────────
   if (ans.longevity) {
     const lvl  = { light:1, medium:2, strong:3 }[ans.longevity] || 2;
-    const conc = { EDC:1, EDT:2, EDP:3, Extrait:4 }[p.concentration] || 2;
+    const conc = { EDC:1, EDT:2, EDP:3, Parfum:4, Extrait:4 }[p.concentration] || 2;
     const diff = Math.abs(lvl - (conc-1));
-    if (diff===0) s+=10;
-    else if (diff===1) s+=5;
-    else if (diff===2) s-=6;
-    else s-=10; // EDT مع strong = penalty كبير
-  }
+    const isExplicit = ans.impression === "longlast";
+    if (diff===0) s += isExplicit ? 15 : 4;
+    else if (diff===1) s += isExplicit ? 8 : 2;
+    else if (diff===2) s -= isExplicit ? 8 : 2;
+    else s -= isExplicit ? 12 : 4;
+  } else s += 2;
 
   // ── IMPRESSION — يعدل الترتيب ضمن نفس الـ character ───
   if (ans.impression) {
     const imp = ans.impression;
+    // impression ديال العطر — من الداتا أولاً، من بعد auto mapping
+    const pAutoImps = p.impression || autoImpressions(p.character, p.occasion);
+    const impBoostFromAuto = pAutoImps.includes(imp) ? 8 : 0;
+    s += impBoostFromAuto;
     if (imp==="confident"||imp==="luxury") {
-      if ((p.character||[]).some(c=>["heavy","woody","oriental"].includes(c))) s+=8;
+      if ((p.character||[]).some(c=>["heavy","woody","oriental"].includes(c))) s+=14;
       const richNotes = ["Oud","Leather","Incense","Saffron","Tobacco","Amber","Resin"];
       const allN = [...(p.notes?.base||[]),...(p.notes?.middle||[])];
       if (allN.some(n=>richNotes.some(rn=>n.toLowerCase().includes(rn.toLowerCase())))) s+=4;
-      if (imp==="luxury" && p.concentration==="Extrait") s+=3;
+      // concentration ماشي luxury hint — يبقى فـ longevity فقط
     }
     if (imp==="longlast") {
-      if (p.concentration==="Extrait") s+=8;
-      else if (p.concentration==="EDP") s+=4;
-      else s-=3;
+      if (p.concentration==="Extrait") s+=16;
+      else if (p.concentration==="EDP") s+=10;
+      else if (p.concentration==="EDT") s+=4;
+      else s-=6;
     }
     if (imp==="attractive"||imp==="firstlook") {
-      if (GIFT_BRANDS.includes(p.brand)) s+=6;
+      // brand bonus صغير فقط للجاذبية — ماشي للفخامة أو الأناقة
+      if (GIFT_BRANDS.some(b=>b.toLowerCase()===p.brand?.toLowerCase())) s+=5;
       else s+=2;
     }
     if (imp==="elegant") {
-      if ((p.character||[]).some(c=>["woody","floral","clean","fresh"].includes(c))) s+=6;
+      if ((p.character||[]).some(c=>["woody","floral","clean","fresh"].includes(c))) s+=14;
       // عطور aggressive (Leather+Tobacco+Oud) ≠ أناقة هادئة
       const aggressiveNotes = ["Leather","Tobacco","Oud","Incense"];
       const allN2 = [...(p.notes?.base||[]),...(p.notes?.middle||[])];
@@ -1683,25 +2296,41 @@ function scoreP(p, ans) {
   }
   else if (userChar === "clean") {
     // نظيف ومسكي → يبحث عن Musk + Clean notes
-    const cleanNotes = ["Musk","White Musk","Soap","Clean","Powder","Iris","Neroli","Cotton","Aldehyde"];
+    const cleanNotes = ["Musk","White Musk","Soap","Clean","Powder","Iris","Neroli","Cotton","Aldehyde","Ambroxan","Cashmeran"];
     const cleanMatch = allNotes.filter(n=>cleanNotes.some(cn=>n.toLowerCase().includes(cn.toLowerCase()))).length;
     s += Math.min(cleanMatch * 3, 12);
     // Penalty للنوتات الثقيلة جداً
     const heavyAnti = ["Oud","Leather","Tobacco","Incense"];
     const heavyMatch = allNotes.filter(n=>heavyAnti.some(an=>n.toLowerCase().includes(an.toLowerCase()))).length;
     s -= Math.min(heavyMatch * 3, 12);
+    // Penalty للحلاوة الثقيلة — مسكي نظيف ≠ حلو بالفانيلا
+    const sweetAnti = ["Vanilla","Caramel","Tonka","Praline","Sugar","Chocolate","Cacao"];
+    const sweetMatch = allNotes.filter(n=>sweetAnti.some(sn=>n.toLowerCase().includes(sn.toLowerCase()))).length;
+    s -= Math.min(sweetMatch * 4, 16);
   }
   else if (userChar === "oriental") {
-    // حلو وشرقي → Vanilla + Amber + Sweet
-    const sweetNotes = ["Vanilla","Caramel","Tonka","Honey","Sweet","Sugar","Praline","Toffee"];
-    const orientalNotes = ["Amber","Oud","Incense","Saffron","Resins","Benzoin"];
-    const sweetMatch = allNotes.filter(n=>sweetNotes.some(sn=>n.toLowerCase().includes(sn.toLowerCase()))).length;
+    // شرقي وعميق → Oud + Amber + Incense + Resins
+    const orientalNotes = ["Oud","Amber","Incense","Saffron","Resins","Benzoin","Frankincense","Myrrh"];
     const orMatch = allNotes.filter(n=>orientalNotes.some(on=>n.toLowerCase().includes(on.toLowerCase()))).length;
-    s += Math.min((sweetMatch + orMatch) * 2, 10);
-    // Penalty للنوتات المنعشة جداً
+    s += Math.min(orMatch * 4, 16);
+    // penalty للحلاوة الخفيفة (مش oriental حقيقي)
+    const sweetLight = ["Caramel","Sugar","Marshmallow","Praline"];
+    const slMatch = allNotes.filter(n=>sweetLight.some(sl=>n.toLowerCase().includes(sl.toLowerCase()))).length;
+    s -= Math.min(slMatch * 2, 8);
+    // penalty للنوتات المنعشة
     const freshPenalty = ["Citrus","Grapefruit","Aquatic","Sea","Marine"];
     const fpMatch = allNotes.filter(n=>freshPenalty.some(fp=>n.toLowerCase().includes(fp.toLowerCase()))).length;
     s -= Math.min(fpMatch * 3, 9);
+  }
+  else if (userChar === "sweet") {
+    // حلو ودافئ → Vanilla + Caramel + Tonka + Sugar
+    const sweetNotes = ["Vanilla","Caramel","Tonka","Honey","Sugar","Praline","Toffee","Chocolate","Marshmallow","Cacao"];
+    const sweetMatch = allNotes.filter(n=>sweetNotes.some(sn=>n.toLowerCase().includes(sn.toLowerCase()))).length;
+    s += Math.min(sweetMatch * 4, 16);
+    // penalty للبخور والعود الثقيل (حلو ≠ شرقي)
+    const heavyScentAnti = ["Incense","Frankincense","Myrrh","Oud"];
+    const haMatch = allNotes.filter(n=>heavyScentAnti.some(ha=>n.toLowerCase().includes(ha.toLowerCase()))).length;
+    s -= Math.min(haMatch * 3, 9);
   }
   else if (userChar === "floral") {
     const floralMatch = allNotes.filter(n=>floralProNotes.some(fn=>n.toLowerCase().includes(fn.toLowerCase()))).length;
@@ -1721,6 +2350,44 @@ function scoreP(p, ans) {
     const richMatch = allNotes.filter(n=>heavyProNotes.some(hn=>n.toLowerCase().includes(hn.toLowerCase()))).length;
     s += Math.min(richMatch, 4);
   }
+  // clean + سهرات + ماركة راقية → bonus
+  if ((ans.character==="clean") && (ans.occasion==="evening"||ans.occasion==="dates")) {
+    if (CLEAN_BRANDS.includes(p.brand)) s += 8;
+  }
+
+  // ── EXACT MATCH BONUS ─────────────────────────────────
+  // كل معيار اختاره الزبون بالضبط = bonus إضافي
+  // هاد البونوس يفرق بين عطر مطابق لـ 4 معايير وعطر مطابق لـ 2
+  let exactMatches = 0;
+
+  // Character exact
+  if (charMatch) exactMatches++;
+
+  // Occasion exact
+  if ((p.occasion||[]).includes(occ) || (p.occasion||[]).includes(ans.occasion)) exactMatches++;
+
+  // Gender exact (not unisex fallback)
+  if ((p.gender||[]).includes(ans.gender)) exactMatches++;
+
+  // Season exact
+  const seasonExact = mapSeason(ans.season);
+  if (seasonExact && (p.season||[]).includes(seasonExact)) exactMatches++;
+
+  // Impression exact
+  const impForBonus = ans.impression;
+  const impIsCompatible = impForBonus && (() => {
+    const heavyImps = ["luxury","confident","longlast","firstlook","attractive"];
+    const freshImps = ["fresh_imp","elegant","firstlook","attractive"];
+    const pChar_ = (p.character||[])[0] || "";
+    if (["heavy","oriental","woody"].includes(pChar_) && heavyImps.includes(impForBonus)) return true;
+    if (["fresh","clean","citrus","fruity"].includes(pChar_) && freshImps.includes(impForBonus)) return true;
+    if (pChar_==="floral" && ["elegant","attractive","firstlook"].includes(impForBonus)) return true;
+    return false;
+  })();
+  if (impIsCompatible) exactMatches++;
+
+  // +5 لكل معيار إضافي مطابق (فوق الـ 2 الأساسيين)
+  if (exactMatches >= 3) s += (exactMatches - 2) * 5;
 
   // ── BOOSTERS ─────────────────────────────────────────
   if (ans.budget)  s+=1;
@@ -1735,6 +2402,10 @@ function scoreP(p, ans) {
   if (p.topSeller) s+=0.5;
   if (p.onSale)    s+=0.3;
 
+  // ── BRAND + POPULARITY + PRIORITY ───────────────────────
+  // finalScore = match*0.75 + brand*0.05 + popularity*0.10 + priority*0.10
+
+
   return s;
 }
 
@@ -1743,6 +2414,7 @@ function scoreP(p, ans) {
 // ═══════════════════════════════════════════════════════════════
 function getResults(ans) {
   const scored = PRODUCTS
+    .filter(p => p.active !== false) // ← حذف العطور غير المتوفرة
     .map(p=>({...p, _s:scoreP(p,ans)}))
     .filter(p=>p._s>=40) // minimum meaningful score
     .sort((a,b)=>b._s-a._s);
@@ -1754,10 +2426,48 @@ function getResults(ans) {
   const slot2 = scored.find(p=>p.id!==slot1.id) || null;
   const slot3 = scored.find(p=>p.id!==slot1.id && p.id!==slot2?.id) || null;
 
+  // حساب النسبة من الـ _s الحقيقي
+  const maxScore = scored[0]?._s || 1;
+
+  // الأول = 100% دائماً
+  // الثاني والثالث = نسبة حقيقية من الـ score — مع minimum gap باش ما يكونوش متساويين
+  // _pct مباشرة من الـ score — الترتيب يعكس الـ scoring الحقيقي
+  const slots   = [slot1, slot2, slot3].filter(Boolean);
+  const scores  = slots.map(p => p._s);
+  const maxS    = scores[0] || 1;
+
+  // ceilings واقعية — 95% تبقى لعطور استثنائية فقط
+  const CEILINGS = [92, 88, 84];
+  // الـ max score الممكن نظرياً (كل المعايير مطابقة)
+  // Gender 25 + Occasion 20+5 + Character 25+6 + Longevity 15 + Season 10 + Impression 15 + ExactBonus 15 = ~136
+  const THEORETICAL_MAX = 100;
+
+  const adjustedPcts = [];
+  slots.forEach((p, i) => {
+    if (i === 0) {
+      // الأول — نسبة حقيقية من الـ theoretical max، ceiling 98%
+      const realPct = Math.round(p._s / THEORETICAL_MAX * 100);
+      adjustedPcts.push(Math.min(Math.max(realPct, 82), CEILINGS[0]));
+      return;
+    }
+    const prev    = adjustedPcts[i-1];
+    const raw     = Math.round(p._s / maxS * adjustedPcts[0]);
+    const ceiling = CEILINGS[i] || 75;
+
+    // إلا الفرق في الـ score صغير → max gap 5 نقاط
+    const scoreRatio = p._s / maxS;
+    const isClose    = scoreRatio >= 0.90;
+    const maxGap     = isClose ? 5 : 12;
+
+    const target = Math.min(raw, ceiling, prev - 1);
+    adjustedPcts.push(Math.max(prev - maxGap, target));
+  });
+
   const main = [slot1, slot2, slot3].filter(Boolean).map((p,i)=>({
     ...p,
     slotType: i===0 ? "best" : i===1 ? "mid" : "third",
-  }));
+    _pct: adjustedPcts[i],
+  })).filter(p => p._pct >= 75); // عرض فقط العطور ≥ 75%
 
   const mainIds = main.map(p=>p.id);
   const usedIds = new Set(mainIds); // نتتبع كل IDs مستخدمة
@@ -1771,37 +2481,96 @@ function getResults(ans) {
     return true;
   };
 
-  // ── topSeller — نفس الجنس ────────────────────────────
-  const char = mapCharacter(ans.character || "heavy");
-  const topSeller = scored.find(p=> p.topSeller && !usedIds.has(p.id) && genderOk(p));
-  if (topSeller) usedIds.add(topSeller.id);
+  // ── "قد يعجبك أيضاً" — فلترة للذوق + ترتيب للتجارة ──
 
-  // ── عطور مشابهة — نفس الجنس + نفس الـ character ────
-  let pool = PRODUCTS.filter(p=>
-    !usedIds.has(p.id) &&
-    genderOk(p) &&
-    (ans.sizeType ? p.sizeType===ans.sizeType : true) &&
-    ((p.character||[]).includes(char)||(p.character||[]).includes(ans.character))
-  ).sort(()=>Math.random()-0.5);
+  // الفلترة الإجبارية — 3 شروط أساسية
+  const userChar    = mapCharacter(ans.character || "heavy");
+  const userSeason  = mapSeason(ans.season);
+  const freshGroup  = ["fresh","clean","citrus","musky","fruity"];
+  const heavyGroup  = ["heavy","oriental","sweet","woody","leather"];
+  const floralGroup = ["floral"];
 
-  // fallback — نفس الجنس فقط
-  if (pool.length < 1) {
-    pool = PRODUCTS.filter(p=> !usedIds.has(p.id) && genderOk(p))
-      .sort(()=>Math.random()-0.5);
-  }
+  const getCharGroup = ch => {
+    if (freshGroup.includes(ch))  return "fresh";
+    if (heavyGroup.includes(ch))  return "heavy";
+    if (floralGroup.includes(ch)) return "floral";
+    return "other";
+  };
+  const userCharGroup = getCharGroup(userChar);
 
-  // fallback أخير
-  if (pool.length < 1) {
-    pool = PRODUCTS.filter(p=> !usedIds.has(p.id)).sort(()=>Math.random()-0.5);
-  }
+  const similarFiltered = PRODUCTS.filter(p => {
+    if (p.active === false) return false; // ← غير متوفر
+    if (usedIds.has(p.id)) return false;
 
-  // ── قسم "قد يعجبك" — 2 عطور مختلفين ────────────────
-  const extraPool = [];
-  if (topSeller) extraPool.push({...topSeller, extraType:"topSeller"});
-  if (pool[0])   extraPool.push({...pool[0],   extraType:"similar"});
-  if (!topSeller && pool[1]) extraPool.push({...pool[1], extraType:"similar"});
+    // شرط 1: نفس الجنس (إجباري)
+    if (!genderOk(p)) return false;
 
-  return { main, similar: extraPool.slice(0,2) };
+    // شرط 2: نفس العائلة العطرية الرئيسية
+    const pChars    = p.character || [];
+    const pGroup    = pChars.map(c => getCharGroup(c));
+    if (!pGroup.includes(userCharGroup)) return false;
+
+    // شرط 3: نفس الموسم أو متقارب
+    const pSeasons  = p.season || [];
+    if (userSeason && !pSeasons.includes(userSeason) && !pSeasons.includes("allseasons")) return false;
+
+    return true;
+  });
+
+  // الترتيب — يخدم التجارة داخل حدود الذوق
+  const scoredSimilar = similarFiltered.map(p => {
+    let score = 0;
+
+    // base similarity score (0-100)
+    const simScore = Math.round(p._s / (scored[0]?._s || 1) * 100);
+
+    // Minimum similarity — 60% إلا أقل ما يطلعش
+    if (simScore < 60) return { ...p, _simScore: -1 };
+
+    // ── Smart Boost — يتطبق فقط إلا العطر مطابق >=60% ──
+    const boostLevel = CONFIG.BOOST_LEVELS?.[p.id] || 0;
+    score += boostLevel; // 0/10/20/30
+
+    // boost قديم (boolean) — compatibility
+    if (p.boost) score += 15;
+
+    // ── Campaign bonus ────────────────────────────────
+    const campaign = CONFIG.ACTIVE_CAMPAIGN;
+    if (campaign === "decants"      && p.sizeType === "decant")                    score += 15;
+    if (campaign === "men"          && (p.gender||[]).includes("men"))             score += 10;
+    if (campaign === "women"        && (p.gender||[]).includes("women"))           score += 10;
+    if (campaign === "summer"       && (p.season||[]).includes("summer"))          score += 10;
+    if (campaign === "winter"       && (p.season||[]).includes("winter"))          score += 10;
+    if (campaign === "new_arrivals" && p.isNew)                                    score += 12;
+
+    // character match
+    const pChars = p.character || [];
+    if (pChars.includes(userChar) || pChars.includes(ans.character)) score += 25;
+
+    // occasion match
+    const prodOcc = mapOccasion((p.occasion||[])[0] || "");
+    const userOcc = mapOccasion(ans.occasion || "");
+    if (prodOcc === userOcc || (p.occasion||[]).includes("allday")) score += 15;
+
+    if (p.topSeller) score += 5;
+
+    return { ...p, _simScore: score };
+  })
+  .filter(p => p._simScore >= 0)
+  .sort((a,b) => b._simScore - a._simScore);
+
+  // fallback إلا ما فيهش نتائج — نفس الجنس فقط
+  const finalPool = scoredSimilar.length > 0
+    ? scoredSimilar
+    : PRODUCTS.filter(p => !usedIds.has(p.id) && genderOk(p))
+        .sort((a,b) => (b.boost?50:0)+(b.topSeller?5:0) - (a.boost?50:0)+(a.topSeller?5:0));
+
+  const extraPool = finalPool.slice(0, 2).map(p => ({
+    ...p,
+    extraType: p.boost ? "topSeller" : "similar"
+  }));
+
+  return { main, similar: extraPool };
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -1822,9 +2591,15 @@ const PERSONAS = {
   },
   "fresh-daily": {
     ar:"المنعش الحيوي", fr:"Le Frais Dynamique", icon:"🌊",
-    tags:{ ar:["منعش","يومي","نظيف"],    fr:["Frais","Quotidien","Pur"] },
-    desc:"ذوقك يميل للعطور المنعشة النظيفة اللي تجمع بين الحمضيات والمسك الأبيض — شخصية نشيطة وأنيقة.",
-    desc_fr:"Votre goût va vers les fragrances fraîches et propres qui mêlent agrumes et muscs blancs — énergie et élégance.",
+    tags:{ ar:["منعش","يومي","نشيط"],    fr:["Frais","Quotidien","Dynamique"] },
+    desc:"ذوقك يميل للعطور المنعشة النشيطة — انتعاش فوري وطاقة طوال اليوم.",
+    desc_fr:"Votre goût va vers les fragrances fraîches et énergiques — fraîcheur immédiate et vitalité.",
+  },
+  "fresh-elegant": {
+    ar:"المنعش الأنيق", fr:"Le Frais Élégant", icon:"✨",
+    tags:{ ar:["منعش","أنيق","جاذبية"],  fr:["Frais","Élégant","Charme"] },
+    desc:"تميل للعطور المنعشة الراقية التي تمنحك كاريزما طبيعية وحضوراً واثقاً — منعش يلفت الأنظار دون مبالغة.",
+    desc_fr:"Votre goût penche vers les fragrances fraîches et raffinées qui dégagent une élégance naturelle et une présence assurée.",
   },
   "fresh-evening": {
     ar:"الراقي الهادئ", fr:"L'Élégant Serein", icon:"🌊",
@@ -1833,15 +2608,21 @@ const PERSONAS = {
     desc_fr:"Vous choisissez le frais même en soirée — différent et distinctif, une personnalité calme et confiante.",
   },
   "floral-daily": {
-    ar:"الأنيق العصري", fr:"L'Élégant Moderne", icon:"🌺",
+    ar:"الأنيق العصري", ar_male:"الأنيق العصري", ar_female:"الأنيقة العصرية",
+    fr:"L'Élégant Moderne", icon:"🌺",
     tags:{ ar:["زهري","يومي","ناعم"],    fr:["Floral","Quotidien","Doux"] },
     desc:"ذوقك يميل للعطور الزهرية الراقية اللي تجمع بين الزهور الناعمة ولمسة خشبية مسكية — شخصية واثقة وتهتم بالتفاصيل.",
+    desc_male:"تميل للعطور الزهرية الراقية التي تعكس الأناقة الحديثة — زهري منعش وخفيف يناسب كل يوم.",
+    desc_female:"تميلين للعطور الزهرية العصرية — ناعمة وأنيقة تعكس شخصيتك الراقية في كل يوم.",
     desc_fr:"Votre goût penche vers les floraux raffinés qui mêlent fleurs douces et touches musquées boisées.",
   },
   "floral-evening": {
-    ar:"الحالم الرومانسي", fr:"Le Rêveur Romantique", icon:"🌺",
+    ar:"الحالم الرومانسي", ar_male:"الرومانسي الراقي", ar_female:"الحالمة الرومانسية",
+    fr:"Le Rêveur Romantique", icon:"🌺",
     tags:{ ar:["زهري","سهرات","فاخر"],   fr:["Floral","Soirée","Luxe"] },
     desc:"تختار الزهري الفاخر للسهرات — حضور قوي لا يُقاوم يجمع بين الزهور وعمق المسك والعود.",
+    desc_male:"تختار الزهري الراقي للسهرات — حضور أنيق وجريء يجمع بين الزهور وعمق العود.",
+    desc_female:"تختارين الزهري الرومانسي للسهرات — أنوثة ساحرة وحضور لا يُنسى يسكن الذاكرة.",
     desc_fr:"Vous choisissez le floral luxueux pour les soirées — une présence irrésistible mêlant fleurs et profondeur.",
   },
   "woody-daily": {
@@ -1881,13 +2662,13 @@ const PERSONAS = {
     desc_fr:"Le musqué raffiné pour les soirées — doux et profond à la fois.",
   },
   "luxury-daily": {
-    ar:"الثري المتميز", fr:"Le Prestige Discret", icon:"👑",
-    tags:{ ar:["فاخر","يومي","ثري"],    fr:["Luxueux","Quotidien","Prestige"] },
-    desc:"ذوقك يميل للعطور الفاخرة الأصيلة اللي تجمع بين العود والجلد والزعفران — شخصية ثرية لا تمر مرور الكرام.",
-    desc_fr:"Votre goût penche vers les fragrances luxueuses alliant oud, cuir et safran — une personnalité d'exception.",
+    ar:"الفاخر اليومي", fr:"Le Luxueux Quotidien", icon:"👑",
+    tags:{ ar:["فاخر","يومي","راقي"],   fr:["Luxueux","Quotidien","Raffiné"] },
+    desc:"تميل للعطور الفاخرة الراقية حتى في اليومي — شخصية ثرية وواثقة تترك حضوراً مميزاً في كل مكان.",
+    desc_fr:"Vous portez le luxe au quotidien — une présence raffinée et assurée en toutes circonstances.",
   },
   "luxury-evening": {
-    ar:"الملك الفاخر", fr:"Le Royal Somptueux", icon:"👑",
+    ar:"الملكي الفاخر", fr:"Le Royal Somptueux", icon:"👑",
     tags:{ ar:["فاخر","سهرات","ملكي"],  fr:["Luxueux","Soirée","Royal"] },
     desc:"تختار الفاخر الملكي للسهرات — عطور العود والبخور والزعفران في حضور لا يُنسى.",
     desc_fr:"Le luxe royal pour les soirées — oud, encens et safran dans une présence inoubliable.",
@@ -2027,7 +2808,7 @@ const QS_BASE = [
     ] },
 
   // Q3 — الموسم
-  { id:"season", q:"فاشن موسم غادي تلبسو أكثر؟", sub:"الموسم يغير كل شيء",
+  { id:"season", q:"شنو الموسم اللي غادي تستعمل فيه العطر أكثر؟", sub:"الموسم يغير كل شيء",
     opts:[
       {v:"summer",  l:"ربيع / صيف",    i:"☀️", d:"منعش وخفيف",         ic:"#7A5C00", bg:"#8B6914"},
       {v:"winter",  l:"خريف / شتاء",   i:"🍂", d:"دافئ وعميق",         ic:"#1A4A6B", bg:"#1a3a5f"},
@@ -2040,7 +2821,8 @@ const QS_BASE = [
       {v:"floral",  l:"زهري",             i:"🌸", d:"Rose · Jasmin · Iris",        ic:"#6B1A45", bg:"#5f1a3a"},
       {v:"woody",   l:"خشبي",             i:"🌲", d:"Cedarwood · Sandalwood · Oud", ic:"#3A2A0A", bg:"#4a3a0a"},
       {v:"fresh",   l:"منعش وحمضي",       i:"🍋", d:"Bergamot · Citrus · Aquatic",  ic:"#0A4A6B", bg:"#0a3a5f"},
-      {v:"oriental",l:"حلو وشرقي",        i:"🍬", d:"Vanilla · Amber · Caramel",    ic:"#6B3A00", bg:"#5f2a00"},
+      {v:"oriental",l:"شرقي وعميق",       i:"🪔", d:"Oud · Amber · Incense · Resin",ic:"#6B3A00", bg:"#5f2a00"},
+      {v:"sweet",   l:"حلو ودافئ",        i:"🍬", d:"Vanilla · Caramel · Tonka",    ic:"#7A3A00", bg:"#6a2a00"},
       {v:"clean",   l:"نظيف ومسكي",       i:"🧼", d:"Musk · Clean · Powder",        ic:"#3A3A5F", bg:"#2a2a4f"},
     ] },
 
@@ -2057,12 +2839,6 @@ const QS_BASE = [
     ] },
 
   // Q6 — الثبات
-  { id:"longevity", q:"شحال بغيتي الثبات؟", sub:"قوة الفوحان والمدة",
-    opts:[
-      {v:"light",  l:"خفيف",    i:"🌿", d:"2-4 ساعات — ناعم وخفيف",     ic:"#1A4A1A", bg:"#1a3a1a"},
-      {v:"medium", l:"متوسط",   i:"⚖️", d:"4-8 ساعات — متوازن",          ic:"#3A3A1A", bg:"#4a4a1a"},
-      {v:"strong", l:"قوي",     i:"💎", d:"+8 ساعات — حضور لا يُنسى",    ic:"#4A2A00", bg:"#5f3a00"},
-    ] },
 ];
 
 const BUDGET_OPTIONS = {
@@ -2081,6 +2857,42 @@ const BUDGET_OPTIONS = {
   ],
 };
 
+// تقريب الثمن لرقم محسن (100، 200، 300، 500، 700، 1000...)
+function roundToNice(n) {
+  if (n <= 100)  return Math.ceil(n/10)*10;      // 10، 20، 30...
+  if (n <= 500)  return Math.ceil(n/50)*50;      // 50، 100، 150...
+  if (n <= 1000) return Math.ceil(n/100)*100;    // 100، 200، 300...
+  if (n <= 3000) return Math.ceil(n/200)*200;    // 200، 400، 600...
+  return Math.ceil(n/500)*500;                   // 500، 1000، 1500...
+}
+
+// حساب نطاقات الميزانية ديناميكياً من الـ PRODUCTS
+function calcDynamicBudget(sizeType, lang="ar") {
+  const isAr = lang !== "fr";
+  const filtered = PRODUCTS.filter(p => p.sizeType === sizeType && p.price > 0);
+  if (!filtered.length) return sizeType === "decant" ? BUDGET_OPTIONS.decant : BUDGET_OPTIONS.full;
+
+  const prices = filtered.map(p => p.price).sort((a,b) => a-b);
+  const minP = prices[0];
+  const maxP = prices[prices.length-1];
+
+  // إلا الفرق صغير جداً (أقل من 50 درهم) → ما يبانش سؤال الميزانية
+  if (maxP - minP < 50) return null;
+
+  // نقسم على 3 نطاقات متساوية تقريباً
+  const third = Math.round((maxP - minP) / 3);
+  const cut1 = roundToNice(minP + third);
+  const cut2 = roundToNice(minP + third * 2);
+
+  return [
+    { v:"any",  l: isAr ? "الثمن غير مهم" : "Prix libre",            i:"🌟", d: isAr ? "كل العطور المناسبة" : "Tous les parfums",  min:0,    max:99999 },
+    { v:"low",  l: isAr ? `أقل من ${cut1} درهم` : `Moins de ${cut1} Dh`, i:"💚", d: isAr ? "قيمة ممتازة" : "Bon rapport",          min:0,    max:cut1-1 },
+    { v:"mid",  l: isAr ? `${cut1} – ${cut2} درهم` : `${cut1} – ${cut2} Dh`, i:"💙", d: isAr ? "الأكثر مبيعاً" : "Les plus vendus", min:cut1, max:cut2 },
+    { v:"high", l: isAr ? `+${cut2} درهم` : `+${cut2} Dh`,           i:"💛", d: isAr ? "فخامة راقية" : "Luxe raffiné",             min:cut2+1, max:99999 },
+  ];
+}
+
+
 function buildQS(sizeType, lang="ar") {
   const hasDecant = CONFIG.HAS_DECANT !== false;
   const hasFull   = CONFIG.HAS_FULL   !== false;
@@ -2091,13 +2903,20 @@ function buildQS(sizeType, lang="ar") {
                           : !hasFull   ? "decant"
                           : (sizeType || CONFIG.DEFAULT_SIZE || "full");
 
-  // سؤال الميزانية دايماً يبان — مع toggle داخله إلا عنده الاثنين
+  // سؤال الميزانية — يمكن تحييده من CONFIG
+  if (CONFIG.HAS_BUDGET_QUESTION === false) return base;
+
+  // نطاقات ديناميكية من الـ PRODUCTS
+  const dynamicOpts = calcDynamicBudget(effectiveSizeType, lang);
+  if (!dynamicOpts) return base; // إلا الأثمان متقاربة → ما يبانش السؤال
+
   const budgetQ = {
     id:       "budget",
     q:        lang==="fr" ? "Votre budget ?" : "شحال الميزانية ديالك؟",
     sub:      lang==="fr" ? "On adapte les prix selon votre choix" : "كنبدلوا الأثمان حسب اختيارك",
     sizeType: effectiveSizeType,
-    hasToggle: hasDecant && hasFull, // يبان الـ toggle إلا عنده الاثنين
+    hasToggle: hasDecant && hasFull,
+    opts:     dynamicOpts,
   };
 
   return [...base, budgetQ];
@@ -2108,9 +2927,13 @@ function buildQS(sizeType, lang="ar") {
 //  TOKENS
 // ═══════════════════════════════════════════════════════════════
 const T = {
-  bg:"#08070A", gold:"#C9A96E", goldD:"#9A6F35", goldL:"#E8C98A",
+  bg:"#08070A", bgModal:"#100D14",
+  gold:"#C9A96E", goldD:"#9A6F35", goldL:"#E8C98A",
   text:"#F0EAE0", muted:"rgba(201,169,110,0.7)", faded:"rgba(201,169,110,0.5)",
-  border:"rgba(255,255,255,0.08)", borderG:"rgba(201,169,110,0.22)",
+  border:"rgba(255,255,255,0.08)", borderG:"rgba(201,169,110,0.25)",
+  card:"rgba(255,255,255,0.03)", cardH:"rgba(255,255,255,0.055)",
+  overlay:"rgba(0,0,0,0.7)",
+  triggerBg:"linear-gradient(135deg,#120A00,#241400)",
 };
 
 // ═══════════════════════════════════════════════════════════════
@@ -2397,6 +3220,55 @@ function PCard({ p, ans, isSmall=false, lang="ar" }) {
           </div>
         )}
 
+        {/* Match Score — خفيف للـ 3 عطور */}
+        {ans && p.slotType && (()=>{
+          const {pct, criteria} = calcMatchScore(p, ans);
+          const isBest = p.slotType==="best";
+          const color  = pct>=80 ? "#5CB88A" : pct>=60 ? T.gold : "#E05555";
+          return (
+            <div style={{ marginBottom:10 }}>
+              {/* Badge صغير للـ 3 */}
+              <div style={{
+                display:"inline-flex", alignItems:"center", gap:5,
+                padding:"3px 10px", borderRadius:99,
+                background: isBest ? "rgba(92,184,138,0.1)" : "rgba(201,169,110,0.06)",
+                border:`1px solid ${isBest ? "rgba(92,184,138,0.25)" : "rgba(201,169,110,0.12)"}`,
+                marginBottom: isBest ? 8 : 0,
+              }}>
+                <span style={{ fontSize:10, fontWeight:900, color }}>
+                  {pct}%
+                </span>
+                <span style={{ fontSize:9, color:T.muted, fontWeight:600 }}>
+                  {lang==="fr" ? "correspond à vos critères" : "مطابق لذوقك"}
+                </span>
+              </div>
+
+              {/* Tags — كاملة للأول، مختصرة للثاني والثالث */}
+              <div style={{ display:"flex", flexWrap:"wrap", gap:4, marginTop:4 }}>
+                {(()=>{
+                  if (!criteria || !criteria.length) return [];
+                  const isMid = p.slotType==="mid";
+                  if (isBest) return criteria;
+                  if (isMid)  return criteria.filter(cr=>cr.match);
+                  return criteria.filter(cr=>cr.match).slice(0,3);
+                })()
+                  .map((cr,i)=>(
+                    <span key={i} style={{
+                      fontSize:9, fontWeight:700,
+                      padding:"2px 8px", borderRadius:99,
+                      background: cr.match ? "rgba(92,184,138,0.1)" : "rgba(201,169,110,0.04)",
+                      color:       cr.match ? "#5CB88A"              : T.faded,
+                      border:      `1px solid ${cr.match ? "rgba(92,184,138,0.2)" : "rgba(201,169,110,0.1)"}`,
+                    }}>
+                      {cr.match ? "✓" : "○"} {lang==="fr" ? cr.label_fr : cr.label_ar}
+                    </span>
+                  ))
+                }
+              </div>
+            </div>
+          );
+        })()}
+
         {/* فقرة واحدة متناسقة — Why + Sensory مدمجين */}
         {ans && (()=>{
           const why     = generateWhyChosen(p, ans, p.slotType||"best", lang);
@@ -2470,9 +3342,11 @@ function WidgetContent({ onClose, lang: langProp }) {
   const questions = buildQS(ans.sizeType, lang);
 
   function getBudgetOpts(q) {
-    const budgets = lang==="fr" ? BUDGET_FR : BUDGET_OPTIONS;
     const st = ans.sizeType || q?.sizeType || CONFIG.DEFAULT_SIZE || "full";
-    return (budgets[st] || budgets["full"]);
+    const validSt = (st === "decant" || st === "full") ? st : "full";
+    const dynamic = calcDynamicBudget(validSt, lang);
+    if (dynamic && dynamic.length) return dynamic;
+    return (BUDGET_OPTIONS[validSt] || BUDGET_OPTIONS["full"] || []);
   }
 
   function toggleBudgetSize() {
@@ -2506,42 +3380,307 @@ function WidgetContent({ onClose, lang: langProp }) {
     }, 900);
     await new Promise(r=>setTimeout(r, msgs.length * 900 + 400));
     clearInterval(interval);
+    // الثبات — ماشي خاصية ديال الزبون، خاصية ديال العطر
+    // نستعملو فقط كـ tiebreaker بين عطور متقاربين
+    // ما نفرضوش — نخلي الداتا ديال العطر تتكلم
+    // الاستنتاج: فقط إلا كاين context واضح
+    if (!na.longevity) {
+      const occ  = na.occasion  || "daily";
+      const imp  = na.impression|| "";
+      // فقط حالتين واضحتين
+      if (imp === "longlast") {
+        na.longevity = "strong";  // الزبون صراحةً طلب أثر طويل
+      } else if (occ === "travel") {
+        na.longevity = "medium";  // سفر = توازن (مش light ولا strong)
+      }
+      // باقي الحالات — ما نفرضوش، الثبات يتحدد من الداتا ديال العطر
+    }
     const results = getResults(na);
     const char = mapCharacter(na.character||"heavy");
-    const occ = mapOccasion(na.occasion||"evening");
+    const occ = mapOccasion(na.occasion||"daily"); // fallback daily مش evening
     const pKey = `${na.character||char}-${occ}`;
-    const basePers = PERSONAS[pKey] || PERSONAS["heavy-evening"];
-    const IMP_DESC_AR = {
-      luxury:     "تميلين/تميل للعطور الراقية التي تجمع بين النعومة والفخامة، وتترك حضوراً أنيقاً يدوم في الذاكرة دون مبالغة.",
-      longlast:   "تبحث/تبحثين عن عطر يدوم ويترك أثراً بعد المغادرة — رائحة تُعرف بها.",
-      attractive: "تبحث/تبحثين عن عطر يجذب الأنظار ويترك انطباعاً لا يُنسى عند كل لقاء.",
-      elegant:    "ذوقك يميل للأناقة الهادئة — عطر يعكس رقيك دون أن يصرخ في كل مكان.",
-      confident:  "تميل/تميلين إلى العطور الخشبية الفاخرة ذات الحضور القوي والثبات العالي — تفضل/تفضلين ترك انطباع واثق يصعب نسيانه.",
-      fresh_imp:  "تفضل/تفضلين الإحساس بالنظافة والانتعاش طوال اليوم في كل مكان.",
-      firstlook:  "تريد/تريدين أن يتذكرك الجميع من أول لقاء — عطر يصنع انطباعاً أولاً قوياً.",
-    };
-    const IMP_DESC_FR = {
-      luxury:     "Votre goût penche vers les fragrances raffinées alliant douceur et luxe, laissant une présence élégante et mémorable.",
-      longlast:   "Vous cherchez un parfum qui dure et laisse une trace après votre départ — une vraie signature olfactive.",
-      attractive: "Vous recherchez un parfum qui attire les regards et laisse une impression inoubliable.",
-      elegant:    "Votre goût penche vers l'élégance discrète — un parfum qui reflète votre raffinement sans ostentation.",
-      confident:  "Vous êtes attiré(e) par les fragrances boisées et intenses, avec une forte projection et une longue tenue — une présence assurée impossible à ignorer.",
-      fresh_imp:  "Vous préférez la sensation de fraîcheur et de propreté tout au long de la journée.",
-      firstlook:  "Vous voulez que tout le monde se souvienne de vous dès la première rencontre.",
-    };
+    // ── الشخصية تتحدد من PERSONA_LOOKUP أولاً ──────────────
+    // character + occasion + impression هما المحددون
+    const imp = na.impression || "";
     const impKey = na.impression;
+    const naChar = na.character || char;
+    const isDaily = occ === "daily" || occ === "travel";
+
+    // وصف ديناميكي — العائلة العطرية × الانطباع
+    const CHAR_IMP_DESC = {
+      // منعش
+      "fresh-confident":  "تميل/ين للعطور المنعشة الواثقة التي تعكس شخصيتك النشيطة والقوية — انتعاش بحضور واضح.",
+      "fresh-attractive": "تميل/ين للعطور المنعشة الجذابة التي تمنح كاريزما طبيعية — منعش يلفت الأنظار بأناقة.",
+      "fresh-elegant":    "تميل/ين للعطور المنعشة الراقية الهادئة — انتعاش يعكس رقيك دون مبالغة.",
+      "fresh-luxury":     "تميل/ين للعطور المنعشة الفاخرة التي تجمع الخفة والراقي في آن واحد.",
+      "fresh-longlast":   "تميل/ين للعطور المنعشة التي تترك أثراً خفياً يدوم — انتعاش يرافقك طوال اليوم.",
+      "fresh-firstlook":  "تريد/ين عطراً منعشاً يصنع انطباعاً أولاً لا يُنسى — حيوية تلفت الأنظار فوراً.",
+      "fresh-fresh_imp":  "تفضل/ين الإحساس بالانتعاش والنظافة طوال اليوم — عطر خفيف يرافقك في كل مكان.",
+      // نظيف/مسكي
+      "clean-confident":  "تميل/ين للعطور النظيفة المسكية الواثقة — نقاء يعكس شخصيتك المتزنة والواثقة.",
+      "clean-attractive": "تميل/ين للعطور المسكية الجذابة التي تمنح جاذبية طبيعية هادئة — ناعم يسحر من حولك.",
+      "clean-elegant":    "تميل/ين للعطور النظيفة الراقية التي تعكس الأناقة الهادئة — عطر يُعبّر عن رقيك دون مبالغة.",
+      "clean-luxury":     "تميل/ين للعطور المسكية الفاخرة التي تجمع النقاء والثراء في توازن مثالي.",
+      "clean-longlast":   "تميل/ين للعطور المسكية الناعمة التي تترك أثراً هادئاً يدوم — نقاء يبقى معك ساعات.",
+      "clean-fresh_imp":  "تفضل/ين الإحساس بالنظافة والنقاء طوال اليوم — مسك ناعم خفيف كالحرير.",
+      // زهري
+      "floral-confident": "تميل/ين للعطور الزهرية التي تجمع الأنوثة والحضور القوي — زهري راقٍ يترك انطباعاً واثقاً.",
+      "floral-attractive":"تميل/ين للعطور الزهرية الجذابة التي تمنح جاذبية طبيعية — رومانسي يلفت الأنظار.",
+      "floral-elegant":   "تميل/ين للعطور الزهرية الراقية الأنيقة — عطري يعكس ذوقاً رفيعاً وأناقة طبيعية.",
+      "floral-luxury":    "تميل/ين للعطور الزهرية الفاخرة التي تجمع بين الأنوثة والثراء — زهري راقٍ لا يمر مرور الكرام.",
+      "floral-longlast":  "تميل/ين للعطور الزهرية التي تترك أثراً رومانسياً يدوم — زهري يبقى في الذاكرة.",
+      "floral-firstlook": "تريد/ين عطراً زهرياً يصنع انطباعاً أولاً لا يُنسى — رومانسي يسحر من أول لقاء.",
+      // خشبي
+      "woody-confident":  "تميل/ين للعطور الخشبية الواثقة التي تعكس القوة والوقار — حضور نبيل لا يُنسى.",
+      "woody-attractive": "تميل/ين للعطور الخشبية الجذابة التي تجمع العمق والجاذبية — خشبي يسحر بأناقة هادئة.",
+      "woody-elegant":    "تميل/ين للعطور الخشبية الأنيقة — فخامة هادئة تناسب كل مناسبة.",
+      "woody-luxury":     "تميل/ين للعطور الخشبية الفاخرة التي تجمع الأصالة والثراء — نبيل كلاسيكي لا يتقادم.",
+      // شرقي
+      "oriental-confident": "تميل/ين للعطور الشرقية العميقة التي تفرض حضورها بقوة — شرقي واثق يترك أثراً لا يُمحى.",
+      "oriental-attractive":"تميل/ين للعطور الشرقية الجذابة التي تمزج الغموض والفخامة — حضور آسر يسحر من حولك.",
+      "oriental-elegant":  "تميل/ين للعطور الشرقية الغامضة الأنيقة — عمق هادئ يعكس شخصيتك المتميزة.",
+      "oriental-luxury":   "تميل/ين للعطور الشرقية الفاخرة الأصيلة — ملكي يليق بأرقى المناسبات.",
+      "oriental-longlast": "تميل/ين للعطور الشرقية التي تترك أثراً قوياً يدوم طويلاً — شرقي يُعرف بك.",
+      "oriental-firstlook":"تريد/ين عطراً شرقياً يصنع انطباعاً أولاً لا يُنسى — آسر يسحر من أول لقاء.",
+      // حلو
+      "sweet-confident":   "تميل/ين للعطور الحلوة الواثقة التي تجمع الدفء والحضور — حلو راقٍ يعكس شخصيتك الواثقة.",
+      "sweet-attractive":  "تميل/ين للعطور الحلوة الجذابة التي تمنح جاذبية طبيعية دافئة — ساحر يقرب القلوب.",
+      "sweet-elegant":     "تميل/ين للعطور الحلوة الراقية التي تجمع النعومة والأناقة — دافئ راقٍ لا يمر مرور الكرام.",
+      "sweet-luxury":      "تميل/ين للعطور الحلوة الفاخرة التي تجمع الدفء والثراء — شخصية راقية تترك بصمة لا تُنسى.",
+      "sweet-longlast":    "تميل/ين للعطور الحلوة الراقية التي تترك انطباعاً أنيقاً يدوم — دفء يبقى في الذاكرة.",
+      "sweet-firstlook":   "تريد/ين عطراً حلواً يصنع انطباعاً أولاً جذاباً — دافئ يسحر من أول لقاء.",
+    };
+
+    // ابحث على وصف مخصص، fallback للوصف العام
+    const dynamicDesc = CHAR_IMP_DESC[`${naChar}-${impKey}`]
+      || CHAR_IMP_DESC[`${char}-${impKey}`]
+      || null;
+
+    // توليد التاغات ديناميكياً من اختيارات الزبون
+    const CHAR_TAG_AR = {
+      fresh:"منعش", clean:"نظيف", floral:"زهري", woody:"خشبي",
+      oriental:"شرقي", sweet:"حلو", heavy:"عميق", musky:"مسكي",
+    };
+    const OCC_TAG_AR = {
+      daily:"يومي", evening:"سهرات", dates:"رومانسي",
+      travel:"سفر", allday:"متعدد",
+    };
+    const IMP_TAG_AR = {
+      luxury:"فاخر", confident:"واثق", attractive:"جذاب",
+      elegant:"أنيق", fresh_imp:"منعش", longlast:"مؤثر", firstlook:"ملفت",
+    };
+    const CHAR_TAG_FR = {
+      fresh:"Frais", clean:"Propre", floral:"Floral", woody:"Boisé",
+      oriental:"Oriental", sweet:"Doux", heavy:"Profond", musky:"Musqué",
+    };
+    const OCC_TAG_FR = {
+      daily:"Quotidien", evening:"Soirée", dates:"Romantique",
+      travel:"Voyage", allday:"Polyvalent",
+    };
+    const IMP_TAG_FR = {
+      luxury:"Luxueux", confident:"Assuré", attractive:"Séduisant",
+      elegant:"Élégant", fresh_imp:"Frais", longlast:"Marquant", firstlook:"Mémorable",
+    };
+
+    // تاغات إضافية للاستعمال كـ fallback إلا كان تكرار
+    const CONTEXT_TAG_AR = {
+      travel:"عملي", daily:"يومي", evening:"ليلي", dates:"رومانسي", allday:"متعدد",
+    };
+    const IMP_ALT_TAG_AR = {
+      fresh_imp:"خفيف", confident:"قوي", attractive:"جذاب",
+      elegant:"هادئ", luxury:"فاخر", longlast:"ثابت", firstlook:"ملفت",
+    };
+
+    const tag1 = CHAR_TAG_AR[na.character] || CHAR_TAG_AR[char] || "مميز";
+    const tag2 = OCC_TAG_AR[na.occasion]   || "يومي";
+    const tag3Raw = IMP_TAG_AR[na.impression] || "راقي";
+    // إلا tag3 = tag1 → استبدل بـ context أو alt
+    const tag3 = (tag3Raw === tag1)
+      ? (IMP_ALT_TAG_AR[na.impression] || CONTEXT_TAG_AR[na.occasion] || "متميز")
+      : tag3Raw;
+
+    const tag1Fr = CHAR_TAG_FR[na.character] || CHAR_TAG_FR[char] || "Distinctif";
+    const tag2Fr = OCC_TAG_FR[na.occasion]   || "Quotidien";
+    const tag3FrRaw = IMP_TAG_FR[na.impression] || "Raffiné";
+    const tag3Fr = (tag3FrRaw === tag1Fr) ? "Léger" : tag3FrRaw;
+
+    const dynamicTags = {
+      ar: [tag1, tag2, tag3],
+      fr: [tag1Fr, tag2Fr, tag3Fr],
+    };
+
+    // جدول الشخصيات — 12 شخصية بأسماء + وصف خاص
+    const PERSONA_LOOKUP = {
+      "oriental-evening-luxury":    { ar:"الملكي الفاخر",     fr:"Le Royal Somptueux",          icon:"👑", desc:"تميل/ين للعطور الشرقية الفاخرة التي تفرض حضورها بقوة وأصالة — عطر يليق بالمناسبات الراقية ويترك أثراً ملكياً لا يُنسى." },
+      "heavy-evening-luxury":       { ar:"الملكي الفاخر",     fr:"Le Royal Somptueux",          icon:"👑", desc:"تميل/ين للعطور الفاخرة العميقة التي تجمع الثقل والأناقة — حضور ملكي يناسب أرقى المناسبات." },
+      "sweet-evening-luxury":       { ar:"الملكي الفاخر",     fr:"Le Royal Somptueux",          icon:"👑", desc:"تميل/ين للعطور الحلوة الفاخرة التي تجمع الدفء والثراء — شخصية راقية تترك بصمة لا تُنسى." },
+      "sweet-dates-luxury":         { ar:"الملكي الفاخر",     fr:"Le Royal Somptueux",          icon:"👑", desc:"تميل/ين للعطور الحلوة الفاخرة الرومانسية — دفء ملكي يجعل كل لحظة خاصة لا تُنسى." },
+      "sweet-daily-luxury":         { ar:"الفخم العصري",      fr:"Le Luxueux Moderne",          icon:"💎", desc:"تميل/ين للعطور الحلوة الفاخرة العصرية — دفء راقٍ يناسب الاستعمال اليومي ويترك حضوراً مميزاً." },
+      "oriental-evening-attractive":{ ar:"الآسر الفاخر",     fr:"L'Envoûtant Luxueux",         icon:"🖤", desc:"تميل/ين للعطور الشرقية الجذابة التي تمزج بين الغموض والفخامة — حضور آسر يسحر من حولك." },
+      "oriental-evening-firstlook": { ar:"الآسر الفاخر",     fr:"L'Envoûtant Luxueux",         icon:"🖤", desc:"تريد/ين أن يتذكرك الجميع من أول لقاء — عطر شرقي فاخر يصنع انطباعاً لا يُمحى." },
+      "sweet-daily-longlast":       { ar:"الآسر الأنيق",    fr:"Le Raffiné Marquant",         icon:"⭐", desc:"تميل/ين للعطور الحلوة الراقية التي تجمع النعومة والجاذبية — تترك انطباعاً أنيقاً يدوم في ذاكرة من حولك." },
+      "sweet-evening-longlast":     { ar:"الآسر الأنيق",    fr:"Le Raffiné Marquant",         icon:"⭐", desc:"تميل/ين للعطور الحلوة الراقية للسهرات — دفء أنيق يترك أثراً يصعب نسيانه." },
+      "sweet-daily-attractive":     { ar:"الدافئ الساحر",    fr:"Le Doux Ensorcelant",         icon:"🍯", desc:"تميل/ين للعطور الحلوة الدافئة التي تمنح جاذبية طبيعية — ساحر يقرب القلوب بأناقة هادئة." },
+      "sweet-evening-attractive":   { ar:"الدافئ الساحر",    fr:"Le Doux Ensorcelant",         icon:"🍯", desc:"تميل/ين للعطور الحلوة الجذابة للسهرات — دفء يلف الحواس ويترك أثراً رومانسياً." },
+      "clean-daily-elegant":        { ar:"الأنيق الواثق",    fr:"L'Élégant Raffiné",           icon:"✨", desc:"تميل/ين للعطور النظيفة الراقية التي تعكس الأناقة الهادئة — عطر يُعبّر عن رقيك دون مبالغة." },
+      "clean-evening-elegant":      { ar:"الأنيق الواثق",    fr:"L'Élégant Raffiné",           icon:"✨", desc:"تميل/ين للعطور المسكية الراقية للسهرات — نقاء وأناقة في آن واحد." },
+      "clean-daily-fresh_imp":      { ar:"الناعم المخملي",   fr:"Le Doux Velouté",             icon:"🤍", desc:"تميل/ين للعطور المسكية الناعمة التي تمنح إحساساً بالنقاء — خفيف كالحرير يلازمك طوال اليوم." },
+      "clean-daily-longlast":       { ar:"الناعم المخملي",   fr:"Le Doux Velouté",             icon:"🤍", desc:"تميل/ين للعطور المسكية الناعمة التي تترك أثراً هادئاً ومميزاً — نقاء يبقى معك ساعات." },
+      "clean-daily-attractive":     { ar:"الناعم المخملي",   fr:"Le Doux Velouté",             icon:"🤍", desc:"تميل/ين للعطور النظيفة الجذابة — مسك ناعم يمنح جاذبية طبيعية وحضوراً هادئاً." },
+      "fresh-daily-fresh_imp":      { ar:"المنعش الحيوي",    fr:"Le Frais Dynamique",          icon:"🌊", desc:"تميل/ين للعطور المنعشة الخفيفة التي تمنح طاقة وحيوية طوال اليوم." },
+      "fresh-daily-confident":      { ar:"المنعش الحيوي",    fr:"Le Frais Dynamique",          icon:"🌊", desc:"تميل/ين للعطور المنعشة الواثقة — انتعاش يعكس شخصيتك النشيطة والواثقة." },
+      // منعش + أمسيات/رومانسي — نفس الاسم وصف مختلف
+      "fresh-evening-fresh_imp":    { ar:"المنعش الحيوي",    fr:"Le Frais Dynamique",          icon:"🌊", desc:"انتعاش راقٍ بلمسة رومانسية — يجعل حضورك مميزاً في اللحظات الخاصة." },
+      "fresh-evening-attractive":   { ar:"المنعش الحيوي",    fr:"Le Frais Dynamique",          icon:"🌊", desc:"تميل/ين للعطور المنعشة الجذابة التي تضيف جاذبية طبيعية في الأمسيات الخاصة." },
+      "fresh-evening-elegant":      { ar:"المنعش الحيوي",    fr:"Le Frais Dynamique",          icon:"🌊", desc:"تفضل/ين العطور المنعشة الأنيقة التي تجمع بين الخفة والجاذبية في الأمسيات المميزة." },
+      "fresh-evening-confident":    { ar:"المنعش الحيوي",    fr:"Le Frais Dynamique",          icon:"🌊", desc:"انتعاش واثق للأمسيات — منعش بحضور واضح يترك انطباعاً قوياً في كل لقاء." },
+      "fresh-dates-attractive":     { ar:"المنعش الحيوي",    fr:"Le Frais Dynamique",          icon:"🌊", desc:"تميل/ين للعطور المنعشة الرومانسية التي تمنح جاذبية طبيعية في المواعيد الخاصة." },
+      "fresh-dates-elegant":        { ar:"المنعش الحيوي",    fr:"Le Frais Dynamique",          icon:"🌊", desc:"انتعاش أنيق ورومانسي — يجعل حضورك خفيفاً وجذاباً في اللحظات الحميمة." },
+      "fresh-daily-attractive":     { ar:"المنعش الأنيق",    fr:"Le Frais Élégant",            icon:"✨", desc:"تميل/ين للعطور المنعشة الراقية التي تمنح كاريزما طبيعية — منعش يلفت الأنظار بأناقة." },
+      "fresh-daily-elegant":        { ar:"المنعش الأنيق",    fr:"Le Frais Élégant",            icon:"✨", desc:"تميل/ين للعطور المنعشة الأنيقة — انتعاش راقٍ يعكس ذوقك المتميز." },
+      "woody-daily-confident":      { ar:"النبيل الكلاسيكي", fr:"Le Noble Classique",          icon:"🎩", desc:"تميل/ين للعطور الخشبية الكلاسيكية التي تعكس الثقة والوقار — شخصية نبيلة تترك انطباعاً احترافياً." },
+      "woody-evening-confident":    { ar:"النبيل الكلاسيكي", fr:"Le Noble Classique",          icon:"🎩", desc:"تميل/ين للعطور الخشبية الفاخرة — حضور نبيل يناسب المناسبات والسهرات الراقية." },
+      "woody-daily-luxury":         { ar:"الفخم الكلاسيكي",  fr:"Le Luxueux Classique",        icon:"🎩", desc:"تميل/ين للعطور الخشبية الفاخرة — أناقة كلاسيكية راقية تعكس الثراء والتميز في كل يوم." },
+      // خشبي + سهرات + جاذبية → الآسر الفاخر
+      "woody-evening-attractive":   { ar:"الآسر الفاخر",     fr:"L'Envoûtant Luxueux",         icon:"🖤", desc:"تميل/ين للعطور الخشبية الجذابة التي تجمع العمق والجاذبية — خشبي آسر يسحر من حولك في السهرات." },
+      "woody-evening-firstlook":    { ar:"الآسر الفاخر",     fr:"L'Envoûtant Luxueux",         icon:"🖤", desc:"تريد/ين عطراً خشبياً يصنع انطباعاً أولاً لا يُنسى — عميق وجذاب يسحر من أول لقاء." },
+      // خشبي + سهرات + أناقة → الغامض الآسر
+      "woody-evening-elegant":      { ar:"الغامض الآسر",     fr:"Le Mystérieux Envoûtant",     icon:"🌙", desc:"تميل/ين للعطور الخشبية الغامضة للسهرات — عمق هادئ وأنيق يثير الفضول ويترك أثراً." },
+      "woody-evening-luxury":       { ar:"الملكي الفاخر",    fr:"Le Royal Somptueux",          icon:"👑", desc:"تميل/ين للعطور الخشبية الملكية الفاخرة للسهرات — نبيل وثري يليق بأرقى المناسبات." },
+      "oriental-evening-elegant":   { ar:"الغامض الآسر",    fr:"Le Mystérieux Envoûtant",     icon:"🌙", desc:"تميل/ين للعطور الشرقية الغامضة التي تثير الفضول — عطر ليلي آسر يترك أثراً غامضاً يصعب نسيانه." },
+      "oriental-daily-elegant":     { ar:"الغامض الآسر",    fr:"Le Mystérieux Envoûtant",     icon:"🌙", desc:"تميل/ين للعطور الشرقية الغامضة — حضور هادئ وعميق يشعرك بالتميز في كل لحظة." },
+      "oriental-daily-luxury":      { ar:"الفخم العصري",    fr:"Le Luxueux Moderne",          icon:"💎", desc:"تميل/ين للعطور الشرقية الفاخرة العصرية — شرقي راقٍ يجمع الأصالة والحداثة، رفيق مثالي في السفر والاستعمال اليومي." },
+      "oriental-travel-confident":   { ar:"الأنيق الواثق",  fr:"L'Élégant Confiant",          icon:"✨", desc:"شرقي راقٍ يجمع بين الأصالة والعملية — يمنحك حضوراً واثقاً أينما كانت وجهتك." },
+      "oriental-travel-elegant":     { ar:"الأنيق الواثق",  fr:"L'Élégant Confiant",          icon:"✨", desc:"تميل/ين للعطور الشرقية المتوازنة التي تجمع الأناقة والحضور الواثق — عطر يرافقك بثقة في السفر والمناسبات." },
+      "oriental-travel-attractive":  { ar:"الأنيق الواثق",  fr:"L'Élégant Confiant",          icon:"✨", desc:"شرقي أنيق وعملي — يمنحك جاذبية طبيعية وحضوراً واثقاً في كل وجهة جديدة." },
+      "oriental-travel-luxury":      { ar:"الفخم العصري",   fr:"Le Luxueux Moderne",           icon:"💎", desc:"شرقي فاخر ومتوازن — راقٍ بما يكفي للمناسبات، وعملي بما يكفي للسفر." },
+      "heavy-daily-luxury":         { ar:"الفخم العصري",    fr:"Le Luxueux Moderne",          icon:"💎", desc:"تميل/ين للعطور الفاخرة العميقة في اليومي — حضور قوي وراقٍ يعكس شخصيتك المميزة." },
+      "heavy-daily-confident":      { ar:"الجريء الواثق",   fr:"L'Audacieux Confiant",        icon:"🔥", desc:"تميل/ين للعطور العميقة الواثقة التي تعكس قوة شخصيتك — حضور جريء لا يمر مرور الكرام." },
+      "heavy-evening-confident":    { ar:"الجريء الواثق",   fr:"L'Audacieux Confiant",        icon:"🔥", desc:"تميل/ين للعطور العميقة الجريئة للسهرات — قوة وثقة يتذكرها الجميع." },
+      "heavy-daily-attractive":     { ar:"الجريء الواثق",   fr:"L'Audacieux Confiant",        icon:"🔥", desc:"تميل/ين للعطور العميقة الجذابة — جريء يلفت الأنظار بحضور واضح وقوي." },
+      "heavy-evening-attractive":   { ar:"الآسر الفاخر",    fr:"L'Envoûtant Luxueux",         icon:"🖤", desc:"تميل/ين للعطور العميقة الجذابة للسهرات — فاخر وآسر يسحر من حولك." },
+      "woody-daily-elegant":        { ar:"الفخم العصري",    fr:"Le Luxueux Moderne",          icon:"💎", desc:"تميل/ين للعطور الخشبية الأنيقة — فخامة عصرية هادئة تناسب كل يوم." },
+      "floral-daily-elegant":       { ar:"الزهري الساحر",   fr:"Le Floral Envoûtant",        icon:"🌹", desc:"تميل/ين للعطور الزهرية الراقية الأنيقة — عطر عطري يعكس ذوقاً رفيعاً وأناقة طبيعية." },
+
+      "floral-daily-attractive":    { ar:"الرومانسي الجذاب",fr:"Le Romantique Séduisant",     icon:"🌹", desc:"تميل/ين للعطور الزهرية الجذابة — رومانسي خفيف يمنح جاذبية طبيعية في كل يوم." },
+
+
+      // 🧭 المستكشف الأنيق — سفر + منعش/نظيف/خشبي خفيف
+      "fresh-travel-fresh_imp":     { ar:"المستكشف الأنيق", fr:"L'Explorateur Élégant",       icon:"🧭", desc:"روح محبة للاكتشاف وذوق أنيق — عطر منعش يرافقك أينما أخذتك المغامرة." },
+      "fresh-travel-confident":     { ar:"المستكشف الأنيق", fr:"L'Explorateur Élégant",       icon:"🧭", desc:"خفيف، عملي وأنيق — عطر واثق يناسب أسلوب حياة متحرك ومليء بالتجارب." },
+      "fresh-travel-elegant":       { ar:"المستكشف الأنيق", fr:"L'Explorateur Élégant",       icon:"🧭", desc:"تميل/ين للعطور المنعشة الأنيقة المخصصة للحركة والسفر — انتعاش راقٍ يرافقك في كل وجهة." },
+      "fresh-travel-attractive":    { ar:"المستكشف الأنيق", fr:"L'Explorateur Élégant",       icon:"🧭", desc:"عطر جذاب يعكس روح المستكشف — منعش وأنيق يلفت الأنظار في كل وجهة جديدة." },
+      "clean-travel-fresh_imp":     { ar:"المستكشف الأنيق", fr:"L'Explorateur Élégant",       icon:"🧭", desc:"نقاء مسكي خفيف يرافقك في كل رحلة — رفيق مثالي للمستكشف الأنيق." },
+      "clean-travel-elegant":       { ar:"المستكشف الأنيق", fr:"L'Explorateur Élégant",       icon:"🧭", desc:"خفيف وعملي وأنيق — نقاء راقٍ يناسب كل مناخ ووجهة في رحلاتك." },
+      "clean-travel-attractive":    { ar:"المستكشف الأنيق", fr:"L'Explorateur Élégant",       icon:"🧭", desc:"روح المستكشف وذوق الأنيق — مسك ناعم وجاذبية طبيعية تلازمك في كل رحلة." },
+      "woody-travel-elegant":       { ar:"المستكشف الأنيق", fr:"L'Explorateur Élégant",       icon:"🧭", desc:"عمق خشبي خفيف يعكس روح المغامر الأنيق — يرافقك من المدينة إلى أبعد الوجهات." },
+      "woody-travel-confident":     { ar:"المستكشف الأنيق", fr:"L'Explorateur Élégant",       icon:"🧭", desc:"نبيل ومغامر في آن واحد — عطر خشبي واثق يعكس شخصيتك الاستكشافية أينما ذهبت." },
+      "fresh-travel-luxury":        { ar:"المستكشف الأنيق", fr:"L'Explorateur Élégant",       icon:"🧭", desc:"فخامة خفيفة للمسافر الراقي — منعش وأنيق يليق بكل وجهة حول العالم." },
+      "clean-travel-luxury":        { ar:"المستكشف الأنيق", fr:"L'Explorateur Élégant",       icon:"🧭", desc:"نقاء فاخر يلازمك في كل رحلة — خفيف وراقٍ يليق بأسلوب حياة المستكشف المتميز." },
+    };
+
+    // ابحث على أقرب شخصية حسب character + occasion + impression
+    const pLookupKey = `${na.character||char}-${na.occasion||"daily"}-${na.impression||"elegant"}`;
+    const lookedUp = PERSONA_LOOKUP[pLookupKey];
+
+    // fallback 1: بدون occasion
+    const pLookupKeyNoOcc = `${na.character||char}-daily-${na.impression||"elegant"}`;
+    // fallback 2: بدون impression
+    const pLookupKeyNoImp = `${na.character||char}-${na.occasion||"daily"}-elegant`;
+    // fallback 3: character فقط
+    const pLookupKeyCharOnly = `${na.character||char}-daily-elegant`;
+
+    // fallback 4: best of character family
+    const CHAR_BEST_KEY = {
+      fresh:    "fresh-daily-fresh_imp",
+      clean:    "clean-daily-elegant",
+      floral:   "floral-daily-elegant",
+      woody:    "woody-daily-confident",
+      oriental: "oriental-daily-elegant",
+      sweet:    "sweet-daily-attractive",
+      heavy:    "heavy-daily-confident",
+    };
+    const pLookupKeyCharBest = CHAR_BEST_KEY[na.character||char] || null;
+
+    const lookedUpFallback = lookedUp
+      || PERSONA_LOOKUP[pLookupKeyNoOcc]
+      || PERSONA_LOOKUP[pLookupKeyNoImp]
+      || PERSONA_LOOKUP[pLookupKeyCharOnly]
+      || (pLookupKeyCharBest ? PERSONA_LOOKUP[pLookupKeyCharBest] : null);
+
     const enrichedPers = {
-      ...basePers,
-      desc:    impKey && IMP_DESC_AR[impKey] ? IMP_DESC_AR[impKey] : basePers.desc,
-      desc_fr: impKey && IMP_DESC_FR[impKey] ? IMP_DESC_FR[impKey] : basePers.desc_fr,
+      ar:      lookedUpFallback?.ar   || "الأنيق الواثق",
+      fr:      lookedUpFallback?.fr   || "L'Élégant Raffiné",
+      icon:    lookedUpFallback?.icon || "✨",
+      tags:    dynamicTags,
+      desc:    (() => {
+        const base = lookedUpFallback?.desc || dynamicDesc || "تميل/ين لعطور تعكس ذوقك الخاص وتترك انطباعاً مميزاً.";
+        // إلا المناسبة سفر — نضيف جملة السفر إلا ما كانتش موجودة
+        if (na.occasion === "travel") {
+          if (!base.includes("سفر") && !base.includes("وجهة") && !base.includes("رحلة")) {
+            if (base.includes("تفرض حضورها") || base.includes("العميقة")) {
+              return "شرقي راقٍ يجمع بين الأصالة والعملية — يمنحك حضوراً واثقاً أينما كانت وجهتك.";
+            }
+            // السفر = أسلوب حياة — نضيف جملة تعكس الحركة والتميز
+            const naChar2 = na.character || char;
+            const baseNoPoint = base.endsWith(".") ? base.slice(0,-1) : base;
+            if (["oriental","heavy","woody"].includes(naChar2)) {
+              return baseNoPoint + " — عطر يرافقك بثقة في السفر ويترك بصمة راقية أينما ذهبت.";
+            } else if (["sweet"].includes(naChar2)) {
+              return baseNoPoint + " — يصلح لمختلف الوجهات ويترك حضوراً دافئاً في كل مكان.";
+            } else {
+              return baseNoPoint + " — شخصية تحب الحركة والتميز، عطر خفيف يناسب كل وجهة.";
+            }
+          }
+        }
+        return base;
+      })(),
+      desc_fr: lookedUpFallback?.desc_fr || "Votre goût reflète une personnalité distinctive et mémorable.",
     };
     setRes(results); setPers(enrichedPers);
-    setStep(results.main.length?"results":"empty");
+    // UX rules حسب الـ pct
+    const topPct = results.main[0]?._pct ?? 100;
+
+    if (!results.main.length) {
+      setStep("empty");
+    } else if (topPct < 70) {
+      // أقل من 70% → واتساب مباشرة
+      setStep("empty");
+    } else {
+      setStep("results");
+    }
   };
+
+  const [favPicked,       setFavPicked]       = useState(null);
+  const [personaFeedback, setPersonaFeedback] = useState(null); // "yes" | "no"
 
   const reset = () => {
     setStep("intro"); setQi(0); setAns({});
-    setRes({main:[],similar:[]}); setPers(null); setAKey(k=>k+1);
+    setRes({main:[],similar:[]}); setPers(null);
+    setFavPicked(null); setPersonaFeedback(null); setAKey(k=>k+1);
+  };
+
+  const pickFavorite = (p) => {
+    setFavPicked(p.id);
+    // Track favorite pick — full context for analytics
+    const position = res.main.findIndex(m=>m.id===p.id) + 1;
+    track("favorite_pick", {
+      productName: p.name,
+      productId:   p.id,
+      brand:       p.brand,
+      position:    position,
+      // context ديال الزبون
+      gender:      ans.gender,
+      occasion:    ans.occasion,
+      season:      ans.season,
+      character:   ans.character,
+      impression:  ans.impression,
+      longevity:   ans.longevity,
+      // العطور الثلاثة اللي بانوا
+      shown1:      res.main[0]?.name || "",
+      shown2:      res.main[1]?.name || "",
+      shown3:      res.main[2]?.name || "",
+    });
   };
 
   return (
@@ -2564,7 +3703,7 @@ function WidgetContent({ onClose, lang: langProp }) {
             background:"rgba(201,169,110,0.04)",
             border:"1px solid rgba(201,169,110,0.09)",
             borderRadius:11, overflow:"hidden" }}>
-            {[["✨",`${PRODUCTS.length} ${lang==="ar"?"عطر في انتظارك":"parfums disponibles"}`],["⚡",t.statsSec],["🆓",lang==="ar"?"مجاني 100%":"100% gratuit"]].map(([ic,lb],i)=>(
+            {[["💎",`${PRODUCTS.length} ${lang==="ar"?"عطر في انتظارك":"parfums disponibles"}`],["⚡",t.statsSec],["🆓",lang==="ar"?"مجاني 100%":"100% gratuit"]].map(([ic,lb],i)=>(
               <div key={lb} style={{ flex:1, padding:"11px 6px", textAlign:"center",
                 borderRight:i<2?"1px solid rgba(201,169,110,0.09)":"none" }}>
                 <div style={{ fontSize:15, marginBottom:2 }}>{ic}</div>
@@ -2649,8 +3788,8 @@ function WidgetContent({ onClose, lang: langProp }) {
 
           <div style={{ display:"flex", flexDirection:"column", gap:7 }}>
             {(questions[qi]?.id==="budget"
-              ? getBudgetOpts(questions[qi])
-              : questions[qi]?.opts
+              ? (getBudgetOpts(questions[qi]) || [])
+              : (questions[qi]?.opts || [])
             ).map((o,i)=>(
               <button key={o.v} className="ff-opt"
                 onClick={()=>answer(questions[qi].id, o.v)}
@@ -2742,6 +3881,52 @@ function WidgetContent({ onClose, lang: langProp }) {
       {/* RESULTS */}
       {step==="results" && (
         <div style={{ animation:"up .4s ease" }}>
+
+          {/* UX Warning — حسب الـ pct */}
+          {(()=>{
+            const topPct = res.main[0]?._pct ?? 100;
+            if (res.main.length === 1 && topPct < 80) {
+              return (
+                <div style={{
+                  background:"rgba(201,169,110,0.06)",
+                  border:"1px solid rgba(201,169,110,0.2)",
+                  borderRadius:11, padding:"11px 14px", marginBottom:14,
+                  display:"flex", alignItems:"flex-start", gap:10,
+                }}>
+                  <span style={{ fontSize:16, flexShrink:0 }}>⚠️</span>
+                  <div>
+                    <div style={{ fontSize:11, fontWeight:800, color:T.gold, marginBottom:3 }}>
+                      {lang==="fr" ? "Votre goût est très précis" : "ذوقك دقيق جداً"}
+                    </div>
+                    <div style={{ fontSize:10, color:T.muted, lineHeight:1.6 }}>
+                      {lang==="fr"
+                        ? "Un seul parfum correspond à vos critères. Contactez-nous pour plus d'options."
+                        : "ما لقيناش غير عطر واحد قريب من اختياراتك. تواصل مع المتجر باش نعاونك."}
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+            if (topPct >= 80 && topPct < 90) {
+              return (
+                <div style={{
+                  background:"rgba(201,169,110,0.04)",
+                  border:"1px solid rgba(201,169,110,0.12)",
+                  borderRadius:11, padding:"9px 14px", marginBottom:14,
+                  display:"flex", alignItems:"center", gap:8,
+                }}>
+                  <span style={{ fontSize:13 }}>💡</span>
+                  <div style={{ fontSize:10, color:T.muted }}>
+                    {lang==="fr"
+                      ? "Résultats limités — essayez d'ajuster certains critères pour plus d'options."
+                      : "النتائج محدودة — جرب تعدل بعض الشروط باش تظهر اقتراحات أكثر."}
+                  </div>
+                </div>
+              );
+            }
+            return null;
+          })()}
+
           {/* Persona */}
           <div style={{ textAlign:"center", marginBottom:14, paddingTop:4 }}>
             <div style={{ fontSize:22, fontWeight:900, color:T.text, marginBottom:6, display:"flex", alignItems:"center", justifyContent:"center", gap:8 }}>
@@ -2780,9 +3965,12 @@ function WidgetContent({ onClose, lang: langProp }) {
                   </div>
                   <div style={{ fontSize:22 }}>{pers.icon}</div>
                 </div>
-                {/* Persona name */}
+                {/* Persona name — حسب الجنس */}
                 <div style={{ fontSize:18, fontWeight:900, color:T.gold, marginBottom:8 }}>
-                  {lang==="fr" ? pers.fr : pers.ar}
+                  {lang==="fr" ? pers.fr :
+                    ans.gender==="men"   && pers.ar_male   ? pers.ar_male   :
+                    ans.gender==="women" && pers.ar_female ? pers.ar_female :
+                    pers.ar}
                 </div>
                 {/* Tags */}
                 <div style={{ display:"flex", flexWrap:"wrap", gap:5, marginBottom:10 }}>
@@ -2796,8 +3984,40 @@ function WidgetContent({ onClose, lang: langProp }) {
                   ))}
                 </div>
                 {/* Desc */}
-                <div style={{ fontSize:11, fontWeight:500, color:"rgba(240,234,224,0.72)", lineHeight:1.8 }}>
-                  {lang==="fr" ? (pers.desc_fr || pers.desc) : pers.desc}
+                <div style={{ fontSize:11, fontWeight:500, color:"rgba(240,234,224,0.72)", lineHeight:1.8, marginBottom:12 }}>
+                  {lang==="fr" ? (pers.desc_fr || pers.desc) :
+                    ans.gender==="men"   && pers.desc_male   ? pers.desc_male   :
+                    ans.gender==="women" && pers.desc_female ? pers.desc_female :
+                    pers.desc}
+                </div>
+                {/* 👍 هل تشبهك هذه الشخصية؟ */}
+                <div style={{ borderTop:"1px solid rgba(201,169,110,0.12)", paddingTop:10,
+                  display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+                  {personaFeedback === null ? (
+                    <>
+                      <div style={{ fontSize:10, color:"rgba(201,169,110,0.55)" }}>
+                        {lang==="fr" ? "Cette personnalité vous ressemble ?" : "هل تشبهك هذه الشخصية؟"}
+                      </div>
+                      <div style={{ display:"flex", gap:6 }}>
+                        <button onClick={()=>{
+                          setPersonaFeedback("yes");
+                          track("persona_feedback",{ store:CONFIG.STORE_NAME, persona:pers?.ar||"", feedback:"yes", character:ans.character, impression:ans.impression });
+                        }} style={{ padding:"4px 13px", borderRadius:7, border:"1px solid rgba(92,184,138,0.35)", background:"rgba(92,184,138,0.08)", color:"#5CB88A", fontSize:13, cursor:"pointer", fontFamily:"inherit" }}>
+                          👍
+                        </button>
+                        <button onClick={()=>{
+                          setPersonaFeedback("no");
+                          track("persona_feedback",{ store:CONFIG.STORE_NAME, persona:pers?.ar||"", feedback:"no", character:ans.character, impression:ans.impression });
+                        }} style={{ padding:"4px 13px", borderRadius:7, border:"1px solid rgba(224,85,85,0.3)", background:"rgba(224,85,85,0.08)", color:"#E05555", fontSize:13, cursor:"pointer", fontFamily:"inherit" }}>
+                          👎
+                        </button>
+                      </div>
+                    </>
+                  ) : (
+                    <div style={{ fontSize:10, color:"rgba(201,169,110,0.55)", width:"100%", textAlign:"center" }}>
+                      {lang==="fr" ? "Merci pour votre retour 🙏" : "شكراً على رأيك 🙏"}
+                    </div>
+                  )}
                 </div>
               </div>
             )}
@@ -2828,6 +4048,65 @@ function WidgetContent({ onClose, lang: langProp }) {
             </div>
           )}
 
+          {/* ⭐ أي عطر أعجبك أكثر؟ */}
+          {res.main.length > 0 && (
+            <div style={{
+              background:"rgba(201,169,110,0.04)",
+              border:"1px solid rgba(201,169,110,0.12)",
+              borderRadius:13, padding:"14px 14px 12px",
+              marginBottom:14,
+            }}>
+              {!favPicked ? (
+                <>
+                  <div style={{ fontSize:12, fontWeight:800, color:T.gold, marginBottom:10, textAlign:"center" }}>
+                    ⭐ {t.favoriteQ}
+                  </div>
+                  <div style={{ display:"flex", gap:7 }}>
+                    {res.main.map((p,i)=>(
+                      <button key={p.id} onClick={()=>pickFavorite(p)}
+                        style={{
+                          flex:1, padding:"8px 4px",
+                          background:"rgba(201,169,110,0.06)",
+                          border:"1px solid rgba(201,169,110,0.18)",
+                          borderRadius:9, cursor:"pointer",
+                          fontFamily:"inherit", transition:"all .2s",
+                        }}
+                        onMouseEnter={e=>{e.currentTarget.style.background="rgba(201,169,110,0.15)";}}
+                        onMouseLeave={e=>{e.currentTarget.style.background="rgba(201,169,110,0.06)";}}>
+                        <div style={{ fontSize:14, marginBottom:3 }}>
+                          {i===0?"🥇":i===1?"🥈":"🥉"}
+                        </div>
+                        <div style={{ fontSize:9, color:T.gold, fontWeight:700, lineHeight:1.3 }}>
+                          {(()=>{
+                            // خد أول كلمة مهمة من الاسم
+                            const words = p.name.split(/[\s\-–]+/);
+                            const skip = ["decantage","pour","homme","femme","de","la","le","les","eau","parfum"];
+                            const meaningful = words.filter(w=>w.length>2 && !skip.includes(w.toLowerCase()));
+                            const short = meaningful.slice(0,2).join(" ");
+                            return short.length > 2 ? short : p.name.slice(0,14);
+                          })()}
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                  <div style={{ fontSize:9, color:"rgba(201,169,110,0.35)", textAlign:"center", marginTop:7 }}>
+                    {t.favoriteHint}
+                  </div>
+                </>
+              ) : (
+                <div style={{ textAlign:"center", padding:"8px 0" }}>
+                  <div style={{ fontSize:20, marginBottom:6 }}>🎉</div>
+                  <div style={{ fontSize:12, color:T.gold, fontWeight:800, marginBottom:4 }}>
+                    {t.favoriteThanks}
+                  </div>
+                  <div style={{ fontSize:10, color:"rgba(201,169,110,0.55)", lineHeight:1.6 }}>
+                    {t.favoriteSubthanks}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
           <div style={{ textAlign:"center" }}>
             <button onClick={reset} style={{ background:"transparent",
               border:"1px solid rgba(201,169,110,0.14)", borderRadius:9,
@@ -2841,28 +4120,107 @@ function WidgetContent({ onClose, lang: langProp }) {
               {t.poweredBy}
             </span>
           </div>
+          {/* Disclaimer */}
+          <div style={{
+            margin:"12px 16px 4px", padding:"10px 14px",
+            background:"rgba(255,255,255,0.04)", borderRadius:10,
+            border:"1px solid rgba(255,255,255,0.07)"
+          }}>
+            <p style={{
+              fontSize:10, color:"rgba(255,255,255,0.35)",
+              textAlign:"center", margin:0, lineHeight:1.6, fontFamily:"inherit"
+            }}>
+              {lang==="fr"
+                ? "💡 Ces recommandations sont basées sur vos réponses. L'expérience finale reste personnelle."
+                : "💡 التوصيات مبنية على اختياراتك وتفضيلاتك العطرية، وقد تختلف التجربة النهائية حسب الذوق الشخصي."
+              }
+            </p>
+          </div>
         </div>
       )}
 
       {/* EMPTY */}
       {step==="empty" && (
-        <div style={{ textAlign:"center", paddingTop:20 }}>
-          <div style={{ fontSize:36, marginBottom:12 }}>🔍</div>
-          <div style={{ fontSize:16, fontWeight:800, color:T.text, marginBottom:8 }}>
-            ما لقيناش نتيجة مطابقة
+        <div style={{ padding:"8px 4px 16px" }}>
+          {/* Icon + Title */}
+          <div style={{ textAlign:"center", marginBottom:16 }}>
+            <div style={{ fontSize:32, marginBottom:10 }}>⚠️</div>
+            <div style={{ fontSize:15, fontWeight:900, color:T.text, marginBottom:8 }}>
+              {lang==="fr"
+                ? "Vos critères sont très spécifiques"
+                : "اختياراتك دقيقة جداً"}
+            </div>
+            <div style={{ fontSize:11, color:T.muted, lineHeight:1.8, maxWidth:260, margin:"0 auto" }}>
+              {lang==="fr"
+                ? "Aucun parfum ne correspond à tous vos critères en même temps. Voici quelques options :"
+                : "حالياً ما كاينش عطر كيجمع جميع الشروط اللي اخترتيها بنفس الوقت. عندك جوج خيارات:"}
+            </div>
           </div>
-          <div style={{ fontSize:12, color:T.muted, lineHeight:1.8, marginBottom:18 }}>
-            تواصل معنا وغنعاونوك
-          </div>
-          <div style={{ display:"flex", gap:8 }}>
-            <a href="https://wa.me/212600000000" target="_blank" rel="noopener noreferrer"
-              style={{ flex:1, display:"flex", alignItems:"center", justifyContent:"center",
-                background:"linear-gradient(135deg,#25D366,#128C7E)",
-                color:"#fff", textDecoration:"none", borderRadius:11, padding:"12px 0",
-                fontSize:13, fontWeight:800, fontFamily:"inherit" }}>{t.talkToUs}</a>
-            <button onClick={reset} style={{ flex:1, background:"transparent",
-              border:`1px solid ${T.border}`, borderRadius:11, color:T.muted,
-              fontSize:12, cursor:"pointer", fontFamily:"inherit" }}>← حاول مرة أخرى</button>
+
+          {/* Options */}
+          <div style={{ display:"flex", flexDirection:"column", gap:10, marginBottom:16 }}>
+
+            {/* Option 1 — رفع الميزانية */}
+            <div style={{
+              background:"rgba(201,169,110,0.06)",
+              border:"1px solid rgba(201,169,110,0.15)",
+              borderRadius:12, padding:"14px",
+              display:"flex", alignItems:"flex-start", gap:12,
+            }}>
+              <div style={{ fontSize:20, flexShrink:0 }}>💡</div>
+              <div>
+                <div style={{ fontSize:12, fontWeight:800, color:T.gold, marginBottom:4 }}>
+                  {lang==="fr" ? "Ajuster les critères" : "جرّب تعدّل بعض الشروط"}
+                </div>
+                <div style={{ fontSize:10, color:T.muted, lineHeight:1.6 }}>
+                  {lang==="fr"
+                    ? "En ajustant la gamme de prix ou la longévité, plus d'options apparaîtront."
+                    : "مثلاً رفع الميزانية شوية أو تخفيف بعض المتطلبات باش تظهر لك اقتراحات أكثر."}
+                </div>
+                <button onClick={reset} style={{
+                  marginTop:8, padding:"5px 14px", borderRadius:7,
+                  background:"rgba(201,169,110,0.1)", border:"1px solid rgba(201,169,110,0.25)",
+                  color:T.gold, fontSize:10, fontWeight:800, cursor:"pointer", fontFamily:"inherit",
+                }}>
+                  {lang==="fr" ? "← Réessayer" : "← حاول مرة أخرى"}
+                </button>
+              </div>
+            </div>
+
+            {/* Option 2 — واتساب */}
+            <div style={{
+              background:"rgba(37,211,102,0.05)",
+              border:"1px solid rgba(37,211,102,0.2)",
+              borderRadius:12, padding:"14px",
+              display:"flex", alignItems:"flex-start", gap:12,
+            }}>
+              <div style={{ fontSize:20, flexShrink:0 }}>📲</div>
+              <div style={{ flex:1 }}>
+                <div style={{ fontSize:12, fontWeight:800, color:"#25D366", marginBottom:4 }}>
+                  {lang==="fr" ? "Besoin d'aide ?" : "تحتاج مساعدة؟"}
+                </div>
+                <div style={{ fontSize:10, color:T.muted, lineHeight:1.6, marginBottom:8 }}>
+                  {lang==="fr"
+                    ? "Notre équipe peut vous aider à trouver le meilleur compromis."
+                    : "فريق المتجر يقدر يقترح عليك أفضل الخيارات المتوفرة حسب ذوقك وميزانيتك."}
+                </div>
+                <a href={`https://wa.me/${CONFIG.WHATSAPP}?text=${encodeURIComponent(
+                    lang==="fr"
+                      ? "Bonjour, j'ai utilisé l'assistant parfum et je n'ai pas trouvé de résultat.\n\nMes critères :\n- Budget : "+(ans.budget||"non précisé")+"\n- Utilisation : "+(ans.occasion||"non précisé")+"\n- Longévité : "+(ans.longevity||"non précisé")+"\n- Style : "+(ans.character||"non précisé")+"\n\nPouvez-vous m'aider ?"
+                      : "السلام عليكم، استعملت مساعد العطور وما لقيتش نتيجة مناسبة.\n\nهادي اختياراتي:\n- الميزانية: "+(ans.budget||"غير محدد")+"\n- الاستعمال: "+(ans.occasion||"غير محدد")+"\n- الثبات: "+(ans.longevity||"غير محدد")+"\n- النمط: "+(ans.character||"غير محدد")+"\n\nواش تقدر تساعدني؟"
+                  )}`}
+                  target="_blank" rel="noopener noreferrer"
+                  style={{
+                    display:"inline-flex", alignItems:"center", gap:6,
+                    padding:"7px 16px", borderRadius:9,
+                    background:"linear-gradient(135deg,#25D366,#128C7E)",
+                    color:"#fff", textDecoration:"none",
+                    fontSize:11, fontWeight:800, fontFamily:"inherit",
+                  }}>
+                  💬 {lang==="fr" ? "Contacter le magasin" : "تواصل مع المتجر"}
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       )}
@@ -2881,11 +4239,11 @@ function Header({ onClose, isMobile, lang, setLang }) {
         {isMobile && <div style={{ width:34, height:4, borderRadius:99,
           background:"rgba(255,255,255,0.14)", margin:"0 auto 13px" }}/>}
         <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", direction:"ltr" }}>
-          <div style={{ display:"flex", alignItems:"center", gap:8, direction:"rtl" }}>
+          <div style={{ display:"flex", alignItems:"center", gap:8, direction: lang==="fr" ? "ltr" : "rtl" }}>
             <div style={{ width:30, height:30,
               background:`linear-gradient(135deg,${T.gold},${T.goldD})`,
               borderRadius:8, display:"flex", alignItems:"center",
-              justifyContent:"center", fontSize:14, color:"#120E08", fontWeight:900 }}></div>
+              justifyContent:"center", fontSize:16, color:"#120E08", fontWeight:900 }}>✦</div>
             <div>
               <div style={{ fontSize:13, fontWeight:900, color:T.text, lineHeight:1.1 }}>
                 TWINS FRAGRANCE
@@ -2933,7 +4291,7 @@ function BottomSheet({ open, onClose }) {
       <div onClick={onClose} style={{ position:"absolute", inset:0,
         background:"rgba(0,0,0,0.65)", backdropFilter:"blur(4px)",
         opacity:vis?1:0, transition:"opacity .35s ease" }}/>
-      <div style={{ position:"relative", zIndex:1, background:"#100D14",
+      <div style={{ position:"relative", zIndex:1, background:T.bgModal,
         borderRadius:"22px 22px 0 0",
         border:"1px solid rgba(201,169,110,0.2)", borderBottom:"none",
         maxHeight:"92vh", display:"flex", flexDirection:"column",
@@ -2956,10 +4314,10 @@ function FloatingModal({ open, onClose }) {
     <div style={{ position:"fixed", inset:0, zIndex:1000,
       display:"flex", alignItems:"center", justifyContent:"center", padding:24 }}>
       <div onClick={onClose} style={{ position:"absolute", inset:0,
-        background:"rgba(0,0,0,0.7)", backdropFilter:"blur(6px)",
+        background:T.overlay, backdropFilter:"blur(6px)",
         opacity:vis?1:0, transition:"opacity .3s ease" }}/>
       <div style={{ position:"relative", zIndex:1, width:"100%", maxWidth:500,
-        maxHeight:"88vh", background:"#100D14",
+        maxHeight:"88vh", background:T.bgModal,
         border:"1px solid rgba(201,169,110,0.22)", borderRadius:22,
         display:"flex", flexDirection:"column",
         boxShadow:"0 32px 80px rgba(0,0,0,0.6)",
@@ -2977,21 +4335,33 @@ function TriggerBtn({ onClick, lang="ar" }) {
   const [hov,      setHov]      = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [pulsing,  setPulsing]  = useState(false);
   const t = TRANSLATIONS[lang||"ar"];
 
   useEffect(() => {
-    // تحقق موبايل
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
     window.addEventListener("resize", checkMobile);
 
-    // scroll listener — ينكمش بعد 80px
     const handleScroll = () => setScrolled(window.scrollY > 80);
     window.addEventListener("scroll", handleScroll, { passive:true });
+
+    // نبضة خفيفة مرة كل 20 ثانية — مرة واحدة فقط بعد 5 ثواني من الفتح
+    const firstPulse = setTimeout(() => {
+      setPulsing(true);
+      setTimeout(() => setPulsing(false), 600);
+    }, 5000);
+
+    const interval = setInterval(() => {
+      setPulsing(true);
+      setTimeout(() => setPulsing(false), 600);
+    }, 20000);
 
     return () => {
       window.removeEventListener("resize", checkMobile);
       window.removeEventListener("scroll", handleScroll);
+      clearTimeout(firstPulse);
+      clearInterval(interval);
     };
   }, []);
 
@@ -3015,7 +4385,7 @@ function TriggerBtn({ onClick, lang="ar" }) {
         display:"flex",
         alignItems:"center",
         gap: showText ? 10 : 0,
-        background:"linear-gradient(135deg,#120A00,#241400)",
+        background:T.triggerBg,
         border: `2.5px solid ${hov ? T.goldL : T.gold}`,
         borderRadius: 50,
         padding: showText ? "9px 18px 9px 9px" : "7px",
@@ -3026,6 +4396,7 @@ function TriggerBtn({ onClick, lang="ar" }) {
             ? "0 6px 24px rgba(201,169,110,0.45)"
             : "0 3px 16px rgba(201,169,110,0.35)",
         transition:"all .45s cubic-bezier(0.34,1.1,0.64,1)",
+        transform: pulsing ? "scale(1.08)" : hov ? "scale(1.04)" : "scale(1)",
         overflow:"hidden",
         direction:"ltr",
         whiteSpace:"nowrap",
@@ -3058,7 +4429,7 @@ function TriggerBtn({ onClick, lang="ar" }) {
         transition:"max-width .4s ease, opacity .3s ease",
         letterSpacing:0.3,
       }}>
-        {t.triggerBtn}
+        {pulsing ? `${t.triggerBtn} ✨` : t.triggerBtn}
       </span>
 
       {/* Pulse dot */}
@@ -3124,7 +4495,7 @@ export default function App() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-        body{background:#080608;font-family:'Tajawal',Arial,sans-serif;direction:rtl;}
+        body{background:#080608;font-family:'Tajawal',Arial,sans-serif;}
         @keyframes up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
         @keyframes fade{from{opacity:0}to{opacity:1}}
         @keyframes spin{to{transform:rotate(360deg)}}
